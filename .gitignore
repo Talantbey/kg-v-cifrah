@@ -1,0 +1,6 @@
+tools/voice/
+episodes/*/build/
+episodes/*/stills/
+episodes/*/video.mp4
+episodes/*/video.tmp.mp4
+__pycache__/
