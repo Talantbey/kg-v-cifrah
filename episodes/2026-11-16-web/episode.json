@@ -1,0 +1,206 @@
+{
+ "theme": "tech",
+ "header": "Интернет и AI",
+ "speed": 0.9,
+ "caption": "Случайно закрыл нужную вкладку? Верни её за секунду ⚡\n\nНажми Ctrl + Shift + T — вкладка откроется снова.\nНажми ещё раз — вернутся и предыдущие, в том порядке, в каком ты их закрыл. На Mac в Chrome: Cmd + Shift + T.\nРаботает в Google Chrome и Microsoft Edge.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.google.com, support.microsoft.com\n\n#chrome #браузер #лайфхаки #горячиеклавиши #компьютер #интернет #полезныефишки",
+ "package": {
+  "title": "Вернуть закрытую вкладку за 1 секунду",
+  "hook": "Случайно закрыл вкладку? Верни её за секунду",
+  "problem": "Нужная вкладка закрыта, а сайт уже не найти.",
+  "solution": "Сочетание Ctrl + Shift + T заново открывает закрытые вкладки в том порядке, в котором их закрыли.",
+  "steps": [
+   "Нажми Ctrl + Shift + T (на Mac в Chrome: Cmd + Shift + T)",
+   "Закрытая вкладка откроется снова",
+   "Нажми ещё раз — вернутся предыдущие закрытые вкладки по порядку"
+  ],
+  "compatibility": "Google Chrome (Windows, Linux, Mac) и Microsoft Edge",
+  "source": "support.google.com — «Chrome keyboard shortcuts» (157179): «Reopen previously closed tabs in the order that they were closed — Ctrl + Shift + t»; support.microsoft.com — «Microsoft Edge keyboard shortcuts»: «Ctrl + Shift + T — Reopen the last closed tab»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Вернуть закрытую",
+    "вкладку за 1 секунду"
+   ],
+   "highlight": [
+    "закрытую",
+    "1",
+    "секунду"
+   ],
+   "icon": "globe",
+   "chip": "Chrome · Edge",
+   "desc": "Хук: крупный текст, иконка глобуса, чип совместимости.",
+   "prompt": "A glowing translucent browser tab shatters into light particles in dark space, then the particles reverse and reassemble into the tab, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Закрыл вкладку? Верни за секунду.",
+     "Закрыл вкладку? Верни за секунду."
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Закрыл не ту вкладку?",
+   "highlight": [
+    "не",
+    "ту"
+   ],
+   "body": "А сайт уже не найти",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A cursor clicks the small close cross on a browser tab, the tab vanishes and an empty glowing window remains, a frustrated hand hovers over the keyboard, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Случайно закрыл нужную вкладку?",
+     "Случайно закрыл нужную вкладку?"
+    ],
+    [
+     "А где был этот сайт — уже не вспомнить.",
+     "А где был этот сайт — не вспомнить."
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Нажми одновременно",
+   "chip": "Google Chrome · Microsoft Edge",
+   "keys": [
+    "Ctrl",
+    "Shift",
+    "T"
+   ],
+   "at_part": 0,
+   "result": "Вкладка открылась снова!",
+   "result_at_part": 1,
+   "desc": "Решение: три клавиши нажимаются по очереди и подсвечиваются, затем результат.",
+   "prompt": "Three large realistic keyboard keys pressed one after another in slow motion, each key lights up with cyan glow on press, a browser tab flies back into place above them, camera low angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нажми Контрол, Шифт и Тэ.",
+     "Нажми Ctrl + Shift + T."
+    ],
+    [
+     "И вкладка сразу откроется снова.",
+     "И вкладка сразу откроется снова."
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Нажми ещё раз",
+   "chip": "Вкладки возвращаются по порядку",
+   "screens": [
+    {
+     "title": "Билеты Бишкек — Ош",
+     "at_part": 0,
+     "rows": [
+      {
+       "label": "Выбрать дату",
+       "icon": "globe"
+      },
+      {
+       "label": "Пассажиры: 1",
+       "icon": "globe"
+      },
+      {
+       "label": "Найти билеты",
+       "icon": "globe"
+      }
+     ]
+    },
+    {
+     "title": "Рецепт плова",
+     "at_part": 1,
+     "rows": [
+      {
+       "label": "Ингредиенты",
+       "icon": "globe"
+      },
+      {
+       "label": "Приготовление",
+       "icon": "globe"
+      },
+      {
+       "label": "Отзывы",
+       "icon": "globe"
+      }
+     ]
+    }
+   ],
+   "keys": [
+    "Ctrl",
+    "Shift",
+    "T"
+   ],
+   "keys_at_part": 0,
+   "desc": "Демонстрация: в браузере на ноутбуке одна за другой возвращаются закрытые вкладки, под ноутбуком подсвечиваются клавиши.",
+   "prompt": "Realistic modern laptop on a dark desk, browser tabs slide back into the top bar one after another with a soft cyan glow, each page fades in, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Закрыл несколько? Нажимай ещё раз.",
+     "Закрыл несколько? Нажимай ещё раз."
+    ],
+    [
+     "Вкладки вернутся в том порядке, в каком ты их закрыл.",
+     "Вернутся в том порядке, в каком закрыл."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {
+     "head": "Ctrl + Shift + T",
+     "text": "вернуть закрытую вкладку",
+     "at_part": 0
+    },
+    {
+     "head": "Ещё раз",
+     "text": "вернуть предыдущие по порядку",
+     "at_part": 1,
+     "color": "teal"
+    },
+    {
+     "head": "Mac (Chrome)",
+     "text": "Cmd + Shift + T",
+     "at_part": 2,
+     "color": "blue"
+    }
+   ],
+   "desc": "Пошаговая инструкция: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, camera glides past them, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Итак: Контрол, Шифт, Тэ.",
+     "Итак: Ctrl + Shift + T,"
+    ],
+    [
+     "Ещё раз — вернутся предыдущие.",
+     "ещё раз — вернутся предыдущие."
+    ],
+    [
+     "А на Маке в Хроме — Команд, Шифт, Тэ.",
+     "На Mac в Chrome — Cmd + Shift + T."
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.google.com, support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
