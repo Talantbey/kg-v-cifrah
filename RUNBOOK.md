@@ -19,7 +19,7 @@ re-verify its facts quickly, `git mv` it to `episodes/YYYY-MM-DD-<slot>/`, then 
 
 ## Video format (every episode)
 
-- `"theme": "tech"`, `"speed"` 0.80–0.86, total **20–35 s** (`make.py` prints it). 4–6 scenes:
+- `"theme": "tech"`, `"speed"` 0.88–0.95 (voice: Ruslan, male — `make.py` prints `voice: ru_RU-ruslan-medium.onnx`; if it falls back to another voice, mention it in the final message), total **20–35 s** (`make.py` prints it). 4–6 scenes:
   1. `hook` — viral title in 2–3 short lines (≤ 2 s of voice), `highlight` key words, `icon`, `chip` = compatibility (e.g. "Windows 10 · 11", "iPhone · iOS 17+", "Android 14 · Samsung").
   2. `problem` — the pain in one line (+ optional body).
   3. Solution demo — `keys` (shortcut), `phone` (settings path with taps/toggles, 4–6 rows per screen),

@@ -13,14 +13,17 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import engine as E
 import tech  # noqa: F401  (registers tech scenes)
 
-VOICE = os.environ.get("KG_VOICE", os.path.join(os.path.dirname(os.path.abspath(__file__)), "voice", "ru-irinia-medium.onnx"))
+_VD = os.path.join(os.path.dirname(os.path.abspath(__file__)), "voice")
+VOICE = os.environ.get("KG_VOICE") or next((os.path.join(_VD, f) for f in ("ru_RU-ruslan-medium.onnx", "ru-irinia-medium.onnx")
+                                            if os.path.exists(os.path.join(_VD, f)) and os.path.getsize(os.path.join(_VD, f)) > 1_000_000), "")
 
 
 def tts(ep, outdir):
     from piper import PiperVoice
     from piper.config import SynthesisConfig
     voice = PiperVoice.load(VOICE)
-    cfg = SynthesisConfig(length_scale=float(ep.get("speed", 0.84)), noise_scale=0.6, noise_w_scale=0.7)
+    print("voice:", os.path.basename(VOICE))
+    cfg = SynthesisConfig(length_scale=float(ep.get("speed", 0.9)), noise_scale=0.6, noise_w_scale=0.7)
     sr = voice.config.sample_rate
     timing = []
     for i, sc in enumerate(ep["scenes"]):
