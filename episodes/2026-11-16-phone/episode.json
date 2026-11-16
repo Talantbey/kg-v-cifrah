@@ -1,0 +1,218 @@
+{
+ "theme": "tech",
+ "header": "Фишки смартфонов",
+ "speed": 0.9,
+ "caption": "Скрытая кнопка на задней панели iPhone 📱\n\nНастройки → Универсальный доступ → Касание → Коснуться сзади → Двойное касание → Снимок экрана.\nТеперь два раза стукни по спине iPhone — скриншот готов. Можно выбрать и другое действие, например Пункт управления.\nРаботает на iPhone 8 и новее с iOS 14 и выше.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.apple.com\n\n#iphone #ios #айфон #лайфхаки #фишкиайфона #скриншот #смартфон",
+ "package": {
+  "title": "Скрытая кнопка на спине iPhone",
+  "hook": "На задней панели iPhone есть скрытая кнопка",
+  "problem": "Делать скриншот двумя кнопками одной рукой неудобно.",
+  "solution": "Функция «Коснуться сзади» (Back Tap): двойное или тройное касание по задней панели запускает выбранное действие, например снимок экрана.",
+  "steps": [
+   "Настройки → Универсальный доступ → Касание",
+   "Коснуться сзади → Двойное касание (или Тройное касание)",
+   "Выбери действие «Снимок экрана»",
+   "Дважды коснись задней панели iPhone"
+  ],
+  "compatibility": "iPhone 8 и новее, iOS 14 и выше",
+  "source": "support.apple.com — «Use Back Tap on your iPhone» / «Использование функции «Коснуться сзади» на iPhone» (111772)"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Скрытая кнопка",
+    "на задней панели iPhone"
+   ],
+   "highlight": [
+    "Скрытая",
+    "кнопка"
+   ],
+   "icon": "phone",
+   "chip": "iPhone 8+ · iOS 14+",
+   "desc": "Хук: крупный текст, иконка телефона, чип совместимости.",
+   "prompt": "A sleek modern smartphone floating face-down in dark space, a fingertip taps twice on its glass back and cyan ripples of light spread across the surface, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "На спине Айфона есть скрытая кнопка.",
+     "На спине iPhone есть скрытая кнопка."
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Скриншот одной рукой?",
+   "highlight": [
+    "одной"
+   ],
+   "body": "Две кнопки сразу — неудобно",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "Close-up of a hand awkwardly trying to press two side buttons of a smartphone at once, the phone almost slipping, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Неудобно делать скриншот одной рукой?",
+     "Неудобно делать скриншот одной рукой?"
+    ],
+    [
+     "Две кнопки сразу — и телефон выскальзывает.",
+     "Две кнопки сразу — телефон выскальзывает."
+    ]
+   ]
+  },
+  {
+   "type": "phone",
+   "title": "Включаем",
+   "chip": "Настройки iPhone",
+   "screens": [
+    {
+     "title": "Настройки",
+     "at_part": 0,
+     "tap": 2,
+     "rows": [
+      {
+       "label": "Основные"
+      },
+      {
+       "label": "Экран и яркость"
+      },
+      {
+       "label": "Универсальный доступ"
+      },
+      {
+       "label": "Пункт управления"
+      },
+      {
+       "label": "Камера"
+      }
+     ]
+    },
+    {
+     "title": "Универсальный доступ",
+     "at_part": 1,
+     "tap": 2,
+     "rows": [
+      {
+       "label": "VoiceOver"
+      },
+      {
+       "label": "Увеличение"
+      },
+      {
+       "label": "Касание"
+      },
+      {
+       "label": "Управление голосом"
+      }
+     ]
+    },
+    {
+     "title": "Касание",
+     "at_part": 2,
+     "tap": 2,
+     "rows": [
+      {
+       "label": "AssistiveTouch"
+      },
+      {
+       "label": "Удобный доступ"
+      },
+      {
+       "label": "Коснуться сзади"
+      }
+     ]
+    }
+   ],
+   "desc": "Демонстрация: Настройки → Универсальный доступ → Касание → Коснуться сзади, касания подсвечиваются.",
+   "prompt": "A realistic smartphone in a hand, screen showing a clean dark settings menu, a fingertip taps through menu rows that glow cyan on touch, screens slide left, slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Открой Настройки, Универсальный доступ.",
+     "Настройки → Универсальный доступ"
+    ],
+    [
+     "Дальше — Касание.",
+     "Дальше — «Касание»"
+    ],
+    [
+     "И внизу — Коснуться сзади.",
+     "Внизу — «Коснуться сзади»"
+    ]
+   ]
+  },
+  {
+   "type": "phone",
+   "title": "Выбираем действие",
+   "chip": "iPhone 8+ · iOS 14+",
+   "screens": [
+    {
+     "title": "Коснуться сзади",
+     "at_part": 0,
+     "tap": 0,
+     "rows": [
+      {
+       "label": "Двойное касание",
+       "value": "Нет"
+      },
+      {
+       "label": "Тройное касание",
+       "value": "Нет"
+      }
+     ]
+    },
+    {
+     "title": "Двойное касание",
+     "at_part": 1,
+     "tap": 2,
+     "rows": [
+      {
+       "label": "Нет"
+      },
+      {
+       "label": "Пункт управления"
+      },
+      {
+       "label": "Снимок экрана"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Стукни дважды по спине — скриншот!",
+    "at_part": 2
+   },
+   "desc": "Демонстрация: Двойное касание → Снимок экрана, затем уведомление о результате.",
+   "prompt": "Close-up of a smartphone screen where a menu option lights up cyan when tapped, then the phone turns and a finger double-taps its glass back, a white screenshot flash fills the screen. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Выбери Двойное касание.",
+     "Выбери «Двойное касание»"
+    ],
+    [
+     "Затем — Снимок экрана.",
+     "Затем — «Снимок экрана»"
+    ],
+    [
+     "Теперь стукни два раза по спине Айфона — и скриншот готов.",
+     "Стукни дважды по спине — скриншот готов!"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.apple.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
