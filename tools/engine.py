@@ -145,13 +145,51 @@ class Ctx:
         return k
 
     def out(self, t):
-        d = 0.4 if self.sc["type"] == "outro" else 0.25
+        d = 0.4 if self.sc["type"] in ("outro", "cta") else 0.2
         return 1 - p(t, self.T - d, d)
 
 
 # ---------------- background, header, subtitles ----------------
 
+THEME = "classic"
+CLASSIC = dict(PAL=dict(PAL), BG1=BG1, BG2=BG2, CARD=CARD, GOLD=GOLD, DARK=DARK, MUTED=MUTED)
+TECH = dict(BG1="#0B1640", BG2="#04071A", CARD="#121C42", GOLD="#38BDF8", DARK="#04101F", MUTED="#9AA8D6",
+            PAL={"gold": "#38BDF8", "teal": "#A78BFA", "red": "#F43F5E", "grey": "#5B6690", "blue": "#7DD3FC",
+                 "violet": "#8B5CF6", "green": "#34D399", "orange": "#FB923C", "white": "#F5F7FF", "muted": "#9AA8D6",
+                 "cyan": "#38BDF8"})
+
+
+def apply_theme(ep):
+    global THEME, BG1, BG2, CARD, GOLD, DARK, MUTED
+    th = ep.get("theme", "classic")
+    d = TECH if th == "tech" else CLASSIC
+    THEME = th
+    BG1, BG2, CARD, GOLD, DARK, MUTED = d["BG1"], d["BG2"], d["CARD"], d["GOLD"], d["DARK"], d["MUTED"]
+    PAL.clear(); PAL.update(d["PAL"])
+
+
+def background_tech(ctx, tg):
+    g = cairo.LinearGradient(0, 0, 0, H)
+    g.add_color_stop_rgb(0, *hexc(BG1)[:3]); g.add_color_stop_rgb(1, *hexc(BG2)[:3])
+    ctx.set_source(g); ctx.paint()
+    for (cx, cy, r, c, a) in [(540 + 300 * math.sin(tg * 0.3), 420, 760, "#38BDF8", 0.16),
+                              (540 - 320 * math.sin(tg * 0.23 + 1), 1350, 820, "#8B5CF6", 0.18)]:
+        rg = cairo.RadialGradient(cx, cy, 0, cx, cy, r)
+        rg.add_color_stop_rgba(0, *hexc(c)[:3], a); rg.add_color_stop_rgba(1, 0, 0, 0, 0)
+        ctx.set_source(rg); ctx.paint()
+    # perspective grid floor + fine grid
+    ctx.set_line_width(1)
+    off = (tg * 40) % 80
+    for y in range(-80, H + 80, 80):
+        ctx.move_to(0, y + off); ctx.line_to(W, y + off)
+    for x in range(0, W + 1, 80):
+        ctx.move_to(x, 0); ctx.line_to(x, H)
+    ctx.set_source_rgba(0.49, 0.83, 0.99, 0.045); ctx.stroke()
+
+
 def background(ctx, tg):
+    if THEME == "tech":
+        return background_tech(ctx, tg)
     g = cairo.LinearGradient(0, 0, 0, H)
     g.add_color_stop_rgb(0, *hexc(BG1)[:3]); g.add_color_stop_rgb(1, *hexc(BG2)[:3])
     ctx.set_source(g); ctx.paint()
@@ -222,7 +260,8 @@ def titles(ctx, sc, t, a, y=470):
         text(ctx, sc["subtitle"], 540, y + 60, 36, MUTED, "c", False, q)
 
 
-def pill(ctx, s, cx, cy, k, a, color=GOLD, fg=DARK, size=36):
+def pill(ctx, s, cx, cy, k, a, color=None, fg=None, size=36):
+    color = color or GOLD; fg = fg or DARK
     if k <= 0:
         return
     w = tw(ctx, s, size) + 70
@@ -594,11 +633,11 @@ def s_outro(ctx, t, c):
 
 SCENES = dict(title=s_title, counter=s_counter, donut=s_donut, bars=s_bars, dotgrid=s_dotgrid,
               scale=s_scale, list=s_list, fact=s_fact, word=s_word, timeline=s_timeline, outro=s_outro)
-NO_HEADER = {"title", "outro"}
+NO_HEADER = {"title", "outro", "hook", "cta"}
 
 
 def scene_dur(sc, tm):
-    tail = OUTRO_TAIL if sc["type"] == "outro" else TAIL
+    tail = OUTRO_TAIL if sc["type"] in ("outro", "cta") else (0.15 if sc["type"] == "hook" else TAIL)
     return round((LEAD + tm["dur"] + tail) * FPS) / FPS
 
 
@@ -608,9 +647,21 @@ def draw(ep, idx, t, timing, offs):
     ctx = cairo.Context(surf); ctx.set_antialias(cairo.ANTIALIAS_BEST)
     background(ctx, offs[idx] + t)
     c = Ctx(sc, tm, T)
+    zoom = THEME == "tech" and t < 0.35 and idx > 0
+    if zoom:
+        k = 1.07 - 0.07 * eo(p(t, 0, 0.35))
+        ctx.save(); ctx.translate(540, 900); ctx.scale(k, k); ctx.translate(-540, -900)
     if sc["type"] not in NO_HEADER and ep.get("header"):
         header(ctx, ep["header"], (eo(p(t, 0, 0.3)) if idx == 1 else 1.0) * c.out(t))
     SCENES[sc["type"]](ctx, t, c)
+    if zoom:
+        ctx.restore()
+    if THEME == "tech" and idx > 0 and t < 0.45:  # light sweep transition
+        x = -400 + 1900 * eo(p(t, 0, 0.45))
+        lg = cairo.LinearGradient(x - 220, 0, x + 220, 0)
+        lg.add_color_stop_rgba(0, 0.22, 0.74, 0.97, 0); lg.add_color_stop_rgba(0.5, 0.65, 0.55, 1.0, 0.22)
+        lg.add_color_stop_rgba(1, 0.22, 0.74, 0.97, 0)
+        ctx.set_source(lg); ctx.paint()
     subtitle(ctx, tm, t)
     a_in = eo(p(t, 0, 0.2))
     if a_in < 1:

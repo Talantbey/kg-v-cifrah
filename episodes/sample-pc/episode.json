@@ -1,0 +1,196 @@
+{
+ "theme": "tech",
+ "header": "Фишки Windows",
+ "speed": 0.82,
+ "caption": "Скриншот части экрана за секунду — без Paint и сторонних программ 💻\n\nWin + Shift + S → выдели область → Ctrl + V.\nРаботает в Windows 10 и Windows 11.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com\n\n#windows #windows11 #лайфхаки #компьютер #горячиеклавиши #скриншот #фишки",
+ "package": {
+  "title": "Скриншот за 1 секунду — без программ",
+  "hook": "Всё ещё делаешь скриншоты через Paint?",
+  "problem": "Нужна только часть экрана, а приходится снимать всё и обрезать вручную.",
+  "solution": "Сочетание Win + Shift + S открывает «Ножницы» (Snipping Tool) прямо поверх экрана.",
+  "steps": [
+   "Нажми Win + Shift + S",
+   "Выдели нужную область мышкой (прямоугольник, окно или весь экран)",
+   "Снимок копируется в буфер обмена — вставь его через Ctrl + V"
+  ],
+  "compatibility": "Windows 10, Windows 11",
+  "source": "support.microsoft.com — «Use Snipping Tool to capture screenshots»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Скриншот",
+    "за 1 секунду"
+   ],
+   "highlight": [
+    "1",
+    "секунду"
+   ],
+   "icon": "keyboard",
+   "chip": "Windows 10 · 11",
+   "desc": "Хук: крупный текст влетает в кадр, иконка клавиатуры.",
+   "prompt": "Extreme close-up of a sleek modern laptop keyboard glowing in the dark, keys softly backlit in cyan, camera rapidly pushes in toward the keys, particles of light. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Всё ещё делаешь скриншоты через Пэйнт?",
+     "Всё ещё делаешь скриншоты через Paint?"
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Нужна только часть экрана?",
+   "highlight": [
+    "часть"
+   ],
+   "body": "Не снимай всё и не обрезай вручную",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A frustrated person's hands at a laptop at night, the screen glow reflecting, camera slowly orbits, moody dark blue and violet lighting. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нужна только часть экрана?",
+     "Нужна только часть экрана?"
+    ],
+    [
+     "Не надо снимать всё и обрезать.",
+     "Не надо снимать всё и обрезать."
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Нажми одновременно",
+   "chip": "Windows 10 · 11",
+   "keys": [
+    "Win",
+    "Shift",
+    "S"
+   ],
+   "result": "Экран затемнится — выдели область",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение: три клавиши нажимаются по очереди и подсвечиваются.",
+   "prompt": "Three large realistic keyboard keys pressed one after another in slow motion, each key lights up with cyan glow on press, camera low angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нажми одновременно Вин, Шифт и Эс.",
+     "Нажми Win + Shift + S."
+    ],
+    [
+     "Экран затемнится, выдели нужную область.",
+     "Экран затемнится — выдели нужную область."
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Снимок уже в буфере",
+   "chip": "Ножницы · Snipping Tool",
+   "screens": [
+    {
+     "title": "Документы",
+     "rows": [
+      {
+       "label": "Отчёт за ноябрь",
+       "icon": "laptop"
+      },
+      {
+       "label": "Фото с поездки",
+       "icon": "globe"
+      },
+      {
+       "label": "Презентация",
+       "icon": "ai"
+      },
+      {
+       "label": "Таблица расходов",
+       "icon": "keyboard"
+      }
+     ]
+    }
+   ],
+   "snip": {
+    "at_part": 0
+   },
+   "toast": {
+    "text": "Снимок скопирован в буфер обмена",
+    "at_part": 0,
+    "delay": 1.3
+   },
+   "keys": [
+    "Ctrl",
+    "V"
+   ],
+   "keys_at_part": 1,
+   "desc": "Демонстрация: экран ноутбука затемняется, рамка выделения, уведомление, затем Ctrl + V.",
+   "prompt": "Realistic modern laptop on a dark desk, screen dims and a glowing selection rectangle is drawn over part of the screen, then a small notification slides in, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Снимок сразу копируется в буфер обмена.",
+     "Снимок сразу копируется в буфер обмена."
+    ],
+    [
+     "Вставь его в чат или документ: Контрол и Вэ.",
+     "Вставь в чат или документ: Ctrl + V."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {
+     "head": "Win + Shift + S",
+     "text": "открыть «Ножницы»",
+     "at_part": 0
+    },
+    {
+     "head": "Выдели область",
+     "text": "прямоугольник, окно или весь экран",
+     "at_part": 1,
+     "color": "teal"
+    },
+    {
+     "head": "Ctrl + V",
+     "text": "вставить куда угодно",
+     "at_part": 2,
+     "color": "blue"
+    }
+   ],
+   "desc": "Пошаговая инструкция: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, camera glides past them, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Итак: Вин, Шифт, Эс.",
+     "Итак: Win + Shift + S,"
+    ],
+    [
+     "Выделяешь область.",
+     "выделяешь область,"
+    ],
+    [
+     "И вставляешь: Контрол Вэ.",
+     "вставляешь: Ctrl + V."
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}

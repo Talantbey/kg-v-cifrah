@@ -11,6 +11,7 @@ import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import engine as E
+import tech  # noqa: F401  (registers tech scenes)
 
 VOICE = os.environ.get("KG_VOICE", os.path.join(os.path.dirname(os.path.abspath(__file__)), "voice", "ru-irinia-medium.onnx"))
 
@@ -49,13 +50,52 @@ def offsets(ep, timing):
 
 def _job(args):
     ep, i, timing, offs, outdir = args
+    E.apply_theme(ep)
     E.render_scene(ep, i, timing, offs, outdir)
     return i
+
+
+def _tc(x):
+    ms = int(round(x * 1000)); h, ms = divmod(ms, 3600000); mi, ms = divmod(ms, 60000); s, ms = divmod(ms, 1000)
+    return f"{h:02d}:{mi:02d}:{s:02d},{ms:03d}"
+
+
+def write_package(ep, timing, epdir):
+    """package.md (title, hook, voiceover, scenes + AI prompts, subtitles, caption) and subtitles.srt."""
+    offs, total = offsets(ep, timing)
+    pk = ep.get("package", {})
+    L = [f"# {pk.get('title', ep.get('header', ''))}", ""]
+    for key, name in [("hook", "Хук (первые 2 секунды)"), ("problem", "Проблема"), ("solution", "Решение"),
+                      ("compatibility", "Совместимость"), ("source", "Источник")]:
+        if pk.get(key):
+            L += [f"**{name}:** {pk[key]}", ""]
+    if pk.get("steps"):
+        L += ["**Пошаговая инструкция:**", ""] + [f"{i + 1}. {s}" for i, s in enumerate(pk["steps"])] + [""]
+    L += [f"**Длительность:** {total:.1f} с", "", "## Полный текст озвучки", ""]
+    L += [" ".join(pt[0] for sc in ep["scenes"] for pt in sc["parts"]), "", "## Сцены и промпты для AI-видео", ""]
+    for i, (sc, o) in enumerate(zip(ep["scenes"], offs)):
+        d = E.scene_dur(sc, timing[i])
+        L += [f"### Сцена {i + 1} · {o:.1f}–{o + d:.1f} с · {sc['type']}", ""]
+        if sc.get("desc"):
+            L += [sc["desc"], ""]
+        if sc.get("prompt"):
+            L += ["```", sc["prompt"], "```", ""]
+    srt, n = [], 1
+    for i, (sc, o) in enumerate(zip(ep["scenes"], offs)):
+        parts = timing[i]["parts"]
+        for j, (s0, e0, sub) in enumerate(parts):
+            e1 = parts[j + 1][0] if j + 1 < len(parts) else e0
+            srt += [str(n), f"{_tc(o + E.LEAD + s0)} --> {_tc(o + E.LEAD + e1)}", sub, ""]; n += 1
+    open(os.path.join(epdir, "subtitles.srt"), "w").write("\n".join(srt))
+    L += ["## Субтитры", "", "```", "\n".join(srt), "```", "", "## Описание для Instagram", "", ep.get("caption", ""), ""]
+    open(os.path.join(epdir, "package.md"), "w").write("\n".join(L))
+    print("package ->", os.path.join(epdir, "package.md"))
 
 
 def main():
     epdir = sys.argv[1]; stills = "--stills" in sys.argv; reuse = "--reuse-audio" in sys.argv
     ep = json.load(open(os.path.join(epdir, "episode.json")))
+    E.apply_theme(ep)
     work = os.path.join(epdir, "build"); os.makedirs(work, exist_ok=True)
     tpath = os.path.join(work, "timing.json")
     timing = json.load(open(tpath)) if (reuse and os.path.exists(tpath)) else tts(ep, work)
@@ -100,6 +140,7 @@ def main():
                     "-af", "highpass=f=70,acompressor=threshold=-18dB:ratio=3:attack=5:release=80,loudnorm=I=-14:TP=-1.5:LRA=9,aresample=48000",
                     "-ac", "2", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-shortest", tmp], check=True)
     os.replace(tmp, os.path.join(epdir, "video.mp4"))
+    write_package(ep, timing, epdir)
     print("video ->", os.path.join(epdir, "video.mp4"), round(total, 2), "s")
 
 
