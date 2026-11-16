@@ -8,7 +8,7 @@
 
 **Совместимость:** Windows 10, Windows 11
 
-**Источник:** support.microsoft.com — «Use Snipping Tool to capture screenshots»
+**Источник:** support.microsoft.com — «Use Snipping Tool to capture screenshots», «Copy the window or screen contents»
 
 **Пошаговая инструкция:**
 
@@ -16,7 +16,7 @@
 2. Выдели нужную область мышкой (прямоугольник, окно или весь экран)
 3. Снимок копируется в буфер обмена — вставь его через Ctrl + V
 
-**Длительность:** 32.4 с
+**Длительность:** 29.2 с
 
 ## Полный текст озвучки
 
@@ -24,7 +24,7 @@
 
 ## Сцены и промпты для AI-видео
 
-### Сцена 1 · 0.0–2.7 с · hook
+### Сцена 1 · 0.0–3.1 с · hook
 
 Хук: крупный текст влетает в кадр, иконка клавиатуры.
 
@@ -32,7 +32,7 @@
 Extreme close-up of a sleek modern laptop keyboard glowing in the dark, keys softly backlit in cyan, camera rapidly pushes in toward the keys, particles of light. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 2 · 2.7–7.2 с · problem
+### Сцена 2 · 3.1–7.8 с · problem
 
 Проблема: значок предупреждения, заголовок, пояснение.
 
@@ -40,7 +40,7 @@ Extreme close-up of a sleek modern laptop keyboard glowing in the dark, keys sof
 A frustrated person's hands at a laptop at night, the screen glow reflecting, camera slowly orbits, moody dark blue and violet lighting. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 3 · 7.2–13.6 с · keys
+### Сцена 3 · 7.8–13.4 с · keys
 
 Решение: три клавиши нажимаются по очереди и подсвечиваются.
 
@@ -48,7 +48,7 @@ A frustrated person's hands at a laptop at night, the screen glow reflecting, ca
 Three large realistic keyboard keys pressed one after another in slow motion, each key lights up with cyan glow on press, camera low angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 4 · 13.6–20.5 с · laptop
+### Сцена 4 · 13.4–19.7 с · laptop
 
 Демонстрация: экран ноутбука затемняется, рамка выделения, уведомление, затем Ctrl + V.
 
@@ -56,7 +56,7 @@ Three large realistic keyboard keys pressed one after another in slow motion, ea
 Realistic modern laptop on a dark desk, screen dims and a glowing selection rectangle is drawn over part of the screen, then a small notification slides in, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 5 · 20.5–28.3 с · list
+### Сцена 5 · 19.7–25.4 с · list
 
 Пошаговая инструкция: три карточки.
 
@@ -64,7 +64,7 @@ Realistic modern laptop on a dark desk, screen dims and a glowing selection rect
 Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, camera glides past them, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 6 · 28.3–32.4 с · cta
+### Сцена 6 · 25.4–29.2 с · cta
 
 Призыв: колокольчик качается, «Подпишись», «Сохрани».
 
@@ -76,47 +76,47 @@ A glowing 3D notification bell icon gently swinging in dark navy space, cyan and
 
 ```
 1
-00:00:00,300 --> 00:00:02,553
+00:00:00,300 --> 00:00:02,948
 Всё ещё делаешь скриншоты через Paint?
 
 2
-00:00:03,000 --> 00:00:04,743
+00:00:03,400 --> 00:00:05,212
 Нужна только часть экрана?
 
 3
-00:00:04,743 --> 00:00:06,821
+00:00:05,212 --> 00:00:07,372
 Не надо снимать всё и обрезать.
 
 4
-00:00:07,533 --> 00:00:10,115
+00:00:08,067 --> 00:00:10,345
 Нажми Win + Shift + S.
 
 5
-00:00:10,115 --> 00:00:13,154
+00:00:10,345 --> 00:00:13,026
 Экран затемнится — выдели нужную область.
 
 6
-00:00:13,867 --> 00:00:16,781
+00:00:13,733 --> 00:00:16,369
 Снимок сразу копируется в буфер обмена.
 
 7
-00:00:16,781 --> 00:00:20,068
+00:00:16,369 --> 00:00:19,342
 Вставь в чат или документ: Ctrl + V.
 
 8
-00:00:20,767 --> 00:00:23,020
+00:00:20,033 --> 00:00:21,619
 Итак: Win + Shift + S,
 
 9
-00:00:23,020 --> 00:00:25,047
+00:00:21,619 --> 00:00:23,045
 выделяешь область,
 
 10
-00:00:25,047 --> 00:00:27,863
+00:00:23,045 --> 00:00:25,027
 вставляешь: Ctrl + V.
 
 11
-00:00:28,567 --> 00:00:31,203
+00:00:25,733 --> 00:00:27,986
 Сохрани и подпишись!
 
 ```
