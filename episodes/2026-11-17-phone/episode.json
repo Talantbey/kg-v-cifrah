@@ -1,0 +1,92 @@
+{
+ "theme": "tech",
+ "header": "Фишки смартфонов",
+ "speed": 0.9,
+ "caption": "Не диктуй пароль от Wi-Fi — покажи QR-код 📶\n\nНастройки → Сеть и интернет → Интернет → нажми на свою сеть Wi-Fi → Поделиться.\nТелефон покажет QR-код — друг сканирует его камерой своего телефона и подключается к той же сети.\nAndroid (некоторые шаги — Android 12 и выше). Названия пунктов могут немного отличаться у разных производителей.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.google.com (Справка Android)\n\n#android #wifi #лайфхаки #фишкиандроид #смартфон #qrкод #андроид",
+ "package": {
+  "title": "Пароль от Wi-Fi одним QR-кодом",
+  "hook": "Не диктуй пароль от Wi-Fi — покажи QR-код",
+  "problem": "Гости просят пароль от Wi-Fi, а он длинный и сложный.",
+  "solution": "В настройках Android можно поделиться сетью Wi-Fi: телефон показывает QR-код, друг сканирует его другим устройством и подключается к той же сети.",
+  "steps": [
+   "Открой Настройки → Сеть и интернет → Интернет",
+   "Нажми на свою сеть Wi-Fi",
+   "Нажми «Поделиться» — появится QR-код",
+   "Друг сканирует код своим телефоном"
+  ],
+  "compatibility": "Android; по Справке Android некоторые шаги работают только на Android 12 и выше; названия пунктов у производителей могут отличаться",
+  "source": "support.google.com — Справка Android «Connect to Wi-Fi networks on your Android device», раздел «Share Wi-Fi info from the Settings app» (9075847)"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": ["Пароль от Wi-Fi", "одним QR-кодом"],
+   "highlight": ["QR-кодом"],
+   "icon": "wifi",
+   "chip": "Android 12+",
+   "desc": "Хук: крупный текст, значок Wi-Fi, чип совместимости.",
+   "prompt": "A modern smartphone floating upright in dark space, its screen emits a glowing abstract square code pattern while cyan Wi-Fi waves radiate outward toward a second phone, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Не диктуй пароль от Вай-фая — покажи кью-ар код.", "Не диктуй пароль от Wi-Fi — покажи QR-код."]]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Гости просят пароль от Wi-Fi?",
+   "highlight": ["пароль"],
+   "body": "А он длинный и сложный",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "Two friends on a cozy sofa, one squints at a long random string of glowing symbols floating in the air and frowns while typing on a phone, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Гости просят пароль от Вай-фая?", "Гости просят пароль от Wi-Fi?"],
+    ["А он длинный, и все путаются в буквах.", "А он длинный — все путаются в буквах."]
+   ]
+  },
+  {
+   "type": "phone",
+   "title": "Открываем сеть",
+   "chip": "Настройки Android",
+   "screens": [
+    {"title": "Настройки", "at_part": 0, "tap": 0, "rows": [
+      {"label": "Сеть и интернет"}, {"label": "Приложения"}, {"label": "Уведомления"}, {"label": "Батарея"}, {"label": "Экран"}]},
+    {"title": "Сеть и интернет", "at_part": 1, "tap": 0, "rows": [
+      {"label": "Интернет"}, {"label": "SIM-карты"}, {"label": "Точка доступа и модем"}, {"label": "Режим полета"}]},
+    {"title": "Интернет", "at_part": 2, "tap": 1, "rows": [
+      {"label": "Wi-Fi", "toggle": 1}, {"label": "Home_WiFi", "value": "Подключено"}, {"label": "Сохраненные сети"}]}
+   ],
+   "desc": "Демонстрация: Настройки → Сеть и интернет → Интернет → нажатие на свою сеть Wi-Fi.",
+   "prompt": "A realistic smartphone in a hand, screen showing a clean dark settings menu, a fingertip taps through menu rows that glow cyan on touch, screens slide left, slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Открой Настройки, Сеть и интернет.", "Настройки → Сеть и интернет"],
+    ["Дальше — Интернет.", "Дальше — «Интернет»"],
+    ["И нажми на свою сеть Вай-фай.", "Нажми на свою сеть Wi-Fi"]
+   ]
+  },
+  {
+   "type": "phone",
+   "title": "Показываем код",
+   "chip": "Android 12+",
+   "screens": [
+    {"title": "Home_WiFi", "at_part": 0, "tap": 2, "rows": [
+      {"label": "Удалить"}, {"label": "Отключить"}, {"label": "Поделиться"}]}
+   ],
+   "toast": {"text": "Друг сканирует QR-код — и он в сети!", "at_part": 1},
+   "desc": "Демонстрация: в настройках сети нажимаем «Поделиться», телефон показывает QR-код, друг сканирует его.",
+   "prompt": "Close-up of a smartphone screen where a share option lights up cyan when tapped, a glowing square code pattern appears, then a second phone camera scans it and a cyan Wi-Fi signal connects both phones with a beam of light. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Нажми Поделиться — телефон покажет кью-ар код.", "«Поделиться» — появится QR-код"],
+    ["Друг сканирует его камерой — и он уже в сети.", "Друг сканирует код — и он в сети!"]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.google.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Сохрани, чтобы не забыть, и подпишись!", "Сохрани и подпишись!"]]
+  }
+ ]
+}
