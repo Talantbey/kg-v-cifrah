@@ -1,0 +1,111 @@
+{
+ "theme": "tech",
+ "header": "Фишки Windows",
+ "speed": 0.9,
+ "caption": "Буфер обмена Windows помнит не только последнюю копию 💻📋\n\nWin + V → выбери, что вставить.\nВ первый раз нажми «Включить». Важное можно закрепить.\nРаботает в Windows 10 и Windows 11.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com\n\n#windows #windows11 #лайфхаки #компьютер #горячиеклавиши #буферобмена #фишки",
+ "package": {
+  "title": "Буфер обмена с памятью: Win + V",
+  "hook": "В Windows есть буфер обмена с памятью.",
+  "problem": "Скопировал новое — а то, что копировал раньше, пропало.",
+  "solution": "Сочетание Win + V открывает журнал буфера обмена: в нём последние скопированные тексты и картинки.",
+  "steps": [
+   "Нажми Win + V",
+   "В первый раз нажми «Включить» (или: Параметры → Система → Буфер обмена → Журнал буфера обмена)",
+   "Выбери нужную запись — она вставится",
+   "Важное можно закрепить, чтобы оно не пропало"
+  ],
+  "compatibility": "Windows 10 (с версии 1809), Windows 11",
+  "source": "support.microsoft.com — «Использование буфера обмена», «Сочетания клавиш в Windows»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": ["Буфер обмена", "с памятью"],
+   "highlight": ["памятью"],
+   "icon": "keyboard",
+   "chip": "Windows 10 · 11",
+   "desc": "Хук: крупный текст влетает в кадр, иконка клавиатуры.",
+   "prompt": "Extreme close-up of a sleek modern laptop keyboard glowing in the dark, translucent glowing paper notes float up from the keys and stack in the air like a memory, camera pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["В Виндоус есть буфер обмена с памятью.", "В Windows есть буфер обмена с памятью."]]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Скопировал новое — старое пропало?",
+   "highlight": ["пропало"],
+   "body": "Его можно вернуть",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A glowing translucent card dissolves into particles above a laptop at night while a new card replaces it, the user's hands pause on the keyboard, moody dark blue and violet lighting, slow orbit. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Скопировал новое, а старое пропало?", "Скопировал новое, а старое пропало?"],
+    ["Его можно вернуть.", "Его можно вернуть."]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Нажми одновременно",
+   "chip": "Windows 10 · 11",
+   "keys": ["Win", "V"],
+   "result": "Откроется журнал буфера обмена",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение: две клавиши нажимаются и подсвечиваются.",
+   "prompt": "Two large realistic keyboard keys pressed one after another in slow motion, each key lights up with cyan glow on press, a soft panel of stacked cards rises above them, low camera angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Нажми Вин и Вэ.", "Нажми Win + V."],
+    ["Откроется журнал буфера обмена.", "Откроется журнал буфера обмена."]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Выбери, что вставить",
+   "chip": "Журнал буфера обмена",
+   "screens": [
+    {
+     "title": "Буфер обмена",
+     "tap": 2,
+     "tap_at_part": 0,
+     "rows": [
+      {"label": "Встреча завтра в 15:00", "icon": "bell"},
+      {"label": "Отчёт за ноябрь", "icon": "laptop"},
+      {"label": "ул. Примерная, 10, кв. 5", "icon": "globe"},
+      {"label": "Скриншот таблицы", "icon": "check"}
+     ]
+    }
+   ],
+   "desc": "Демонстрация: на экране ноутбука список последних копий, нажатие на одну из них.",
+   "prompt": "Realistic modern laptop on a dark desk, a floating panel with a vertical stack of glowing cards appears on the screen, a cursor clicks one card and it flies into a document, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Тут последние копии: выбери любую, и она вставится.", "Выбери любую копию — и она вставится."],
+    ["Важное можно закрепить, чтобы оно не пропало.", "Важное можно закрепить."]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {"head": "Win + V", "text": "открыть журнал буфера", "at_part": 0},
+    {"head": "Первый раз", "text": "нажми «Включить»", "at_part": 1, "color": "teal"},
+    {"head": "Выбери запись", "text": "она вставится", "at_part": 2, "color": "blue"}
+   ],
+   "desc": "Пошаговая инструкция: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, camera glides past them, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Итак: Вин и Вэ.", "Итак: Win + V."],
+    ["В первый раз нажми «Включить».", "В первый раз — «Включить»."],
+    ["И выбирай, что вставить.", "И выбирай, что вставить."]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Сохрани, чтобы не забыть, и подпишись!", "Сохрани и подпишись!"]]
+  }
+ ]
+}
