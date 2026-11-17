@@ -1,0 +1,189 @@
+{
+ "theme": "tech",
+ "header": "Интернет и AI",
+ "speed": 0.9,
+ "caption": "Браузер прочитает статью вслух — пока ты занят другим 🎧\n\nВ Microsoft Edge нажми Ctrl + Shift + U — Edge начнёт читать страницу вслух. Нажми ещё раз — чтение остановится.\nИли кликни правой кнопкой мыши по странице → «Читать вслух».\nРаботает в Microsoft Edge на Windows.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com\n\n#edge #браузер #лайфхаки #горячиеклавиши #компьютер #интернет #полезныефишки",
+ "package": {
+  "title": "Браузер прочитает статью вслух",
+  "hook": "Пусть браузер сам прочитает тебе статью",
+  "problem": "Длинная статья, а читать некогда или устали глаза.",
+  "solution": "Функция «Читать вслух» в Microsoft Edge озвучивает веб-страницу: сочетание Ctrl + Shift + U запускает и останавливает чтение, также её можно включить через правую кнопку мыши.",
+  "steps": [
+   "Открой статью в Microsoft Edge",
+   "Нажми Ctrl + Shift + U — Edge начнёт читать страницу вслух",
+   "Или щёлкни правой кнопкой мыши по странице → «Читать вслух»",
+   "Нажми Ctrl + Shift + U ещё раз, чтобы остановить"
+  ],
+  "compatibility": "Microsoft Edge на Windows 10 · 11",
+  "source": "support.microsoft.com — «Accessibility features in Microsoft Edge» (4000734): «select and hold (right-click) anywhere on the page and choose Read aloud»; таблица клавиш: «Ctrl+Shift+U — Start or stop Read aloud»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Браузер прочитает",
+    "статью вслух"
+   ],
+   "highlight": [
+    "прочитает",
+    "вслух"
+   ],
+   "icon": "globe",
+   "chip": "Microsoft Edge · Windows",
+   "desc": "Хук: крупный текст, иконка глобуса, чип совместимости.",
+   "prompt": "A glowing translucent web page floats in dark space, lines of text lift off the page and turn into flowing cyan sound waves that drift toward a pair of sleek headphones, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Пусть браузер сам прочитает тебе статью.",
+     "Пусть браузер сам прочитает статью."
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Читать некогда?",
+   "highlight": [
+    "некогда"
+   ],
+   "body": "Статья длинная, а глаза устали",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A tired person rubs their eyes in front of a laptop showing an endless scrolling article, the screen light flickers, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Длинная статья, а читать некогда?",
+     "Длинная статья, а читать некогда?"
+    ],
+    [
+     "Или просто устали глаза.",
+     "Или просто устали глаза."
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Открой статью в Edge и нажми",
+   "chip": "Microsoft Edge · Windows",
+   "keys": [
+    "Ctrl",
+    "Shift",
+    "U"
+   ],
+   "at_part": 0,
+   "result": "Edge читает страницу вслух!",
+   "result_at_part": 1,
+   "desc": "Решение: три клавиши нажимаются по очереди и подсвечиваются, затем результат.",
+   "prompt": "Three large realistic keyboard keys pressed one after another in slow motion, each key lights up with cyan glow on press, soft sound waves ripple out from the keys toward a floating browser window, camera low angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "В браузере Эдж нажми Контрол, Шифт и Ю.",
+     "В Edge нажми Ctrl + Shift + U."
+    ],
+    [
+     "И Эдж начнёт читать страницу вслух.",
+     "И Edge начнёт читать страницу вслух."
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Или правой кнопкой мыши",
+   "chip": "Правый клик по странице",
+   "address": "Microsoft Edge",
+   "screens": [
+    {
+     "title": "Меню страницы",
+     "at_part": 0,
+     "tap": 3,
+     "tap_at_part": 1,
+     "rows": [
+      {
+       "label": "Назад"
+      },
+      {
+       "label": "Обновить"
+      },
+      {
+       "label": "Печать"
+      },
+      {
+       "label": "Читать вслух"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Читаю вслух…",
+    "at_part": 1,
+    "delay": 0.6
+   },
+   "desc": "Демонстрация: на ноутбуке в Edge открыто контекстное меню страницы, выбирается пункт «Читать вслух», появляется уведомление.",
+   "prompt": "Realistic modern laptop on a dark desk, a cursor right-clicks on a web article and a small glass context menu pops open, one item glows cyan as it is selected, gentle sound waves rise from the laptop speakers, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Или щёлкни правой кнопкой мыши по странице.",
+     "Или щёлкни правой кнопкой по странице"
+    ],
+    [
+     "И выбери «Читать вслух».",
+     "и выбери «Читать вслух»."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {
+     "head": "Ctrl + Shift + U",
+     "text": "начать чтение вслух",
+     "at_part": 0
+    },
+    {
+     "head": "Ещё раз",
+     "text": "остановить чтение",
+     "at_part": 1,
+     "color": "teal"
+    },
+    {
+     "head": "Правый клик",
+     "text": "«Читать вслух»",
+     "at_part": 2,
+     "color": "blue"
+    }
+   ],
+   "desc": "Шпаргалка: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, a thin sound wave line runs through them, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Итак: Контрол, Шифт, Ю — начать.",
+     "Итак: Ctrl + Shift + U — начать,"
+    ],
+    [
+     "Ещё раз — остановить.",
+     "ещё раз — остановить."
+    ],
+    [
+     "Или правый клик и «Читать вслух».",
+     "Или правый клик → «Читать вслух»."
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
