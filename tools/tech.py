@@ -171,7 +171,7 @@ def keycap(ctx, label, cx, cy, h, pressed, a):
     return w
 
 
-def keys_row(ctx, keys, cx, cy, h, t, start, a, step=0.28):
+def keys_row(ctx, keys, cx, cy, h, t, start, a, step=0.28, sep="+"):
     gap = h * 0.45
     font(ctx, h * 0.4)
     widths = [max(h, tw(ctx, k, h * (0.34 if len(k) > 2 else 0.42)) + h * 0.55) for k in keys]
@@ -185,8 +185,8 @@ def keys_row(ctx, keys, cx, cy, h, t, start, a, step=0.28):
         ctx.save(); ctx.translate(x + w / 2, 0); ctx.scale(appear, appear)
         keycap(ctx, k, 0, 0, h, pr, a)
         ctx.restore()
-        if i < len(keys) - 1:
-            text(ctx, "+", x + w + gap / 2, h * 0.16, h * 0.42, E.MUTED, "c", True, a * appear)
+        if i < len(keys) - 1 and sep:
+            text(ctx, sep, x + w + gap / 2, h * 0.16, h * 0.42, E.MUTED, "c", True, a * appear)
         x += w + gap
     ctx.restore()
 
@@ -197,7 +197,7 @@ def s_keys(ctx, t, c):
         text(ctx, sc["title"], 540, 470, fit(ctx, sc["title"], 58, 960), WHITE, "c", True, eo(p(t, 0, 0.35)) * a)
     chip(ctx, sc.get("chip"), 540, 560, eo(p(t, 0.1, 0.35)) * a)
     start = c.at(sc["at_part"]) if sc.get("at_part") is not None else 0.6
-    keys_row(ctx, sc["keys"], 540, 850, 190, t, start, a)
+    keys_row(ctx, sc["keys"], 540, 850, 190, t, start, a, step=sc.get("step", 0.28), sep=sc.get("sep", "+"))
     if sc.get("result"):
         tr = start + 0.3 * len(sc["keys"]) + 0.2
         if sc.get("result_at_part") is not None:

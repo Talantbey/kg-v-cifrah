@@ -1,0 +1,177 @@
+{
+ "theme": "tech",
+ "header": "Интернет и AI",
+ "speed": 0.9,
+ "caption": "YouTube без мышки — всего три клавиши ⌨️\n\nКликни по видео, а дальше: K — пауза и воспроизведение, J — назад на 10 секунд, L — вперёд на 10 секунд.\nЦифры 1–9 — сразу к 10–90% видео, 0 — в самое начало.\nРаботает на сайте YouTube на компьютере.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.google.com/youtube\n\n#youtube #горячиеклавиши #лайфхаки #компьютер #интернет #полезныефишки",
+ "package": {
+  "title": "YouTube без мышки: J, K, L",
+  "hook": "Управляй YouTube без мышки",
+  "problem": "Перематываешь видео мышкой и постоянно промахиваешься мимо нужного момента.",
+  "solution": "У YouTube есть официальные горячие клавиши: K — пауза/воспроизведение, J — назад на 10 секунд, L — вперёд на 10 секунд, цифры 1–9 — переход к 10–90% видео, 0 — в начало.",
+  "steps": [
+   "Открой видео на YouTube и кликни по плееру",
+   "K — пауза / воспроизведение",
+   "J — назад на 10 секунд, L — вперёд на 10 секунд",
+   "Цифры 1–9 — к 10–90% видео, 0 — в начало"
+  ],
+  "compatibility": "YouTube в браузере на компьютере (Windows, Mac)",
+  "source": "support.google.com/youtube — «Keyboard shortcuts for YouTube» (7631406): «k — Pause/Play in player», «j — Seek backward 10 seconds», «l — Seek forward 10 seconds», «Numbers 1 to 9 — Seek to the 10% to 90% of the video», «Number 0 — Seek to the beginning»; «you must click the video player before using keyboard shortcuts»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Управляй YouTube",
+    "без мышки"
+   ],
+   "highlight": [
+    "без",
+    "мышки"
+   ],
+   "icon": "keyboard",
+   "chip": "YouTube · на компьютере",
+   "desc": "Хук: крупный текст, иконка клавиатуры, чип совместимости.",
+   "prompt": "A sleek glowing keyboard floats in dark space, three keys light up one after another while a translucent video player hovers above it and its progress bar jumps forward and back in sync, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Управляй Ютубом без мышки.",
+     "Управляй YouTube без мышки."
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Мотаешь мышкой?",
+   "highlight": [
+    "мышкой"
+   ],
+   "body": "И снова промахнулся мимо момента",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A frustrated hand drags a computer mouse back and forth while a glowing video progress bar overshoots its target again and again, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Перематываешь видео мышкой?",
+     "Перематываешь видео мышкой?"
+    ],
+    [
+     "И снова промахнулся мимо нужного момента.",
+     "И снова мимо нужного момента."
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Кликни по видео и нажми",
+   "chip": "YouTube · на компьютере",
+   "keys": [
+    "K"
+   ],
+   "at_part": 0,
+   "result": "Пауза. Ещё раз — снова играет",
+   "result_at_part": 1,
+   "desc": "Решение: крупная клавиша K нажимается и подсвечивается, затем результат.",
+   "prompt": "One large realistic keyboard key pressed in slow motion, it lights up with cyan glow, a floating video player above it freezes on a frame with a soft pause pulse, then resumes playing, camera low angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Кликни по видео и нажми Кей.",
+     "Кликни по видео и нажми K."
+    ],
+    [
+     "Пауза. Нажми ещё раз — видео снова играет.",
+     "Пауза. Ещё раз — видео снова играет."
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Перемотка на 10 секунд",
+   "chip": "Назад · вперёд",
+   "keys": [
+    "J",
+    "L"
+   ],
+   "at_part": 0,
+   "result": "J — назад, L — вперёд на 10 с",
+   "result_at_part": 1,
+   "desc": "Решение: клавиши J и L подсвечиваются по очереди, затем подсказка.",
+   "prompt": "Two large realistic keyboard keys on either side of a glowing video timeline, the left key presses and the playhead jumps backward with a cyan streak, then the right key presses and the playhead jumps forward with a violet streak, dark navy studio, slow dolly. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Джей — назад на десять секунд.",
+     "J — назад на 10 секунд."
+    ],
+    [
+     "Эл — вперёд на десять секунд.",
+     "L — вперёд на 10 секунд."
+    ]
+   ],
+   "sep": "",
+   "step": 2.05
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {
+     "head": "K",
+     "text": "пауза / воспроизведение",
+     "at_part": 0
+    },
+    {
+     "head": "J  ·  L",
+     "text": "−10 секунд  ·  +10 секунд",
+     "at_part": 1,
+     "color": "teal"
+    },
+    {
+     "head": "1 – 9",
+     "text": "к 10–90% видео",
+     "at_part": 2,
+     "color": "blue"
+    },
+    {
+     "head": "0",
+     "text": "в самое начало",
+     "at_part": 3
+    }
+   ],
+   "desc": "Шпаргалка: четыре карточки с клавишами.",
+   "prompt": "Four floating glass cards appear one by one in 3D space with soft cyan and violet glow, a thin glowing video timeline runs through them with a playhead hopping between marks, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Итак: Кей — пауза.",
+     "Итак: K — пауза."
+    ],
+    [
+     "Джей и Эл — перемотка.",
+     "J и L — перемотка."
+    ],
+    [
+     "Цифры от одного до девяти — сразу к нужной части видео.",
+     "Цифры 1–9 — к нужной части видео."
+    ],
+    [
+     "А ноль — в самое начало.",
+     "А 0 — в самое начало."
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.google.com/youtube",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
