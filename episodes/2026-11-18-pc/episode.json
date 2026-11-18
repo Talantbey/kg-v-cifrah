@@ -1,0 +1,190 @@
+{
+ "theme": "tech",
+ "header": "Фишки Windows",
+ "speed": 0.9,
+ "caption": "Эмодзи на компьютере — без копирования из интернета 😎💻\n\nПоставь курсор в текст и нажми Win + . (точка).\nПечатай слово — найдётся нужный эмодзи, клик — и он вставлен.\nВ Windows 11 там же GIF, каомодзи и символы.\nРаботает в Windows 10 и Windows 11.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com\n\n#windows #windows11 #эмодзи #лайфхаки #компьютер #горячиеклавиши #фишки",
+ "package": {
+  "title": "Эмодзи на компьютере за секунду: Win + .",
+  "hook": "Эмодзи прямо на компьютере.",
+  "problem": "Чтобы вставить смайлик, ищешь его в интернете и копируешь.",
+  "solution": "Сочетание Win + . (точка) во время ввода текста открывает панель эмодзи; можно искать, просто печатая слово.",
+  "steps": [
+   "Поставь курсор в поле ввода текста",
+   "Нажми Win + . (точка)",
+   "Печатай слово — панель найдёт эмодзи",
+   "Выбери эмодзи мышью — он вставится",
+   "В Windows 11 в панели также GIF, каомодзи и символы"
+  ],
+  "compatibility": "Windows 10, Windows 11 (GIF — Windows 11)",
+  "source": "support.microsoft.com — «Советы и рекомендации по работе с клавиатурой Windows» (раздел «Вставка эмодзи, GIF-изображений и символов с помощью панели эмодзи»)"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Эмодзи",
+    "на компьютере"
+   ],
+   "highlight": [
+    "Эмодзи"
+   ],
+   "icon": "keyboard",
+   "chip": "Windows 10 · 11",
+   "desc": "Хук: крупный текст влетает в кадр, иконка клавиатуры.",
+   "prompt": "Extreme close-up of a sleek modern laptop keyboard in the dark, glossy 3D smiley faces and hearts pop out of the keys and float upward like bubbles, camera pushes in slowly. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Эмодзи прямо на компьютере.",
+     "Эмодзи прямо на компьютере."
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "globe",
+   "headline": "Ищешь смайлики в интернете?",
+   "highlight": [
+    "интернете"
+   ],
+   "body": "Есть способ быстрее",
+   "body_at_part": 1,
+   "desc": "Проблема: значок интернета, заголовок, пояснение.",
+   "prompt": "A tired person at a laptop scrolls endlessly through a glowing web page full of tiny icons, copying one by one, moody dark blue and violet lighting, slow orbit around the desk. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Ищешь смайлики в интернете и копируешь?",
+     "Ищешь смайлики в интернете и копируешь?"
+    ],
+    [
+     "Есть способ быстрее.",
+     "Есть способ быстрее."
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Нажми Win и точку",
+   "chip": "Windows 10 · 11",
+   "keys": [
+    "Win",
+    "."
+   ],
+   "result": "Откроется панель эмодзи",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение: клавиши Win и точка нажимаются и подсвечиваются.",
+   "prompt": "Two large realistic keyboard keys pressed one after another in slow motion, each lights up with cyan glow, a small glass panel filled with colorful round faces unfolds above them, low camera angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Поставь курсор в текст и нажми Вин и точку.",
+     "Курсор в тексте — нажми Win + . (точка)"
+    ],
+    [
+     "Откроется панель эмодзи.",
+     "Откроется панель эмодзи."
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Печатай слово — найдёт",
+   "chip": "Панель эмодзи",
+   "screens": [
+    {
+     "title": "Панель эмодзи",
+     "tap": 0,
+     "tap_at_part": 0,
+     "rows": [
+      {
+       "label": "Эмодзи — поиск по слову",
+       "icon": "check"
+      },
+      {
+       "label": "GIF (Windows 11)",
+       "icon": "globe"
+      },
+      {
+       "label": "Каомодзи",
+       "icon": "ai"
+      },
+      {
+       "label": "Символы",
+       "icon": "keyboard"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Клик — и эмодзи вставлен",
+    "at_part": 0,
+    "delay": 1.2
+   },
+   "desc": "Демонстрация: на экране ноутбука панель эмодзи с разделами, выбор эмодзи.",
+   "prompt": "Realistic modern laptop on a dark desk, a small floating panel with a grid of colorful glossy round faces appears next to a text cursor, the grid filters as letters are typed, one face is clicked and flies into the text line, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Начни печатать слово, и найдётся нужный эмодзи. Кликни, и он вставится.",
+     "Печатай слово — найдётся нужный эмодзи."
+    ],
+    [
+     "В Виндоус одиннадцать тут ещё гифки, каомодзи и символы.",
+     "В Windows 11 — ещё GIF, каомодзи, символы."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {
+     "head": "Win + .",
+     "text": "открыть панель эмодзи",
+     "at_part": 0
+    },
+    {
+     "head": "Пиши слово",
+     "text": "поиск эмодзи",
+     "at_part": 1,
+     "color": "teal"
+    },
+    {
+     "head": "Клик",
+     "text": "эмодзи вставится",
+     "at_part": 2,
+     "color": "blue"
+    }
+   ],
+   "desc": "Пошаговая инструкция: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, small glossy emoji-like spheres orbit around them, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Итак: Вин и точка.",
+     "Итак: Win + . (точка)"
+    ],
+    [
+     "Пиши слово для поиска.",
+     "Пиши слово для поиска."
+    ],
+    [
+     "Кликни, и эмодзи вставится.",
+     "Клик — и эмодзи вставится."
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
