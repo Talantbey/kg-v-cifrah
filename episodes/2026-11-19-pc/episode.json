@@ -1,0 +1,192 @@
+{
+ "theme": "tech",
+ "header": "Фишки Windows",
+ "speed": 0.9,
+ "caption": "Два окна рядом за секунду — без мышки 🪟⚡\n\nВыбери окно и нажми Win + ← — оно встанет на левую половину экрана.\nСправа появятся другие окна: кликни нужное (или Win + →).\nВ Windows 11: Win + Z — готовые макеты прикрепления.\nРаботает в Windows 10 и Windows 11.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com\n\n#windows #windows11 #лайфхаки #компьютер #горячиеклавиши #фишки #многозадачность",
+ "package": {
+  "title": "Два окна рядом за секунду: Win + стрелка",
+  "hook": "Два окна рядом за секунду.",
+  "problem": "Окна приходится перетаскивать мышкой и вручную подгонять размер.",
+  "solution": "Win + стрелка влево/вправо прикрепляет активное окно к половине экрана; «Помощник по прикреплению» (Snap Assist) показывает остальные окна, чтобы заполнить вторую половину.",
+  "steps": [
+   "Выбери окно",
+   "Нажми Win + ← — окно займёт левую половину экрана",
+   "Справа появятся эскизы других открытых окон — кликни нужное",
+   "Или выбери другое окно и нажми Win + →",
+   "Windows 11: Win + Z — макеты прикрепления"
+  ],
+  "compatibility": "Windows 10, Windows 11 (Win + Z — Windows 11)",
+  "source": "support.microsoft.com — «Привязка окон» / «Snap Your Windows»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Два окна",
+    "рядом за секунду"
+   ],
+   "highlight": [
+    "Два",
+    "окна"
+   ],
+   "icon": "laptop",
+   "chip": "Windows 10 · 11",
+   "desc": "Хук: крупный текст, иконка ноутбука.",
+   "prompt": "A sleek modern laptop floating in dark space, two glowing glass windows slide in from both sides and lock neatly side by side on its screen with a soft magnetic snap, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Два окна рядом за секунду.",
+     "Два окна рядом за секунду."
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Тянешь окна мышкой и подгоняешь размер?",
+   "highlight": [
+    "мышкой"
+   ],
+   "body": "Есть способ быстрее",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A frustrated person at a desk drags and resizes overlapping glowing windows on a monitor with a mouse, the windows keep overlapping messily, moody blue and violet lighting, slow orbit around the desk. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Тянешь окна мышкой и подгоняешь размер?",
+     "Тянешь окна мышкой и подгоняешь размер?"
+    ],
+    [
+     "Есть способ быстрее.",
+     "Есть способ быстрее."
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Win + стрелка влево",
+   "chip": "Windows 10 · 11",
+   "keys": [
+    "Win",
+    "←"
+   ],
+   "result": "Окно — на левую половину",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение: клавиши Win и стрелка влево нажимаются и подсвечиваются.",
+   "prompt": "Two large realistic keyboard keys, a logo-less system key and a left arrow key, pressed one after another in slow motion, each lights up with cyan glow, above them a glowing window slides to the left half of a floating screen, low camera angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нажми Вин и стрелку влево.",
+     "Нажми Win + ← (стрелка влево)"
+    ],
+    [
+     "Окно встанет на левую половину экрана.",
+     "Окно — на левую половину экрана."
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Выбери второе окно",
+   "chip": "Помощник по прикреплению",
+   "screens": [
+    {
+     "title": "Другие открытые окна",
+     "tap": 0,
+     "tap_at_part": 0,
+     "rows": [
+      {
+       "label": "Браузер",
+       "icon": "globe"
+      },
+      {
+       "label": "Проводник",
+       "icon": "laptop"
+      },
+      {
+       "label": "Документ",
+       "icon": "keyboard"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Второе окно — справа",
+    "at_part": 0,
+    "delay": 1.2
+   },
+   "keys": [
+    "Win",
+    "→"
+   ],
+   "keys_at_part": 1,
+   "desc": "Демонстрация: на экране ноутбука эскизы других окон, клик по одному — оно занимает вторую половину; затем клавиши Win и стрелка вправо.",
+   "prompt": "Realistic modern laptop on a dark desk, one window fills the left half of the screen while small glowing thumbnails of other windows appear on the right half, a cursor clicks one thumbnail and it smoothly expands to fill the right half, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Справа появятся другие окна. Кликни нужное, и оно займёт вторую половину.",
+     "Справа — другие окна: кликни нужное."
+    ],
+    [
+     "Или нажми Вин и стрелку вправо.",
+     "Или Win + → (стрелка вправо)"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {
+     "head": "Win + ←",
+     "text": "окно слева",
+     "at_part": 0
+    },
+    {
+     "head": "Win + →",
+     "text": "окно справа",
+     "at_part": 1,
+     "color": "teal"
+    },
+    {
+     "head": "Win + Z",
+     "text": "макеты (Windows 11)",
+     "at_part": 2,
+     "color": "blue"
+    }
+   ],
+   "desc": "Пошаговая инструкция: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, small translucent window panes arrange themselves into neat split-screen grids around them, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Итак: Вин и стрелка влево — окно слева.",
+     "Win + ← — окно слева"
+    ],
+    [
+     "Вин и стрелка вправо — окно справа.",
+     "Win + → — окно справа"
+    ],
+    [
+     "А в Виндоус одиннадцать Вин и Зэт — готовые макеты.",
+     "Win + Z — макеты (Windows 11)"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
