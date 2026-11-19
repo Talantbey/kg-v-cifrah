@@ -1,0 +1,211 @@
+{
+ "theme": "tech",
+ "header": "Фишки смартфонов",
+ "speed": 0.9,
+ "caption": "Случайно смахнул уведомление? Его можно вернуть 🔔\n\nSamsung: Настройки → Уведомления → Дополнительные параметры → «Журнал событий» → включи.\nТеперь все уведомления за последние 24 часа сохраняются там — даже смахнутые.\nНа других Android ищи историю уведомлений в разделе «Уведомления». Android 11 и новее.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: samsung.com, support.google.com\n\n#samsung #android #galaxy #лайфхаки #фишкисмартфона #уведомления #смартфон #oneui",
+ "package": {
+  "title": "Верни смахнутое уведомление",
+  "hook": "Случайно смахнул уведомление и не успел прочитать? Его можно вернуть",
+  "problem": "Смахнул уведомление не глядя — и уже не знаешь, кто писал и что там было.",
+  "solution": "На Samsung Galaxy есть «Журнал событий» (история уведомлений): после включения в нём видны все уведомления за последние 24 часа, включая смахнутые. На других Android функция называется «История уведомлений» и находится в разделе «Уведомления» (есть не на всех устройствах).",
+  "steps": [
+   "Настройки → Уведомления",
+   "Дополнительные параметры → «Журнал событий»",
+   "Включи переключатель — с этого момента уведомления сохраняются",
+   "Смахнул уведомление? Открой «Журнал событий» снова: там уведомления за последние 24 часа"
+  ],
+  "compatibility": "Samsung Galaxy с Android 11 и новее (One UI); на других Android-смартфонах — «История уведомлений» в разделе «Уведомления», если производитель её поддерживает. Журнал начинает записывать только после включения.",
+  "source": "samsung.com/ru — «Как посмотреть журнал уведомлений на Samsung Galaxy» (Android 11+, хранятся 24 часа); support.google.com — Pixel Phone Help «Find missed or past notifications» и Android Help «Control notifications on Android»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Верни смахнутое",
+    "уведомление"
+   ],
+   "highlight": [
+    "Верни",
+    "смахнутое"
+   ],
+   "icon": "bell",
+   "chip": "Samsung · Android 11+",
+   "desc": "Хук: крупный текст, значок колокольчика, чип совместимости.",
+   "prompt": "A sleek modern smartphone floating upright in dark space, a glowing notification card slides off the screen and dissolves into particles, then the particles rewind and reassemble the card back onto the screen, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Верни смахнутое уведомление.",
+     "Верни смахнутое уведомление"
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Смахнул не глядя?",
+   "highlight": [
+    "не",
+    "глядя?"
+   ],
+   "body": "И уже не знаешь, кто писал",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A thumb quickly swipes away a stack of glowing notification cards on a smartphone lock screen, the cards fly off and vanish into darkness, a puzzled person looks at the empty screen, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Смахнул уведомление не глядя?",
+     "Смахнул уведомление не глядя?"
+    ],
+    [
+     "И уже не знаешь, кто писал и что там было.",
+     "И уже не знаешь, кто писал"
+    ]
+   ]
+  },
+  {
+   "type": "phone",
+   "title": "Включаем журнал",
+   "chip": "Настройки Samsung",
+   "screens": [
+    {
+     "title": "Настройки",
+     "at_part": 0,
+     "tap": 2,
+     "rows": [
+      {
+       "label": "Подключения"
+      },
+      {
+       "label": "Звуки и вибрация"
+      },
+      {
+       "label": "Уведомления"
+      },
+      {
+       "label": "Дисплей"
+      },
+      {
+       "label": "Батарея"
+      }
+     ]
+    },
+    {
+     "title": "Уведомления",
+     "at_part": 1,
+     "tap": 2,
+     "rows": [
+      {
+       "label": "Уведомления приложений"
+      },
+      {
+       "label": "Не беспокоить"
+      },
+      {
+       "label": "Дополнительные параметры"
+      }
+     ]
+    },
+    {
+     "title": "Дополнительные параметры",
+     "at_part": 2,
+     "tap": 0,
+     "rows": [
+      {
+       "label": "Журнал событий"
+      }
+     ]
+    },
+    {
+     "title": "Журнал событий",
+     "at_part": 3,
+     "tap": 0,
+     "tap_at_part": 3,
+     "rows": [
+      {
+       "label": "Журнал событий",
+       "toggle": 0,
+       "toggle_to": 1
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Теперь уведомления сохраняются",
+    "at_part": 3,
+    "delay": 0.4
+   },
+   "desc": "Демонстрация: Настройки → Уведомления → Дополнительные параметры → Журнал событий, переключатель включается.",
+   "prompt": "A realistic smartphone in a hand, screen showing a clean dark settings menu, a fingertip taps through menu rows that glow cyan on touch, screens slide left, a toggle switch flips to green, slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Открой Настройки, Уведомления.",
+     "Настройки → Уведомления"
+    ],
+    [
+     "Дальше — Дополнительные параметры.",
+     "Дополнительные параметры"
+    ],
+    [
+     "Выбери Журнал событий.",
+     "«Журнал событий»"
+    ],
+    [
+     "И включи переключатель.",
+     "Включи переключатель"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Как это работает",
+   "items": [
+    {
+     "head": "Смахнул уведомление?",
+     "text": "открой «Журнал событий» снова",
+     "at_part": 0
+    },
+    {
+     "head": "Там все за 24 часа",
+     "text": "даже те, что ты смахнул",
+     "at_part": 1
+    },
+    {
+     "head": "Включи заранее",
+     "text": "журнал пишет только после включения",
+     "at_part": 2
+    }
+   ],
+   "desc": "Шаги: открыть журнал снова, там уведомления за 24 часа, включить заранее.",
+   "prompt": "A smartphone lies on a dark table, a translucent timeline of glowing notification cards scrolls upward above the screen like a holographic log, a 24-hour clock ring glows softly around it, a finger taps one card and it lights up cyan. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Смахнул уведомление — открой Журнал событий снова.",
+     "Открой «Журнал событий» снова"
+    ],
+    [
+     "Там все уведомления за последние двадцать четыре часа.",
+     "Там все уведомления за 24 часа"
+    ],
+    [
+     "Включи заранее: журнал пишет только после включения.",
+     "Включи заранее — пока не поздно!"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: samsung.com, support.google.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
