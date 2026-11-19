@@ -1,0 +1,202 @@
+{
+ "theme": "tech",
+ "header": "Интернет и AI",
+ "speed": 0.9,
+ "caption": "Любой сайт — на русском за пару кликов 🌍\n\nВ Google Chrome щёлкни правой кнопкой мыши по странице → «Перевести на русский».\nИли нажми значок «Перевести» справа в адресной строке и выбери язык. Не сработало — обнови страницу.\nGoogle Chrome на компьютере (Windows, Mac).\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.google.com/chrome\n\n#googlechrome #переводчик #лайфхаки #интернет #компьютер #полезныефишки #браузер",
+ "package": {
+  "title": "Любой сайт — на русском за 2 клика",
+  "hook": "Переведи любой сайт на русский за два клика",
+  "problem": "Нужный сайт только на английском или другом языке — и ничего не понятно.",
+  "solution": "В Google Chrome есть встроенный переводчик: правый клик по странице → «Перевести на русский», или значок «Перевести» справа в адресной строке → выбрать язык.",
+  "steps": [
+   "Открой страницу на другом языке в Google Chrome",
+   "Щёлкни правой кнопкой мыши по странице → «Перевести на русский»",
+   "Или нажми значок «Перевести» справа в адресной строке и выбери язык",
+   "Если перевод не сработал — обнови страницу"
+  ],
+  "compatibility": "Google Chrome на компьютере (Windows, Mac)",
+  "source": "support.google.com/chrome — «Translate pages and change Chrome languages» (173424, Computer): «On the right of the address bar, select Translate», «You can right-click anywhere on the page and select Translate to [Language]», «Select your preferred language», «If Translate doesn't work, refresh the page»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Сайт на русском",
+    "за 2 клика"
+   ],
+   "highlight": [
+    "русском"
+   ],
+   "icon": "globe",
+   "chip": "Google Chrome · компьютер",
+   "desc": "Хук: крупный текст, иконка глобуса, чип совместимости.",
+   "prompt": "A glowing translucent web page floats in dark space, its lines of foreign text dissolve into particles and reassemble into new lines while a slowly rotating holographic globe glows behind it, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Любой сайт — на русском за два клика.",
+     "Любой сайт — на русском за 2 клика."
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Сайт не на русском?",
+   "highlight": [
+    "не",
+    "на",
+    "русском?"
+   ],
+   "body": "И ничего не понятно",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A confused person sits in front of a glowing monitor filled with unreadable foreign script, question mark shaped light particles drift around their head, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нашёл нужный сайт, а он не на русском?",
+     "Нужный сайт, а он не на русском?"
+    ],
+    [
+     "И ничего не понятно.",
+     "И ничего не понятно."
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Правый клик по странице",
+   "chip": "Google Chrome",
+   "address": "news-site.com",
+   "screens": [
+    {
+     "title": "Latest news",
+     "at_part": 0,
+     "rows": [
+      {
+       "label": "World",
+       "icon": "globe"
+      },
+      {
+       "label": "Technology",
+       "icon": "globe"
+      },
+      {
+       "label": "Sport",
+       "icon": "globe"
+      }
+     ]
+    },
+    {
+     "title": "Меню страницы",
+     "at_part": 1,
+     "tap": 2,
+     "tap_at_part": 1,
+     "rows": [
+      {
+       "label": "Назад"
+      },
+      {
+       "label": "Печать…"
+      },
+      {
+       "label": "Перевести на русский"
+      }
+     ]
+    },
+    {
+     "title": "Последние новости",
+     "at_part": 2,
+     "rows": [
+      {
+       "label": "Мир",
+       "icon": "globe"
+      },
+      {
+       "label": "Технологии",
+       "icon": "globe"
+      },
+      {
+       "label": "Спорт",
+       "icon": "globe"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Страница на русском",
+    "at_part": 2,
+    "delay": 0.5
+   },
+   "desc": "Демонстрация: в Google Chrome открыт английский сайт, правый клик — меню, выбирается «Перевести на русский», страница становится русской.",
+   "prompt": "A sleek laptop on a dark desk shows a browser with an English news page, a cursor right-clicks and a small glass context menu pops up, one item glows cyan, then the page text ripples and transforms into another language with a soft wave of light, slow dolly toward the screen. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Открой сайт в Гугл Хроме и щёлкни правой кнопкой мыши по странице.",
+     "Открой сайт в Chrome, правый клик по странице"
+    ],
+    [
+     "Выбери «Перевести на русский».",
+     "и выбери «Перевести на русский»."
+    ],
+    [
+     "Готово — вся страница на русском.",
+     "Готово — вся страница на русском."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Или так",
+   "items": [
+    {
+     "head": "Значок «Перевести»",
+     "text": "справа в адресной строке",
+     "at_part": 0
+    },
+    {
+     "head": "Выбери язык",
+     "text": "например, русский",
+     "at_part": 1,
+     "color": "teal"
+    },
+    {
+     "head": "Не сработало?",
+     "text": "обнови страницу",
+     "at_part": 2,
+     "color": "blue"
+    }
+   ],
+   "desc": "Второй способ: три карточки — значок в адресной строке, выбор языка, совет обновить страницу.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, a thin glowing browser address bar hovers above them with a small translate symbol pulsing at its right end, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Или нажми значок «Перевести» справа в адресной строке.",
+     "Или значок «Перевести» в адресной строке"
+    ],
+    [
+     "И выбери нужный язык.",
+     "и выбери нужный язык."
+    ],
+    [
+     "Если перевод не сработал — просто обнови страницу.",
+     "Не сработало — обнови страницу."
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.google.com/chrome",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
