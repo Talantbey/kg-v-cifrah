@@ -1,0 +1,96 @@
+{
+ "theme": "tech",
+ "header": "Фишки смартфонов",
+ "speed": 0.9,
+ "caption": "Пиши две буквы — iPhone сам допишет фразу ⌨️\n\nНастройки → Основные → Клавиатура → Замена текста → «+».\nВ «Фразу» впиши текст (например, «Позвоню позже»), в «Сокращение» — «пз», нажми «Сохранить».\nТеперь пишешь «пз» в любом чате — и появляется вся фраза. Работает на iPhone и iPad.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.apple.com\n\n#iphone #ios #айфон #лайфхаки #фишкиайфона #клавиатура #заменатекста #смартфон",
+ "package": {
+  "title": "Пиши 2 буквы — iPhone допишет фразу",
+  "hook": "Пишешь две буквы — а iPhone сам вставляет всю фразу",
+  "problem": "Каждый день набираешь одно и то же: почту, адрес, «перезвоню позже».",
+  "solution": "Функция «Замена текста»: задаёшь короткое сокращение для длинной фразы, и когда вводишь это сокращение в любом текстовом поле, iPhone автоматически заменяет его фразой.",
+  "steps": [
+   "Настройки → Основные → Клавиатура → «Замена текста»",
+   "Нажми «+»",
+   "В поле «Фраза» — нужный текст, в поле «Сокращение» — пара букв (например, «пз»), затем «Сохранить»",
+   "Пиши сокращение в любом чате — iPhone подставит фразу"
+  ],
+  "compatibility": "iPhone и iPad (iOS / iPadOS); с включённой синхронизацией iCloud замены доступны на других твоих устройствах",
+  "source": "support.apple.com — «How to use Auto-Correction and predictive text on your iPhone, iPad, or iPod touch» (104995, раздел «Add a text replacement») и Руководство пользователя iPhone «Set up shorthand for frequently used text on iPhone»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": ["Пиши 2 буквы —", "iPhone допишет", "всю фразу"],
+   "highlight": ["2", "буквы", "всю", "фразу"],
+   "icon": "keyboard",
+   "chip": "iPhone · iPad",
+   "desc": "Хук: крупный текст, значок клавиатуры, чип совместимости.",
+   "prompt": "A sleek modern smartphone floating upright in dark space, a finger taps just two glowing keys on its on-screen keyboard and a long luminous line of text unfurls out of the screen like a ribbon, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Пиши две буквы — Айфон допишет всю фразу.", "Пиши 2 буквы — iPhone допишет фразу"]]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Пишешь одно и то же?",
+   "highlight": ["одно", "и", "то", "же"],
+   "body": "Почту, адрес, «перезвоню позже»",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A tired person types on a smartphone late at night, identical glowing chat bubbles keep repeating and stacking up endlessly above the screen, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Каждый день пишешь одно и то же?", "Каждый день пишешь одно и то же?"],
+    ["Почту, адрес, перезвоню позже.", "Почту, адрес, «перезвоню позже»"]
+   ]
+  },
+  {
+   "type": "phone",
+   "title": "Настраиваем",
+   "chip": "Настройки iPhone",
+   "screens": [
+    {"title": "Настройки", "at_part": 0, "tap": 1, "rows": [
+      {"label": "Wi-Fi"}, {"label": "Основные"}, {"label": "Экран и яркость"}, {"label": "Универсальный доступ"}, {"label": "Аккумулятор"}]},
+    {"title": "Основные", "at_part": 1, "tap": 3, "rows": [
+      {"label": "Об этом устройстве"}, {"label": "Обновление ПО"}, {"label": "Дата и время"}, {"label": "Клавиатура"}, {"label": "Язык и регион"}]},
+    {"title": "Клавиатура", "at_part": 2, "tap": 1, "rows": [
+      {"label": "Клавиатуры", "value": "2"}, {"label": "Замена текста"}, {"label": "Автокоррекция", "toggle": 1}, {"label": "Автопрописные", "toggle": 1}]},
+    {"title": "Замена текста", "at_part": 3, "rows": [
+      {"label": "Фраза", "value": "Позвоню позже"}, {"label": "Сокращение", "value": "пз"}]}
+   ],
+   "toast": {"text": "Нажми «Сохранить»", "at_part": 3, "delay": 1.2},
+   "desc": "Демонстрация: Настройки → Основные → Клавиатура → Замена текста → «+», поля «Фраза» и «Сокращение», «Сохранить».",
+   "prompt": "A realistic smartphone in a hand, screen showing a clean dark settings menu, a fingertip taps through menu rows that glow cyan on touch, screens slide left, two input fields fill with glowing characters, a confirmation checkmark pops up, slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Открой Настройки, Основные.", "Настройки → Основные"],
+    ["Дальше — Клавиатура.", "Дальше — «Клавиатура»"],
+    ["Выбери Замена текста.", "«Замена текста»"],
+    ["Нажми плюс. Во Фразу впиши текст, в Сокращение — пэ зэ, и сохрани.", "«+» → Фраза и Сокращение → Сохранить"]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Как пользоваться",
+   "items": [
+    {"head": "Напиши «пз» в чате", "text": "iPhone сам подставит фразу", "at_part": 0},
+    {"head": "Добавь почту и адрес", "text": "и любые частые фразы", "at_part": 1},
+    {"head": "Работает и на iPad", "text": "с iCloud — на всех твоих устройствах", "at_part": 2}
+   ],
+   "desc": "Шаги: пишешь сокращение — появляется фраза; добавить почту и адрес; работает и на iPad.",
+   "prompt": "Close-up of a smartphone chat screen, a finger types two letters and they morph with a cyan shimmer into a full glowing sentence inside a chat bubble, then small floating cards with an envelope and a house icon orbit the phone, a tablet glows in the background syncing with light particles. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Теперь пишешь пэ зэ в любом чате — и появляется вся фраза.", "Пишешь «пз» — появляется фраза"],
+    ["Добавь так почту, адрес и любые частые фразы.", "Добавь почту, адрес, частые фразы"],
+    ["Работает и на Айпаде.", "Работает и на iPad"]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.apple.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Сохрани, чтобы не забыть, и подпишись!", "Сохрани и подпишись!"]]
+  }
+ ]
+}
