@@ -122,7 +122,7 @@ def s_hook(ctx, t, c):
     lines = sc.get("lines") or wrap(ctx, sc.get("text", ""), 100, 960, True, False)
     n = len(lines)
     size = min(fit(ctx, max(lines, key=len), 112, 960), 112 if n <= 2 else 96)
-    y0 = 860 - (n - 1) * size * 0.6 + (0 if sc.get("icon") else -120)
+    y0 = 860 - (n - 1) * size * 0.6 + (40 if sc.get("icon") else -120)
     shake = 7 * math.sin(t * 60) * (1 - p(t, 0.15, 0.3)) if t < 0.45 else 0
     ctx.save(); ctx.translate(shake, 0)
     for i, l in enumerate(lines):

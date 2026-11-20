@@ -1,0 +1,102 @@
+{
+ "theme": "tech",
+ "header": "Фишки Windows",
+ "speed": 0.9,
+ "caption": "Спрячь все окна за одну секунду 🙈⚡\n\nWin + D — все окна свернутся, откроется рабочий стол. Нажми ещё раз — окна вернутся.\nУходишь от компьютера? Win + L — и он сразу заблокирован.\nРаботает в Windows 10 и Windows 11.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com\n\n#windows #windows11 #лайфхаки #компьютер #горячиеклавиши #фишки #безопасность",
+ "package": {
+  "title": "Спрячь все окна за секунду: Win + D и Win + L",
+  "hook": "Спрячь все окна за одну секунду.",
+  "problem": "Кто-то подошёл к компьютеру, а на экране открыто личное; сворачивать окна по одному долго.",
+  "solution": "Win + D показывает и скрывает рабочий стол (повторное нажатие возвращает окна); Win + L блокирует компьютер.",
+  "steps": [
+   "Нажми Win + D — все окна свернутся, видно рабочий стол",
+   "Нажми Win + D ещё раз — окна вернутся на место",
+   "Уходишь — нажми Win + L, компьютер заблокируется",
+   "Чтобы вернуться, войди в систему снова"
+  ],
+  "compatibility": "Windows 10, Windows 11",
+  "source": "support.microsoft.com — «Сочетания клавиш в Windows» / «Windows keyboard tips and tricks»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": ["Спрячь все окна", "за одну секунду"],
+   "highlight": ["все", "окна"],
+   "icon": "laptop",
+   "chip": "Windows 10 · 11",
+   "desc": "Хук: крупный текст, иконка ноутбука.",
+   "prompt": "A sleek modern laptop floating in dark space, a stack of glowing glass windows on its screen instantly folds away into the bottom edge revealing a calm empty desktop wallpaper, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Спрячь все окна за одну секунду.", "Спрячь все окна за одну секунду."]]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Кто-то подошёл, а на экране — личное?",
+   "highlight": ["личное"],
+   "body": "Сворачивать окна по одному — долго",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A person sits at a desk with many overlapping glowing windows on a monitor, a silhouette of a colleague approaches from behind in the soft background blur, the person glances over their shoulder, moody blue and violet lighting, slow orbit around the desk. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Кто-то подошёл, а на экране личное?", "Кто-то подошёл, а на экране — личное?"],
+    ["Сворачивать окна по одному долго.", "Сворачивать окна по одному — долго."]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Win + D",
+   "chip": "Windows 10 · 11",
+   "keys": ["Win", "D"],
+   "result": "Ещё раз — окна вернутся",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение 1: клавиши Win и D нажимаются и подсвечиваются; все окна сворачиваются, виден рабочий стол; повторное нажатие возвращает окна.",
+   "prompt": "Two large realistic keyboard keys, a logo-less system key and a letter key, pressed together in slow motion and lighting up with cyan glow, above them a floating screen full of glowing windows that all shrink away at once revealing an empty desktop, then spring back, low camera angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Нажми Вин и Дэ. Все окна свернутся, и откроется рабочий стол.", "Win + D — откроется рабочий стол"],
+    ["Нажми ещё раз — окна вернутся на место.", "Ещё раз — окна вернутся на место."]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Win + L",
+   "chip": "Блокировка",
+   "keys": ["Win", "L"],
+   "result": "Компьютер заблокирован",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение 2: клавиши Win и L; появляется экран блокировки.",
+   "prompt": "Two large realistic keyboard keys, a logo-less system key and a letter key, pressed together in slow motion with violet glow, behind them a laptop screen fades to a calm lock screen with a glowing padlock symbol, gentle push-in, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Уходишь от компьютера? Нажми Вин и Эль.", "Уходишь? Нажми Win + L"],
+    ["Компьютер сразу заблокируется.", "Компьютер сразу заблокируется."]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {"head": "Win + D", "text": "рабочий стол", "at_part": 0},
+    {"head": "Win + D", "text": "ещё раз — окна назад", "at_part": 1, "color": "teal"},
+    {"head": "Win + L", "text": "блокировка", "at_part": 2, "color": "blue"}
+   ],
+   "desc": "Пошаговая инструкция: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, translucent window panes fold away and a small glowing padlock appears beside the last card, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Итак: Вин и Дэ — рабочий стол.", "Win + D — рабочий стол"],
+    ["Ещё раз — окна назад.", "Ещё раз — окна назад"],
+    ["Вин и Эль — блокировка.", "Win + L — блокировка"]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Сохрани, чтобы не забыть, и подпишись!", "Сохрани и подпишись!"]]
+  }
+ ]
+}
