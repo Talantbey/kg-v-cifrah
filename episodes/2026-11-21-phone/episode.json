@@ -1,0 +1,131 @@
+{
+ "theme": "tech",
+ "header": "Фишки смартфонов",
+ "speed": 0.9,
+ "caption": "В клавиатуре телефона спрятан трекпад для курсора ⌨️\n\niPhone: коснись пробела и удерживай, пока клавиатура не станет серой, — и веди пальцем, курсор поедет следом.\nAndroid с клавиатурой Gboard: проведи пальцем по пробелу влево или вправо.\nБольше не нужно тыкать в текст, чтобы исправить одну букву.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.apple.com, support.google.com\n\n#iphone #android #gboard #клавиатура #лайфхаки #фишкиайфона #смартфон #полезныефишки",
+ "package": {
+  "title": "Секретный трекпад в клавиатуре телефона",
+  "hook": "В клавиатуре твоего телефона спрятан трекпад",
+  "problem": "Пытаешься поставить курсор пальцем в нужное место текста — а он прыгает не туда.",
+  "solution": "Двигай курсор пробелом: на iPhone клавиатура превращается в трекпад, на Android с Gboard курсор двигается свайпом по пробелу.",
+  "steps": [
+   "iPhone: коснись пробела и удерживай, пока клавиатура не станет светло-серой",
+   "Не отпуская, веди пальцем по клавиатуре — курсор двигается следом",
+   "Android (Gboard): проведи пальцем по пробелу влево или вправо — курсор сдвинется",
+   "Отпусти палец там, где нужно, и исправляй текст"
+  ],
+  "compatibility": "iPhone (стандартная клавиатура iOS); Android с клавиатурой Gboard (некоторые функции — Android 7.0 и новее). На Samsung со своей клавиатурой Samsung способ может отличаться.",
+  "source": "support.apple.com — Руководство пользователя iPhone «Type with the onscreen keyboard on iPhone», раздел «Turn the onscreen keyboard into a trackpad»; support.google.com/gboard/answer/2842292 — «Use your keyboard» («Move your cursor: Swipe left or right on the space bar»)"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Секретный трекпад",
+    "в клавиатуре"
+   ],
+   "highlight": [
+    "секретный",
+    "трекпад"
+   ],
+   "icon": "keyboard",
+   "chip": "iPhone · Android (Gboard)",
+   "desc": "Хук: крупный текст, значок клавиатуры, чип совместимости.",
+   "prompt": "A sleek modern smartphone floating upright in dark space, its on-screen keyboard dims to a smooth blank glowing surface like a laptop trackpad, a fingertip glides across it and a bright cyan text cursor slides through a line of luminous text above, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "В клавиатуре спрятан трекпад.",
+     "В клавиатуре спрятан трекпад"
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Курсор прыгает не туда?",
+   "highlight": [
+    "не",
+    "туда"
+   ],
+   "body": "Тыкаешь в текст — и не попадаешь в букву",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "Extreme close-up of a finger repeatedly tapping a line of glowing text on a smartphone screen, a small cyan cursor keeps jumping to the wrong place between letters, frustrated rhythm, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Хочешь исправить одну букву, а курсор прыгает не туда?",
+     "Курсор прыгает не туда?"
+    ],
+    [
+     "Тыкаешь пальцем — и опять мимо.",
+     "Тыкаешь пальцем — и опять мимо"
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "iPhone",
+   "chip": "Клавиатура iPhone",
+   "keys": [
+    "Пробел"
+   ],
+   "at_part": 0,
+   "result": "Удерживай, пока клавиатура не станет серой, и веди пальцем",
+   "result_at_part": 1,
+   "desc": "iPhone: коснуться пробела и удерживать, пока клавиатура не станет светло-серой, затем вести пальцем — курсор двигается.",
+   "prompt": "Close-up of a smartphone on-screen keyboard, a fingertip presses and holds the long space bar, all the key letters fade away and the keyboard turns into a smooth light gray glowing pad, the finger slides in small circles and a cyan text cursor glides smoothly through text above, slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "На Айфоне коснись пробела и не отпускай.",
+     "iPhone: коснись пробела и не отпускай"
+    ],
+    [
+     "Клавиатура станет серой — веди пальцем, и курсор поедет следом.",
+     "Клавиатура станет серой — веди пальцем"
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Android · Gboard",
+   "chip": "Клавиатура Gboard",
+   "keys": [
+    "←",
+    "Пробел",
+    "→"
+   ],
+   "sep": "",
+   "step": 0.35,
+   "at_part": 0,
+   "result": "Проведи пальцем по пробелу влево или вправо",
+   "result_at_part": 1,
+   "desc": "Android с Gboard: свайп по пробелу влево или вправо двигает курсор.",
+   "prompt": "Close-up of an Android smartphone keyboard, a fingertip swipes left and right along the long space bar leaving a cyan light trail, above it a glowing text cursor steps letter by letter in sync with the swipe, smooth slow dolly. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "На Андроиде с клавиатурой Джи-борд ещё проще.",
+     "Android с клавиатурой Gboard — ещё проще"
+    ],
+    [
+     "Проведи пальцем по пробелу влево или вправо.",
+     "Проведи по пробелу влево или вправо"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.apple.com, support.google.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
