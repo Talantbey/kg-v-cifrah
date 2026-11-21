@@ -1,0 +1,121 @@
+{
+ "theme": "tech",
+ "header": "Фишки Windows",
+ "speed": 0.9,
+ "caption": "Программа зависла? Закрой её за пару секунд 🧊⚡\n\nCtrl + Shift + Esc — сразу откроется диспетчер задач.\nПравый клик по зависшей программе → «Снять задачу».\nРаботает в Windows 10 и Windows 11.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com, asus.com\n\n#windows #windows11 #лайфхаки #компьютер #горячиеклавиши #фишки #диспетчерзадач",
+ "package": {
+  "title": "Программа зависла? Ctrl + Shift + Esc → «Снять задачу»",
+  "hook": "Программа зависла? Закрой её за пару секунд.",
+  "problem": "Окно не отвечает, крестик не помогает, компьютер тормозит.",
+  "solution": "Ctrl + Shift + Esc сразу открывает диспетчер задач; правый клик по зависшему приложению → «Снять задачу» принудительно закрывает его.",
+  "steps": [
+   "Нажми Ctrl + Shift + Esc — откроется диспетчер задач",
+   "Windows 10: если окно маленькое, нажми «Подробнее»",
+   "Найди зависшую программу и кликни по ней правой кнопкой",
+   "Выбери «Снять задачу» — программа закроется",
+   "Системные процессы Windows не закрывай"
+  ],
+  "compatibility": "Windows 10, Windows 11",
+  "source": "support.microsoft.com — «Средства настройки системы в Windows» (Ctrl+Shift+Esc, завершение не отвечающих программ); asus.com/ru FAQ 1043921 — «Снять задачу» (Windows 11/10)"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": ["Программа зависла?", "Закрой её", "за пару секунд"],
+   "highlight": ["зависла", "секунд"],
+   "icon": "laptop",
+   "chip": "Windows 10 · 11",
+   "desc": "Хук: крупный текст, иконка ноутбука.",
+   "prompt": "A sleek modern laptop floating in dark space, on its screen a glowing app window freezes and turns pale with a spinning loading ring, then a burst of cyan light snaps the frozen window shut and the screen becomes calm again, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Программа зависла? Закрой её за пару секунд.", "Программа зависла? Закрой за пару секунд."]]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Окно не отвечает и не закрывается?",
+   "highlight": ["не", "отвечает"],
+   "body": "Крестик не помогает",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "Close-up of a computer monitor where a pale frozen window with a spinning loading circle refuses to close, a mouse cursor clicks the corner again and again with no effect, frustrated hand on the mouse in soft focus, moody blue and violet lighting, slow orbit. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Окно не отвечает и не закрывается?", "Окно не отвечает и не закрывается?"],
+    ["И крестик не помогает.", "И крестик не помогает."]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Ctrl + Shift + Esc",
+   "chip": "Windows 10 · 11",
+   "keys": ["Ctrl", "Shift", "Esc"],
+   "result": "Откроется диспетчер задач",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение: клавиши Ctrl, Shift и Esc нажимаются по очереди и подсвечиваются; появляется надпись «Откроется диспетчер задач».",
+   "prompt": "Three large realistic keyboard keys pressed together in slow motion, each lighting up with cyan glow, above them a floating translucent panel with a list of running apps and live activity graphs slides open, low camera angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Нажми Контрол, Шифт и Эскейп.", "Нажми Ctrl + Shift + Esc"],
+    ["Сразу откроется диспетчер задач.", "Сразу откроется диспетчер задач."]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Правый клик → «Снять задачу»",
+   "chip": "Диспетчер задач",
+   "screens": [
+    {
+     "title": "Диспетчер задач",
+     "tap": 1,
+     "tap_at_part": 0,
+     "rows": [
+      {"label": "Браузер", "icon": "globe"},
+      {"label": "Игра — не отвечает", "icon": "warning"},
+      {"label": "Проводник", "icon": "laptop"}
+     ]
+    },
+    {
+     "title": "Игра — не отвечает",
+     "tap": 0,
+     "tap_at_part": 1,
+     "at_part": 1,
+     "rows": [
+      {"label": "Снять задачу"}
+     ]
+    }
+   ],
+   "toast": {"text": "Программа закрыта", "at_part": 1, "delay": 1.4},
+   "desc": "Демонстрация: окно диспетчера задач со списком приложений; правый клик по зависшей программе, в меню — «Снять задачу», клик; уведомление «Программа закрыта».",
+   "prompt": "Realistic modern laptop on a dark desk showing a sleek system monitor window with a list of running apps, one row is highlighted in amber as not responding, a cursor right-clicks it, a small context menu appears and a glowing option is clicked, the frozen row dissolves into particles, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Найди зависшую программу и кликни по ней правой кнопкой.", "Правый клик по зависшей программе"],
+    ["Выбери «Снять задачу» — и она закроется.", "«Снять задачу» — и она закроется."]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {"head": "Ctrl + Shift + Esc", "text": "диспетчер задач", "at_part": 0},
+    {"head": "Правый клик", "text": "«Снять задачу»", "at_part": 1, "color": "teal"},
+    {"head": "Windows 10", "text": "окно маленькое — «Подробнее»", "at_part": 2, "color": "blue"}
+   ],
+   "desc": "Пошаговая инструкция: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, a small frozen window icon cracks and fades away beside the last card, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Итак: Контрол, Шифт, Эскейп — диспетчер задач.", "Ctrl + Shift + Esc — диспетчер задач"],
+    ["Правый клик — снять задачу.", "Правый клик — «Снять задачу»"],
+    ["В Виндоус десять, если окно маленькое, нажми «Подробнее».", "Windows 10: окно маленькое — «Подробнее»"]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com, asus.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Сохрани, чтобы не забыть, и подпишись!", "Сохрани и подпишись!"]]
+  }
+ ]
+}
