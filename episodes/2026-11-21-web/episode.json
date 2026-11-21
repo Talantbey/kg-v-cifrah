@@ -1,0 +1,177 @@
+{
+ "theme": "tech",
+ "header": "Интернет и AI",
+ "speed": 0.9,
+ "caption": "Отправил письмо не тому? Его можно вернуть ✉️\n\nВ Gmail сразу после отправки внизу слева появляется «Отменить» — нажми, и письмо не уйдёт.\nБольше времени: ⚙️ → «Все настройки» → «Отмена отправки» → 30 секунд → «Сохранить изменения».\nGmail на компьютере (в браузере).\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.google.com/mail\n\n#gmail #почта #лайфхаки #интернет #компьютер #полезныефишки #google",
+ "package": {
+  "title": "Отправил письмо не тому? Верни его в Gmail",
+  "hook": "Отправил письмо не тому? Его можно вернуть",
+  "problem": "Нажал «Отправить» — и сразу заметил ошибку: не тот адрес, опечатка или забыл файл.",
+  "solution": "В Gmail сразу после отправки внизу слева появляется кнопка «Отменить» — нажми её, и письмо не уйдёт. Время на отмену можно увеличить до 30 секунд: значок настроек → «Все настройки» → «Отмена отправки» → 30 секунд → «Сохранить изменения».",
+  "steps": [
+   "Отправь письмо в Gmail на компьютере",
+   "Сразу внизу слева нажми «Отменить» — письмо не уйдёт",
+   "Чтобы времени было больше: значок настроек ⚙️ справа вверху → «Все настройки»",
+   "Рядом с «Отмена отправки» выбери 5, 10, 20 или 30 секунд",
+   "Внизу страницы нажми «Сохранить изменения»"
+  ],
+  "compatibility": "Gmail на компьютере (браузер, mail.google.com)",
+  "source": "support.google.com/mail — «Send or unsend Gmail messages» (2819488, Computer): «In the bottom left, you'll see \"Message sent\" and the option to \"Undo\"… Click Undo»; «In the top right, click Settings → See all settings. Next to \"Undo Send,\" select a Send cancellation period of 5, 10, 20, or 30 seconds. At the bottom, click Save changes.» Русские подписи («Отменить», «Отмена отправки», «Сохранить изменения») — androidinsider.ru."
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Отправил письмо",
+    "не тому?",
+    "Верни его"
+   ],
+   "highlight": [
+    "Верни"
+   ],
+   "icon": "laptop",
+   "chip": "Gmail · компьютер",
+   "desc": "Хук: крупный текст, иконка ноутбука, чип совместимости.",
+   "prompt": "A glowing paper-plane envelope flies away from a laptop screen into dark space, then freezes mid-air, reverses and glides smoothly back into the screen, cyan light trail, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Отправил письмо не тому? Его можно вернуть.",
+     "Отправил письмо не тому? Верни его."
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Нажал «Отправить» и увидел ошибку?",
+   "highlight": [
+    "ошибку?"
+   ],
+   "body": "Не тот адрес или забыл файл",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A person at a desk presses a glowing key on a laptop and instantly freezes with a worried face as a small envelope icon shoots away from the screen, soft blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нажал «Отправить» — и сразу увидел ошибку?",
+     "Нажал «Отправить» — и увидел ошибку?"
+    ],
+    [
+     "Не тот адрес, опечатка или забыл файл.",
+     "Не тот адрес, опечатка, забыл файл"
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Жми «Отменить»",
+   "chip": "Gmail · браузер",
+   "address": "mail.google.com",
+   "screens": [
+    {
+     "title": "Новое сообщение",
+     "at_part": 0,
+     "tap": 2,
+     "rows": [
+      {"label": "Кому: ivan@example.com"},
+      {"label": "Тема: Отчёт за неделю"},
+      {"label": "Отправить"}
+     ]
+    },
+    {
+     "title": "Письмо отправлено",
+     "at_part": 1,
+     "tap": 0,
+     "tap_at_part": 1,
+     "rows": [
+      {"label": "Отменить"}
+     ]
+    }
+   ],
+   "toast": {"text": "Письмо не ушло", "at_part": 2, "delay": 0.2},
+   "desc": "Демонстрация: в Gmail отправляется письмо, сразу появляется «Письмо отправлено» с кнопкой «Отменить», нажатие — письмо не ушло.",
+   "prompt": "A sleek laptop on a dark desk shows a minimal email window, a cursor clicks a glowing send button, a small notification slides up in the bottom left corner and the cursor quickly clicks it, the flying envelope returns back into the screen with a soft cyan pulse, slow dolly toward the screen. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "В Джимейле, на компьютере, ты нажал «Отправить».",
+     "В Gmail на компьютере нажал «Отправить»"
+    ],
+    [
+     "Сразу внизу слева появится кнопка «Отменить» — жми!",
+     "Внизу слева появится «Отменить» — жми!"
+    ],
+    [
+     "Письмо не уйдёт, его можно исправить.",
+     "Письмо не уйдёт — можно исправить"
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Сделай 30 секунд",
+   "chip": "Gmail · настройки",
+   "address": "mail.google.com",
+   "screens": [
+    {
+     "title": "Настройки",
+     "at_part": 0,
+     "tap": 0,
+     "rows": [
+      {"label": "Все настройки"}
+     ]
+    },
+    {
+     "title": "Отмена отправки",
+     "at_part": 1,
+     "tap": 3,
+     "rows": [
+      {"label": "5 секунд"},
+      {"label": "10 секунд"},
+      {"label": "20 секунд"},
+      {"label": "30 секунд"}
+     ]
+    },
+    {
+     "title": "Внизу страницы",
+     "at_part": 2,
+     "tap": 0,
+     "tap_at_part": 2,
+     "rows": [
+      {"label": "Сохранить изменения"}
+     ]
+    }
+   ],
+   "desc": "Настройка: значок настроек → «Все настройки» → «Отмена отправки» → 30 секунд → «Сохранить изменения».",
+   "prompt": "A floating glass settings panel with a glowing gear icon in dark space, a cursor clicks through it, a row of four time options lights up and the last one glows cyan, then a large save button pulses, a soft stopwatch ring fills around it, camera glides past. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Чтобы успевать: значок настроек справа вверху — «Все настройки».",
+     "Значок настроек → «Все настройки»"
+    ],
+    [
+     "В пункте «Отмена отправки» выбери тридцать секунд.",
+     "«Отмена отправки» → 30 секунд"
+    ],
+    [
+     "И внизу нажми «Сохранить изменения».",
+     "Внизу — «Сохранить изменения»"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.google.com/mail",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
