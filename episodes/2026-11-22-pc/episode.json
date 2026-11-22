@@ -1,0 +1,188 @@
+{
+ "theme": "tech",
+ "header": "Фишки Windows",
+ "speed": 0.9,
+ "caption": "Печатай голосом — Windows сам наберёт текст 🎙️⌨️\n\nПоставь курсор в текстовое поле → Win + H → говори.\nЗнаки — словами: «запятая», «точка», «вопросительный знак». Остановить — кнопка микрофона.\nWindows 11, нужен интернет и микрофон.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com\n\n#windows #windows11 #лайфхаки #компьютер #горячиеклавиши #фишки #голосовойввод",
+ "package": {
+  "title": "Не печатай — говори: Win + H включает голосовой ввод",
+  "hook": "Не печатай — говори. Компьютер наберёт текст сам.",
+  "problem": "Длинный текст набирать долго, особенно если печатаешь медленно.",
+  "solution": "Встроенный голосовой ввод Windows: курсор в текстовом поле → Win + H → после сигнала «слушаю» говорить; знаки препинания — словами; остановить — кнопкой микрофона.",
+  "steps": [
+   "Поставь курсор в любое текстовое поле",
+   "Нажми Win + H — откроется голосовой ввод и начнёт слушать",
+   "Говори: текст появится сам",
+   "Знаки — словами: «запятая», «точка», «вопросительный знак»",
+   "Остановить — нажми кнопку микрофона",
+   "Нужны интернет и микрофон; в настройках (шестерёнка) есть автоматическая пунктуация"
+  ],
+  "compatibility": "Windows 11 (русский язык в списке языков голосового ввода Windows 11); нужен интернет и микрофон",
+  "source": "support.microsoft.com — «Use voice typing to talk instead of type on your PC» (Win + H, требования, список языков, команды пунктуации на русском); microsoft.com Learning Center — «Get the Most out of Voice Typing in Windows 11»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Не печатай —",
+    "говори!"
+   ],
+   "highlight": [
+    "говори!"
+   ],
+   "icon": "laptop",
+   "chip": "Windows 11",
+   "desc": "Хук: иконка ноутбука, крупный текст «Не печатай — говори!», чип Windows 11.",
+   "prompt": "A sleek modern laptop floating in dark space, glowing sound waves flow from the left into the screen and turn into lines of typed text appearing on a document, the keyboard stays untouched, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Не печатай — говори!",
+     "Не печатай — говори!"
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "keyboard",
+   "headline": "Долго набирать длинный текст?",
+   "highlight": [
+    "долго"
+   ],
+   "body": "Компьютер напечатает за тебя",
+   "body_at_part": 1,
+   "desc": "Проблема: значок клавиатуры, заголовок, пояснение.",
+   "prompt": "Close-up of hands slowly typing with two fingers on a laptop keyboard, a long empty document on the screen with a blinking cursor, a clock hand spins in soft focus, moody blue and violet lighting, slow orbit. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Долго набирать длинный текст?",
+     "Долго набирать длинный текст?"
+    ],
+    [
+     "Компьютер напечатает за тебя.",
+     "Компьютер напечатает за тебя."
+    ]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Win + H",
+   "chip": "Windows 11",
+   "keys": [
+    "Win",
+    "H"
+   ],
+   "result": "Откроется голосовой ввод",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение: клавиши Win и H нажимаются по очереди и подсвечиваются; надпись «Откроется голосовой ввод».",
+   "prompt": "Two large realistic keyboard keys pressed together in slow motion, each lighting up with cyan glow, above them a small floating translucent panel with a glowing microphone symbol and pulsing sound wave rings appears, low camera angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Поставь курсор в текстовое поле и нажми Вин и Аш.",
+     "Курсор в текстовое поле → Win + H"
+    ],
+    [
+     "Откроется голосовой ввод.",
+     "Откроется голосовой ввод."
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Говори — текст печатается сам",
+   "chip": "Голосовой ввод",
+   "screens": [
+    {
+     "title": "Новое сообщение",
+     "rows": [
+      {
+       "label": "|"
+      }
+     ]
+    },
+    {
+     "title": "Новое сообщение",
+     "at_part": 1,
+     "rows": [
+      {
+       "label": "Привет, буду через десять минут."
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Остановить — кнопка микрофона",
+    "at_part": 2
+   },
+   "desc": "Демонстрация: окно с пустым сообщением, затем появляется надиктованная фраза с запятой и точкой; подсказка «Остановить — кнопка микрофона».",
+   "prompt": "Realistic modern laptop on a dark desk showing a messaging window, glowing sound waves drift into the screen and words appear letter by letter in the message field, a small microphone button pulses in a floating panel and then is clicked to stop, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Дождись сигнала, что компьютер слушает, и говори.",
+     "Дождись «слушаю» — и говори"
+    ],
+    [
+     "Привет, запятая, буду через десять минут, точка.",
+     "«Привет, запятая… точка»"
+    ],
+    [
+     "Чтобы остановить — нажми кнопку микрофона.",
+     "Стоп — кнопка микрофона"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {
+     "head": "Win + H",
+     "text": "включить голосовой ввод",
+     "at_part": 0
+    },
+    {
+     "head": "Знаки — словами",
+     "text": "«запятая», «точка», «вопросительный знак»",
+     "at_part": 1,
+     "color": "teal"
+    },
+    {
+     "head": "Нужно",
+     "text": "интернет и микрофон",
+     "at_part": 2,
+     "color": "blue"
+    }
+   ],
+   "desc": "Пошаговая инструкция: три карточки.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, a small glowing microphone and a comma and period shape made of light float beside them, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Итак: Вин и Аш — голосовой ввод.",
+     "Win + H — голосовой ввод"
+    ],
+    [
+     "Знаки говори словами: запятая, точка.",
+     "Знаки — словами: «запятая», «точка»"
+    ],
+    [
+     "Нужны интернет и микрофон.",
+     "Нужны интернет и микрофон"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
