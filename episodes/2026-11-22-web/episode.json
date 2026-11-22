@@ -1,0 +1,221 @@
+{
+ "theme": "tech",
+ "header": "Интернет и AI",
+ "speed": 0.9,
+ "caption": "Ищи в Google как профи — 3 приёма 🔍\n\n\"фраза в кавычках\" — найдёт точно эти слова\nягуар скорость -машина — минус убирает слово из поиска\nsite:youtube.com котики — искать только на одном сайте (без пробела после двоеточия)\nGoogle Поиск в любом браузере.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.google.com/websearch\n\n#google #гугл #поиск #лайфхаки #интернет #полезныефишки #компьютер",
+ "package": {
+  "title": "Ищи в Google как профи: кавычки, минус и site:",
+  "hook": "Ищи в Google как профи — 3 приёма",
+  "problem": "Google выдаёт миллион ссылок, а нужного среди них нет.",
+  "solution": "Три оператора поиска Google: фраза в кавычках — точное совпадение; минус перед словом — исключить его из результатов; site: перед адресом — искать только на одном сайте. Между оператором и запросом не ставь пробел.",
+  "steps": [
+   "Точная фраза: возьми её в кавычки — \"ошибка 0x80070005\"",
+   "Убрать лишнее: поставь минус перед словом — ягуар скорость -машина",
+   "Один сайт: напиши site: и адрес — site:youtube.com котики",
+   "Без пробела после двоеточия: site:youtube.com работает, site: youtube.com — нет"
+  ],
+  "compatibility": "Google Поиск в любом браузере (компьютер и телефон)",
+  "source": "support.google.com/websearch — «Refine Google searches» (2466433), раздел Operators: «To search for an exact match of a word or phrase: Enter a word or a phrase inside quotes» (\"tallest building\"); «To exclude words from your search: Enter - in front of a word» (jaguar speed -car); «To search for results from a specific site: Enter site: in front of a site or domain» (site:youtube.com cat videos); «Do not put spaces between the operator and your search term»."
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Ищи в Google",
+    "как профи:",
+    "3 приёма"
+   ],
+   "highlight": [
+    "профи:",
+    "3",
+    "приёма"
+   ],
+   "icon": "globe",
+   "chip": "Google Поиск · любой браузер",
+   "desc": "Хук: крупный текст, иконка глобуса, чип совместимости.",
+   "prompt": "A glowing magnifying glass made of glass and cyan light sweeps over a floating sea of thousands of tiny web page cards in dark space, then three bright cards rise out of the crowd and line up in front of the camera, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Ищи в Гугле как профи — три приёма.",
+     "Ищи в Google как профи — 3 приёма"
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Миллион ссылок, а нужного нет?",
+   "highlight": [
+    "нет?"
+   ],
+   "body": "Сузь поиск парой символов",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A person at a laptop scrolls through an endless waterfall of glowing search result cards pouring out of the screen, looking tired and confused, soft blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Гугл выдаёт миллион ссылок, а нужного нет?",
+     "Миллион ссылок, а нужного нет?"
+    ],
+    [
+     "Сузь поиск — хватит пары символов.",
+     "Сузь поиск — хватит пары символов"
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "1. Кавычки — точная фраза",
+   "chip": "Приём 1",
+   "address": "google.com",
+   "screens": [
+    {
+     "title": "Поиск в Google",
+     "at_part": 0,
+     "tap": 1,
+     "tap_at_part": 1,
+     "rows": [
+      {
+       "label": "\"ошибка 0x80070005\"",
+       "icon": "globe"
+      },
+      {
+       "label": "Поиск"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Только эта фраза, слово в слово",
+    "at_part": 1,
+    "delay": 0.3
+   },
+   "desc": "Демонстрация: в строку поиска Google вводится фраза в кавычках, нажимается «Поиск», всплывает подсказка «Только эта фраза, слово в слово».",
+   "prompt": "A sleek laptop on a dark desk shows a minimal search bar, two glowing quotation marks fly in from the sides and clamp around a line of light inside the bar, the search button pulses and a single bright result card slides up, slow dolly toward the screen. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Первый: возьми фразу в кавычки.",
+     "1. Возьми фразу в кавычки"
+    ],
+    [
+     "Гугл найдёт именно её, слово в слово.",
+     "Google найдёт её слово в слово"
+    ]
+   ],
+   "keys": [
+    "\"фраза\""
+   ],
+   "keys_at_part": 0,
+   "sep": ""
+  },
+  {
+   "type": "laptop",
+   "title": "2. Минус — убрать лишнее",
+   "chip": "Приём 2",
+   "address": "google.com",
+   "screens": [
+    {
+     "title": "Поиск в Google",
+     "at_part": 0,
+     "tap": 1,
+     "tap_at_part": 1,
+     "rows": [
+      {
+       "label": "ягуар скорость -машина",
+       "icon": "globe"
+      },
+      {
+       "label": "Поиск"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Про машины — ни одной ссылки",
+    "at_part": 1,
+    "delay": 0.3
+   },
+   "desc": "Демонстрация: запрос «ягуар скорость -машина», нажатие «Поиск», подсказка — результаты без машин.",
+   "prompt": "A floating glass search bar in dark space with three glowing word blocks, a cyan minus sign snaps in front of the last block and it dissolves into particles, a sleek running jaguar silhouette made of light appears instead, camera glides past. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Второй: минус перед словом убирает его из поиска.",
+     "2. Минус перед словом — убрать его"
+    ],
+    [
+     "Ягуар скорость минус машина — и про авто ни слова.",
+     "ягуар скорость -машина — без авто"
+    ]
+   ],
+   "keys": [
+    "-слово"
+   ],
+   "keys_at_part": 0,
+   "sep": ""
+  },
+  {
+   "type": "laptop",
+   "title": "3. site: — поиск по сайту",
+   "chip": "Приём 3",
+   "address": "google.com",
+   "screens": [
+    {
+     "title": "Поиск в Google",
+     "at_part": 0,
+     "tap": 1,
+     "tap_at_part": 1,
+     "rows": [
+      {
+       "label": "site:youtube.com котики",
+       "icon": "globe"
+      },
+      {
+       "label": "Поиск"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Только с youtube.com",
+    "at_part": 1,
+    "delay": 0.3
+   },
+   "desc": "Демонстрация: запрос «site:youtube.com котики», «Поиск», подсказка «Только с youtube.com»; напоминание — без пробела после двоеточия.",
+   "prompt": "A glowing search bar beams a narrow cyan spotlight onto one single floating website card among many dim ones in dark space, the other cards fade away and the chosen card brightens and comes forward, slow dolly. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Третий: напиши сайт, двоеточие и адрес.",
+     "3. Напиши site: и адрес сайта"
+    ],
+    [
+     "Гугл будет искать только на этом сайте.",
+     "Поиск только на этом сайте"
+    ],
+    [
+     "Главное — без пробела после двоеточия.",
+     "Без пробела после двоеточия!"
+    ]
+   ],
+   "keys": [
+    "site:адрес.com"
+   ],
+   "keys_at_part": 0,
+   "sep": ""
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.google.com/websearch",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
