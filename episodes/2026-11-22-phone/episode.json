@@ -1,0 +1,173 @@
+{
+ "theme": "tech",
+ "header": "Фишки смартфонов",
+ "speed": 0.9,
+ "caption": "Убери фон с фото за секунду — прямо на iPhone ✂️\n\nОткрой фото на весь экран → задержи палец на человеке или предмете → появится светящийся контур → отпусти и нажми «Скопировать».\nВставь в чат или Заметки — объект уже без фона. Там же «Добавить стикер» и «Поделиться». Работает и на кадре видео на паузе.\nНужен iPhone XS / XR или новее с iOS 16 и новее.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.apple.com\n\n#iphone #ios #айфон #лайфхаки #фишкиайфона #фото #убратьфон #смартфон",
+ "package": {
+  "title": "Убери фон с фото за 1 секунду на iPhone",
+  "hook": "Убери фон с фото за секунду — без приложений, прямо на iPhone",
+  "problem": "Нужно вырезать человека или предмет из фото, а качать редактор не хочется.",
+  "solution": "Функция «Поднятие объекта с фона» в iOS: касаешься объекта на фото и удерживаешь, iPhone выделяет его контуром, после чего объект можно скопировать, сделать стикером или отправить.",
+  "steps": [
+   "Открой фото в приложении «Фото» на весь экран (или поставь видео на паузу)",
+   "Коснись объекта и удерживай, пока не появится светящийся контур, затем отпусти",
+   "Нажми «Скопировать» и вставь объект в чат, письмо или Заметки",
+   "Либо «Добавить стикер» (для Сообщений и разметки) или «Поделиться» (AirDrop, Почта)"
+  ],
+  "compatibility": "iPhone XS, iPhone XR и новее с iOS 16 и новее; работает в «Фото», Сообщениях, Safari и других приложениях",
+  "source": "support.apple.com — «Create and share photo cutouts on your iPhone» (102460) и Руководство пользователя iPhone «Lift a subject from the photo or video background on iPhone»"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Убери фон с фото",
+    "за 1 секунду"
+   ],
+   "highlight": [
+    "фон",
+    "1",
+    "секунду"
+   ],
+   "icon": "phone",
+   "chip": "iPhone XS+ · iOS 16+",
+   "desc": "Хук: крупный текст, значок телефона, чип совместимости.",
+   "prompt": "A sleek modern smartphone floating upright in dark space showing a photo of a person, a glowing white outline traces around the person and the figure lifts off the screen as a floating 3D cutout while the background stays behind, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Убери фон с фото за секунду!",
+     "Убери фон с фото за 1 секунду"
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Нужно вырезать объект?",
+   "highlight": [
+    "вырезать"
+   ],
+   "body": "Редактор качать не нужно",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A person looks at a smartphone with frustration, floating app store style icons of photo editors pile up around the phone with loading spinners, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нужно вырезать человека или предмет из фото?",
+     "Нужно вырезать объект из фото?"
+    ],
+    [
+     "Редактор качать не нужно.",
+     "Редактор качать не нужно"
+    ]
+   ]
+  },
+  {
+   "type": "phone",
+   "title": "Как вырезать",
+   "chip": "Фото на iPhone",
+   "screens": [
+    {
+     "title": "Удерживай объект",
+     "at_part": 0,
+     "tap": 0,
+     "tap_at_part": 1,
+     "rows": [
+      {
+       "label": "Скопировать"
+      },
+      {
+       "label": "Добавить стикер"
+      },
+      {
+       "label": "Поделиться…"
+      }
+     ]
+    },
+    {
+     "title": "Чат или Заметки",
+     "at_part": 2,
+     "tap": 0,
+     "rows": [
+      {
+       "label": "Вставить"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Объект уже без фона",
+    "at_part": 2,
+    "delay": 1.3
+   },
+   "desc": "Демонстрация: удержание пальца на объекте → контур → меню «Скопировать / Добавить стикер / Поделиться» → «Скопировать» → в чате «Вставить» → объект без фона.",
+   "prompt": "A realistic smartphone in a hand showing a photo of a dog in a park, a fingertip presses and holds on the dog, a shimmering white outline runs around it, a small dark pop-up menu appears and the top option glows cyan when tapped, then the screen slides to a chat where the dog appears as a clean cutout sticker without background, slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Открой фото на весь экран и задержи палец на объекте.",
+     "Открой фото → задержи палец на объекте"
+    ],
+    [
+     "Появится светящийся контур. Отпусти и нажми Скопировать.",
+     "Контур → отпусти → «Скопировать»"
+    ],
+    [
+     "Вставь в чат или Заметки — объект уже без фона.",
+     "Вставь в чат или Заметки — без фона"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что ещё можно",
+   "items": [
+    {
+     "head": "«Добавить стикер»",
+     "text": "для Сообщений и разметки",
+     "at_part": 0
+    },
+    {
+     "head": "«Поделиться»",
+     "text": "по AirDrop или Почте",
+     "at_part": 1
+    },
+    {
+     "head": "Видео на паузе",
+     "text": "объект вырезается из кадра",
+     "at_part": 2
+    }
+   ],
+   "desc": "Ещё варианты: стикер, поделиться, кадр видео на паузе.",
+   "prompt": "A floating 3D cutout of a cat turns into a glossy sticker with a white border and lands in a chat bubble, then flies as a glowing particle to a second phone, then a paused video frame on a tablet with a person being outlined in white light, camera orbits slowly. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Можно сразу сделать стикер.",
+     "Сразу сделай стикер"
+    ],
+    [
+     "Или отправить по Эйрдроп и почте.",
+     "Или отправь по AirDrop и почте"
+    ],
+    [
+     "Работает даже с видео на паузе.",
+     "Работает и с видео на паузе"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.apple.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нужен Айфон Икс Эс или новее. Сохрани и подпишись!",
+     "iPhone XS и новее · Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
