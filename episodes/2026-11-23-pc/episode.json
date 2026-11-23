@@ -1,0 +1,120 @@
+{
+ "theme": "tech",
+ "header": "Фишки Windows",
+ "speed": 0.9,
+ "caption": "Второй рабочий стол в Windows — за секунду 🖥️✨\n\nWin + Ctrl + D — новый рабочий стол.\nWin + Ctrl + ← / → — переключаться между столами, Win + Tab — увидеть все.\nWin + Ctrl + F4 — закрыть стол: окна перейдут на соседний.\nWindows 10 и Windows 11.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.microsoft.com\n\n#windows #windows11 #лайфхаки #компьютер #горячиеклавиши #фишки #рабочийстол",
+ "package": {
+  "title": "Второй рабочий стол за секунду: Win + Ctrl + D",
+  "hook": "Второй рабочий стол за секунду.",
+  "problem": "Работа, учёба и соцсети — всё в одной куче окон.",
+  "solution": "Виртуальные рабочие столы Windows: Win + Ctrl + D создаёт новый стол, Win + Ctrl + ← / → переключает между столами, Win + Tab показывает все столы (представление задач), Win + Ctrl + F4 закрывает текущий стол — открытые на нём окна переходят на следующий стол.",
+  "steps": [
+   "Нажми Win + Ctrl + D — откроется новый пустой рабочий стол",
+   "Открой на нём нужные окна",
+   "Win + Ctrl + ← / → — переключение между столами",
+   "Win + Tab — показать все рабочие столы (или кнопка представления задач на панели задач → «New desktop»)",
+   "Win + Ctrl + F4 — закрыть текущий стол; его окна перейдут на следующий стол"
+  ],
+  "compatibility": "Windows 10 · Windows 11",
+  "source": "support.microsoft.com — «Keyboard shortcuts in Windows» (Win + Tab, Win + Ctrl + D, Win + Ctrl + ← / →, Win + Ctrl + F4) и «How to Multitask in Windows» (новый стол через представление задач; при закрытии стола приложения переносятся на следующий доступный стол)"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": ["Второй рабочий стол", "за секунду"],
+   "highlight": ["Второй"],
+   "icon": "laptop",
+   "chip": "Windows 10 · 11",
+   "desc": "Хук: иконка ноутбука, крупный текст «Второй рабочий стол за секунду», чип Windows 10 · 11.",
+   "prompt": "A sleek modern laptop floating in dark space, its screen splits and a second glowing desktop slides out sideways like a glass panel, then a third, forming a row of floating screens, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Второй рабочий стол за секунду.", "Второй рабочий стол за секунду."]]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Работа, учёба и соцсети — в одной куче окон?",
+   "highlight": ["куче"],
+   "body": "Разложи их по разным столам",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок про кучу окон, пояснение.",
+   "prompt": "A cluttered computer screen with dozens of overlapping floating windows piling up chaotically, slowly tilting and stacking, a tired figure silhouette in soft focus in front, moody blue and violet lighting, slow orbit. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Работа, учёба и соцсети — всё в одной куче окон?", "Работа, учёба, соцсети — в одной куче окон?"],
+    ["Разложи их по разным столам.", "Разложи их по разным столам."]
+   ]
+  },
+  {
+   "type": "keys",
+   "title": "Win + Ctrl + D",
+   "chip": "Windows 10 · 11",
+   "keys": ["Win", "Ctrl", "D"],
+   "result": "Новый пустой рабочий стол",
+   "result_at_part": 1,
+   "at_part": 0,
+   "desc": "Решение: клавиши Win, Ctrl и D нажимаются по очереди и подсвечиваются; надпись «Новый пустой рабочий стол».",
+   "prompt": "Three large realistic keyboard keys pressed together in slow motion, each lighting up with cyan glow, above them a fresh empty glowing desktop screen slides in from the right, low camera angle, dark navy studio. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Нажми Вин, Контрол и Дэ.", "Нажми Win + Ctrl + D"],
+    ["Откроется новый пустой рабочий стол.", "Откроется новый пустой рабочий стол."]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Переключайся между столами",
+   "chip": "Win + Ctrl + ← / →",
+   "screens": [
+    {
+     "title": "Рабочий стол 1 — работа",
+     "rows": [
+      {"label": "Браузер", "icon": "globe"},
+      {"label": "Документ", "icon": "keyboard"}
+     ]
+    },
+    {
+     "title": "Рабочий стол 2 — отдых",
+     "at_part": 1,
+     "rows": [
+      {"label": "Музыка", "icon": "bell"},
+      {"label": "Соцсети", "icon": "globe"}
+     ]
+    }
+   ],
+   "keys": ["Win", "Ctrl", "→"],
+   "keys_at_part": 0,
+   "toast": {"text": "Win + Tab — показать все столы", "at_part": 2},
+   "desc": "Демонстрация: окно ноутбука показывает «Рабочий стол 1» с рабочими окнами, нажимаются Win + Ctrl + →, появляется «Рабочий стол 2» со своими окнами; подсказка «Win + Tab — показать все столы».",
+   "prompt": "Realistic modern laptop on a dark desk, the screen content smoothly slides sideways from one desktop full of work windows to another desktop with music and chat windows, a row of glowing keys pulses below, then all desktops appear as small floating thumbnails in a row, cinematic slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Переключайся: Вин, Контрол и стрелка вправо или влево.", "Сменить стол: Win + Ctrl + ← / →"],
+    ["На каждом столе — свои окна.", "На каждом столе — свои окна."],
+    ["А Вин и Таб покажет все столы сразу.", "Win + Tab — все столы сразу"]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {"head": "Win + Ctrl + D", "text": "новый рабочий стол", "at_part": 0},
+    {"head": "Win + Ctrl + ← / →", "text": "переключить стол", "at_part": 1, "color": "teal"},
+    {"head": "Win + Ctrl + F4", "text": "закрыть стол — окна перейдут на соседний", "at_part": 2, "color": "blue"}
+   ],
+   "desc": "Шпаргалка: три карточки с сочетаниями клавиш.",
+   "prompt": "Three floating glass cards appear one by one in 3D space with soft cyan and violet glow, beside them a row of small glowing desktop screens, one of them closes and its tiny windows fly over to the neighbouring screen, camera glides past, dark navy environment. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Итак: Вин, Контрол, Дэ — новый стол.", "Win + Ctrl + D — новый стол"],
+    ["Со стрелками — переключение.", "Win + Ctrl + ← / → — переключение"],
+    ["Вин, Контрол, Эф четыре — закрыть стол. Окна перейдут на соседний.", "Win + Ctrl + F4 — закрыть стол"]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.microsoft.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [["Сохрани, чтобы не забыть, и подпишись!", "Сохрани и подпишись!"]]
+  }
+ ]
+}
