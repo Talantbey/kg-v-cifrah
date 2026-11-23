@@ -12,6 +12,7 @@ import numpy as np
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import engine as E
 import tech  # noqa: F401  (registers tech scenes)
+import fruits  # noqa: F401  (registers fresh/fruit scenes)
 
 _VD = os.path.join(os.path.dirname(os.path.abspath(__file__)), "voice")
 VOICE = os.environ.get("KG_VOICE") or next((os.path.join(_VD, f) for f in ("ru_RU-ruslan-medium.onnx", "ru-irinia-medium.onnx")

@@ -145,7 +145,7 @@ class Ctx:
         return k
 
     def out(self, t):
-        d = 0.4 if self.sc["type"] in ("outro", "cta") else 0.2
+        d = 0.4 if self.sc["type"] in ("outro", "cta", "finale") else 0.2
         return 1 - p(t, self.T - d, d)
 
 
@@ -159,10 +159,18 @@ TECH = dict(BG1="#0B1640", BG2="#04071A", CARD="#121C42", GOLD="#38BDF8", DARK="
                  "cyan": "#38BDF8"})
 
 
+FRESH = dict(BG1="#123524", BG2="#06140D", CARD="#17402C", GOLD="#FFB547", DARK="#1E1405", MUTED="#A9C7B4",
+             PAL={"gold": "#FFB547", "teal": "#7BD389", "red": "#FF5A5F", "grey": "#5E7A69", "blue": "#FF8A3D",
+                  "violet": "#B565D8", "green": "#7BD389", "orange": "#FF8A3D", "white": "#FFF8EE", "muted": "#A9C7B4",
+                  "yellow": "#F7D154", "pink": "#FF7AA2"})
+THEMES = {"tech": TECH, "fresh": FRESH}
+BG_HOOKS = {}
+
+
 def apply_theme(ep):
     global THEME, BG1, BG2, CARD, GOLD, DARK, MUTED
     th = ep.get("theme", "classic")
-    d = TECH if th == "tech" else CLASSIC
+    d = THEMES.get(th, CLASSIC)
     THEME = th
     BG1, BG2, CARD, GOLD, DARK, MUTED = d["BG1"], d["BG2"], d["CARD"], d["GOLD"], d["DARK"], d["MUTED"]
     PAL.clear(); PAL.update(d["PAL"])
@@ -188,6 +196,8 @@ def background_tech(ctx, tg):
 
 
 def background(ctx, tg):
+    if THEME in BG_HOOKS:
+        return BG_HOOKS[THEME](ctx, tg)
     if THEME == "tech":
         return background_tech(ctx, tg)
     g = cairo.LinearGradient(0, 0, 0, H)
@@ -633,11 +643,11 @@ def s_outro(ctx, t, c):
 
 SCENES = dict(title=s_title, counter=s_counter, donut=s_donut, bars=s_bars, dotgrid=s_dotgrid,
               scale=s_scale, list=s_list, fact=s_fact, word=s_word, timeline=s_timeline, outro=s_outro)
-NO_HEADER = {"title", "outro", "hook", "cta"}
+NO_HEADER = {"title", "outro", "hook", "cta", "fruit", "finale"}
 
 
 def scene_dur(sc, tm):
-    tail = OUTRO_TAIL if sc["type"] in ("outro", "cta") else (0.15 if sc["type"] == "hook" else TAIL)
+    tail = OUTRO_TAIL if sc["type"] in ("outro", "cta", "finale") else (0.15 if sc["type"] == "hook" else TAIL)
     return round((LEAD + tm["dur"] + tail) * FPS) / FPS
 
 
@@ -647,7 +657,7 @@ def draw(ep, idx, t, timing, offs):
     ctx = cairo.Context(surf); ctx.set_antialias(cairo.ANTIALIAS_BEST)
     background(ctx, offs[idx] + t)
     c = Ctx(sc, tm, T)
-    zoom = THEME == "tech" and t < 0.35 and idx > 0
+    zoom = THEME in ("tech", "fresh") and t < 0.35 and idx > 0
     if zoom:
         k = 1.07 - 0.07 * eo(p(t, 0, 0.35))
         ctx.save(); ctx.translate(540, 900); ctx.scale(k, k); ctx.translate(-540, -900)
@@ -656,11 +666,12 @@ def draw(ep, idx, t, timing, offs):
     SCENES[sc["type"]](ctx, t, c)
     if zoom:
         ctx.restore()
-    if THEME == "tech" and idx > 0 and t < 0.45:  # light sweep transition
+    if THEME in ("tech", "fresh") and idx > 0 and t < 0.45:  # light sweep transition
         x = -400 + 1900 * eo(p(t, 0, 0.45))
         lg = cairo.LinearGradient(x - 220, 0, x + 220, 0)
-        lg.add_color_stop_rgba(0, 0.22, 0.74, 0.97, 0); lg.add_color_stop_rgba(0.5, 0.65, 0.55, 1.0, 0.22)
-        lg.add_color_stop_rgba(1, 0.22, 0.74, 0.97, 0)
+        sw = (0.65, 0.55, 1.0) if THEME == "tech" else hexc(GOLD)[:3]
+        lg.add_color_stop_rgba(0, *sw, 0); lg.add_color_stop_rgba(0.5, *sw, 0.2)
+        lg.add_color_stop_rgba(1, *sw, 0)
         ctx.set_source(lg); ctx.paint()
     subtitle(ctx, tm, t)
     a_in = eo(p(t, 0, 0.2))
