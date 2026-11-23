@@ -1,0 +1,179 @@
+{
+ "theme": "tech",
+ "header": "Интернет и AI",
+ "speed": 0.9,
+ "caption": "Инкогнито — не невидимка 🕵️\n\nОткрыть: Ctrl + Shift + N (Mac: ⌘ + Shift + N) или меню (три точки) → «Новое окно в режиме инкогнито»\nНе сохранит: историю, файлы cookie и данные сайтов\nВсё равно видят: сайты, работодатель или учебное заведение, интернет-провайдер\nОстанутся: скачанные файлы и закладки. Выйти — закрой все окна инкогнито.\nGoogle Chrome на компьютере (Windows, Mac, Linux, ChromeOS).\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.google.com/chrome/answer/95464\n\n#инкогнито #chrome #браузер #приватность #интернет #лайфхаки #полезныефишки",
+ "package": {
+  "title": "Режим инкогнито: что он скрывает, а что — нет",
+  "hook": "Инкогнито — не невидимка!",
+  "problem": "Многие думают, что в режиме инкогнито их никто не видит. Это не так.",
+  "solution": "Открой окно инкогнито в Google Chrome: Ctrl + Shift + N (Mac: ⌘ + Shift + N) или меню (три точки) → «Новое окно в режиме инкогнито». После сеанса Chrome не сохранит историю, файлы cookie и данные сайтов. Но сайты и организации, управляющие сетью (работодатель, учебное заведение, интернет-провайдер), могут видеть твои действия. Скачанные файлы и закладки остаются. Чтобы выйти — закрой все окна инкогнито.",
+  "steps": [
+   "Открыть: Ctrl + Shift + N (Mac: ⌘ + Shift + N) или меню (три точки) → «Новое окно в режиме инкогнито»",
+   "Не сохраняется: история, файлы cookie и данные сайтов (удаляются после сеанса)",
+   "Всё равно видят: сайты, работодатель или учебное заведение, интернет-провайдер",
+   "Остаются: скачанные файлы и закладки; выйти — закрыть все окна инкогнито"
+  ],
+  "compatibility": "Google Chrome на компьютере (Windows, Linux, ChromeOS, macOS)",
+  "source": "support.google.com/chrome/answer/95464 (hl=ru, «Как использовать режим инкогнито», Компьютер): меню «Ещё» → «Новое окно в режиме инкогнито»; Windows, Linux, ChromeOS — Ctrl + Shift + N, macOS — ⌘ + Shift + N; «После завершения сеанса в режиме инкогнито Chrome не сохраняет данные сайтов и историю посещенных страниц»; файлы cookie и данные сайтов хранятся временно и удаляются после сеанса; режим «не делает вас невидимым» — действия видят сайты и «организации, управляющие вашей сетью, например учебное заведение, работодатель или интернет-провайдер»; «Скачанные файлы будут храниться на устройстве», закладки доступны в обычном режиме; «Чтобы выйти из него, закройте все окна в режиме инкогнито»."
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Инкогнито —",
+    "не невидимка!"
+   ],
+   "highlight": [
+    "не",
+    "невидимка!"
+   ],
+   "icon": "lock",
+   "chip": "Google Chrome · компьютер",
+   "desc": "Хук: крупный текст «Инкогнито — не невидимка!», иконка замка, чип совместимости.",
+   "prompt": "A sleek translucent glass mask floats in dark space in front of a glowing browser window, then soft cyan scanning beams pass right through the mask and reveal faint data trails behind it, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Инкогнито — не невидимка!",
+     "Инкогнито — не невидимка!"
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Думаешь, в инкогнито тебя не видно?",
+   "highlight": [
+    "не",
+    "видно?"
+   ],
+   "body": "Разберём, что он скрывает",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A person at a laptop in a dark room wears a hoodie and looks relaxed, while around them several faint glowing eyes and network nodes quietly light up in the darkness, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Думаешь, в инкогнито тебя никто не видит?",
+     "Думаешь, в инкогнито тебя не видно?"
+    ],
+    [
+     "Разберём, что он скрывает, а что нет.",
+     "Что он скрывает, а что — нет"
+    ]
+   ]
+  },
+  {
+   "type": "laptop",
+   "title": "Открыть инкогнито",
+   "chip": "Google Chrome",
+   "address": "chrome",
+   "screens": [
+    {
+     "title": "Меню Chrome",
+     "at_part": 0,
+     "tap": 2,
+     "tap_at_part": 1,
+     "rows": [
+      {
+       "label": "Новая вкладка"
+      },
+      {
+       "label": "Новое окно"
+      },
+      {
+       "label": "Новое окно в режиме инкогнито",
+       "icon": "lock"
+      }
+     ]
+    }
+   ],
+   "keys": [
+    "Ctrl",
+    "Shift",
+    "N"
+   ],
+   "keys_at_part": 0,
+   "toast": {
+    "text": "Mac: ⌘ + Shift + N",
+    "at_part": 1,
+    "delay": 0.4
+   },
+   "desc": "Демонстрация: клавиши Ctrl + Shift + N; меню Chrome (три точки), нажатие «Новое окно в режиме инкогнито»; подсказка для Mac.",
+   "prompt": "A sleek laptop on a dark desk shows a minimal browser window, three glowing keycaps are pressed one after another in front of it, the window smoothly turns into a darker violet-tinted window with a soft glow, slow dolly toward the screen. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Открыть: Контрол, Шифт, Эн.",
+     "Открыть: Ctrl + Shift + N"
+    ],
+    [
+     "Или меню, три точки — новое окно в режиме инкогнито.",
+     "Или меню → «Новое окно в режиме инкогнито»"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Запомни",
+   "items": [
+    {
+     "head": "Не сохранит",
+     "text": "историю, cookie и данные сайтов",
+     "at_part": 0
+    },
+    {
+     "head": "Всё равно видят",
+     "text": "сайты, работодатель, провайдер",
+     "at_part": 1,
+     "color": "red"
+    },
+    {
+     "head": "Останутся",
+     "text": "скачанные файлы и закладки",
+     "at_part": 2,
+     "color": "teal"
+    },
+    {
+     "head": "Выйти",
+     "text": "закрой все окна инкогнито",
+     "at_part": 3,
+     "color": "blue"
+    }
+   ],
+   "desc": "Итоги карточками: что не сохраняется, кто всё равно видит, что остаётся, как выйти.",
+   "prompt": "Four glowing glass cards rise one after another in dark space: a fading clock-like history trail, a set of watching eyes over a network, a download arrow and a bookmark ribbon, and finally a closing window, each lighting up in turn as the camera glides past. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Хром не сохранит историю, куки и данные сайтов.",
+     "Не сохранит: историю, cookie, данные сайтов"
+    ],
+    [
+     "Но сайты, работодатель и провайдер всё равно видят.",
+     "Видят: сайты, работодатель, провайдер"
+    ],
+    [
+     "Скачанные файлы и закладки останутся.",
+     "Файлы и закладки останутся"
+    ],
+    [
+     "Выйти — закрой все окна инкогнито.",
+     "Выйти — закрой все окна инкогнито"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.google.com/chrome",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани, чтобы не забыть, и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
