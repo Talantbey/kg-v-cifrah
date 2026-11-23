@@ -1,0 +1,180 @@
+{
+ "theme": "tech",
+ "header": "Фишки смартфонов",
+ "speed": 0.9,
+ "caption": "Поставь Face ID на любое приложение — без сторонних программ 🔒\n\nУдерживай значок приложения → «Требовать Face ID» → подтверди лицом.\nТеперь открыть его можно только по твоему лицу (или Touch ID / код-паролю), после выхода оно снова закрывается. Содержимое не видно в поиске и уведомлениях. Снять: удерживай значок → «Не требовать Face ID».\nНужен iPhone с iOS 18 и новее. Некоторые встроенные приложения (Камера, Настройки, Карты) заблокировать нельзя.\n\nСохрани, чтобы не забыть, и подпишись — каждый день полезные фишки.\nИсточник: support.apple.com\n\n#iphone #ios18 #айфон #faceid #лайфхаки #фишкиайфона #приватность #смартфон",
+ "package": {
+  "title": "Поставь Face ID на любое приложение iPhone",
+  "hook": "Любое приложение на iPhone можно закрыть на Face ID — без сторонних программ",
+  "problem": "Даёшь телефон другу или ребёнку — и не хочешь, чтобы открыли переписку, галерею или банк.",
+  "solution": "В iOS 18 приложение можно заблокировать прямо с экрана «Домой»: удерживаешь значок и выбираешь «Требовать Face ID». Открыть его можно только после Face ID, Touch ID или код-пароля.",
+  "steps": [
+   "Найди приложение на экране «Домой» и удерживай его значок, пока не откроется меню",
+   "Нажми «Требовать Face ID» (на iPhone с кнопкой «Домой» — Touch ID, без них — код-пароль)",
+   "Подтверди ещё раз «Требовать Face ID» и пройди Face ID",
+   "Снять блокировку: удерживай значок → «Не требовать Face ID» → подтвердить"
+  ],
+  "compatibility": "iPhone с iOS 18 и новее (iPhone XS / XR и новее); некоторые встроенные приложения — Калькулятор, Камера, Часы, Контакты, Локатор, Карты, Команды, Настройки — заблокировать нельзя",
+  "source": "support.apple.com — Руководство пользователя iPhone «Lock or hide an app on iPhone» (iph00f208d05) и «Use locked apps with Stolen Device Protection» (125690)"
+ },
+ "scenes": [
+  {
+   "type": "hook",
+   "lines": [
+    "Замок Face ID",
+    "на любое приложение"
+   ],
+   "highlight": [
+    "Face",
+    "ID",
+    "любое"
+   ],
+   "icon": "lock",
+   "chip": "iPhone · iOS 18+",
+   "desc": "Хук: крупный текст, значок замка, чип совместимости.",
+   "prompt": "A sleek modern smartphone floating upright in dark space, its home screen app icons glow softly, one app icon lifts forward and a translucent glowing padlock closes over it with a soft click flash, a faint face-scan grid sweeps across the scene, camera slowly pushes in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Поставь Фэйс Ай-Ди на любое приложение!",
+     "Поставь Face ID на любое приложение"
+    ]
+   ]
+  },
+  {
+   "type": "problem",
+   "icon": "warning",
+   "headline": "Даёшь телефон другу?",
+   "highlight": [
+    "телефон"
+   ],
+   "body": "А переписка и банк открыты",
+   "body_at_part": 1,
+   "desc": "Проблема: значок предупреждения, заголовок, пояснение.",
+   "prompt": "A hand passes a smartphone to another person across a dark table, glowing chat bubbles and a banking card hologram float out of the screen, exposed and vulnerable, moody blue and violet light, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Даёшь телефон другу или ребёнку?",
+     "Даёшь телефон другу или ребёнку?"
+    ],
+    [
+     "А переписка и банк открыты.",
+     "А переписка и банк открыты"
+    ]
+   ]
+  },
+  {
+   "type": "phone",
+   "title": "Как закрыть",
+   "chip": "Экран «Домой»",
+   "screens": [
+    {
+     "title": "Удерживай значок",
+     "at_part": 0,
+     "tap": 0,
+     "tap_at_part": 1,
+     "rows": [
+      {
+       "label": "Требовать Face ID",
+       "icon": "lock"
+      },
+      {
+       "label": "Поделиться приложением"
+      },
+      {
+       "label": "Удалить приложение"
+      }
+     ]
+    },
+    {
+     "title": "Подтверди",
+     "at_part": 2,
+     "tap": 0,
+     "rows": [
+      {
+       "label": "Требовать Face ID"
+      },
+      {
+       "label": "Скрыть и требовать Face ID"
+      },
+      {
+       "label": "Отменить"
+      }
+     ]
+    }
+   ],
+   "toast": {
+    "text": "Только по Face ID",
+    "at_part": 2,
+    "delay": 1.4
+   },
+   "desc": "Демонстрация: удержание значка приложения → меню быстрых действий → «Требовать Face ID» → подтверждение «Требовать Face ID» → Face ID → приложение под замком.",
+   "prompt": "A realistic smartphone in a hand showing a home screen, a fingertip presses and holds one app icon, a dark blurred quick-actions menu pops up and the top option with a small padlock glows cyan when tapped, then a confirmation sheet slides up and its first button glows, a face-scan animation of rotating cyan dots completes and a padlock badge settles on the app, slow push-in. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Удерживай значок нужного приложения.",
+     "Удерживай значок приложения"
+    ],
+    [
+     "В меню нажми Требовать Фэйс Ай-Ди.",
+     "В меню — «Требовать Face ID»"
+    ],
+    [
+     "Подтверди ещё раз и посмотри на экран. Готово!",
+     "Подтверди ещё раз → Face ID → готово"
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что теперь",
+   "items": [
+    {
+     "head": "Только по лицу",
+     "text": "или Touch ID / код-пароль",
+     "at_part": 0
+    },
+    {
+     "head": "Скрыто от глаз",
+     "text": "нет в поиске и уведомлениях",
+     "at_part": 1
+    },
+    {
+     "head": "Снять замок",
+     "text": "удерживай → «Не требовать»",
+     "at_part": 2
+    }
+   ],
+   "desc": "Что даёт блокировка: вход только по Face ID, содержимое не видно в поиске и уведомлениях, как снять.",
+   "prompt": "A locked app icon with a glowing padlock opens only when a cyan face-scan grid recognises a stylised face, then notification cards float by with their contents blurred, finally the padlock gently unlatches and dissolves into particles, camera orbits slowly. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Теперь его откроет только твоё лицо.",
+     "Теперь откроет только твоё лицо"
+    ],
+    [
+     "Содержимое не видно в поиске и уведомлениях.",
+     "Не видно в поиске и уведомлениях"
+    ],
+    [
+     "Снять: удерживай значок и нажми Не требовать.",
+     "Снять: удерживай → «Не требовать»"
+    ]
+   ]
+  },
+  {
+   "type": "cta",
+   "cta": "Подпишись",
+   "sub": "каждый день — полезные фишки",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источник: support.apple.com",
+   "desc": "Призыв: колокольчик качается, «Подпишись», «Сохрани».",
+   "prompt": "A glowing 3D notification bell icon gently swinging in dark navy space, cyan and violet light rays, particles, slow orbit camera. Premium 3D animation, dark navy blue background with cyan and violet neon rim light, cinematic lighting, shallow depth of field, smooth slow camera dolly, consistent tech style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нужна Ай-Оэс восемнадцать. Сохрани и подпишись!",
+     "Нужна iOS 18+ · Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
