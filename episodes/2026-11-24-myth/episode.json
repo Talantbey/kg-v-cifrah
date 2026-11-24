@@ -1,0 +1,204 @@
+{
+ "theme": "fresh",
+ "header": "Миф или факт?",
+ "speed": 0.88,
+ "caption": "Фреш полезнее целого апельсина? МИФ 🍊\n\nВитамина C почти поровну (53 и 50 мг в 100 г), но клетчатки в апельсине 2,4 г, а в свежевыжатом соке — 0,2 г.\nВОЗ относит сахар из сока к «свободным» — как добавленный. Сахар целых фруктов ВОЗ не ограничивает.\n\n⚠️ Даже сок без сахара — сладкий: NHS советует не больше 150 мл в день и лучше во время еды (сахар вредит зубам).\nНе является медицинской рекомендацией.\nИсточники: ВОЗ, 2015; NHS «5 A Day»; USDA FoodData Central.\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#мифилифакт #апельсин #фреш #сок #здоровоепитание #пп #фрукты",
+ "package": {
+  "title": "Фреш полезнее апельсина? Миф",
+  "hook": "Свежевыжатый сок полезнее целого апельсина? Это миф.",
+  "problem": "Многие считают стакан фреша самым полезным способом съесть фрукты.",
+  "solution": "Витамина C в соке почти столько же, но клетчатки в 12 раз меньше (0,2 г против 2,4 г на 100 г), а его сахар ВОЗ считает «свободным».",
+  "steps": [
+   "Ешь апельсин целиком",
+   "Сок — не больше 150 мл в день (NHS)",
+   "Пей сок во время еды, а не между приёмами пищи"
+  ],
+  "compatibility": "Апельсин сырой и свежевыжатый апельсиновый сок без сахара",
+  "source": "WHO Guideline: sugars intake for adults and children (2015); NHS «5 A Day: what counts?»; USDA FoodData Central SR Legacy: Oranges, raw, all commercial varieties (169097), Orange juice, raw (169098)"
+ },
+ "scenes": [
+  {
+   "type": "myth",
+   "statement": "Фреш полезнее целого апельсина",
+   "verdict": "МИФ",
+   "body": "Витамин C почти тот же, а клетчатка остаётся в жмыхе",
+   "fruit": "orange",
+   "verdict_at_part": 1,
+   "body_at_part": 2,
+   "desc": "Утверждение крупно, штамп «МИФ», пояснение снизу.",
+   "prompt": "A glass of freshly squeezed orange juice next to a whole orange on a dark green surface, a slow-motion splash of juice rises from the glass while the orange rolls into frame, macro detail of pulp and droplets. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Свежевыжатый сок полезнее целого апельсина?",
+     "Фреш полезнее целого апельсина?"
+    ],
+    [
+     "Это миф.",
+     "Это миф."
+    ],
+    [
+     "А клетчатка почти вся остаётся в жмыхе.",
+     "А клетчатка остаётся в жмыхе."
+    ]
+   ],
+   "kicker": "Говорят, что…",
+   "deco": false
+  },
+  {
+   "type": "nutrients",
+   "title": "Апельсин и фреш, 100 г",
+   "subtitle": "по данным USDA",
+   "active": [
+    0,
+    1,
+    3,
+    2
+   ],
+   "tiles": [
+    {
+     "value": 53.2,
+     "decimals": 1,
+     "unit": "мг",
+     "label": "Витамин C",
+     "note": "апельсин",
+     "color": "gold"
+    },
+    {
+     "value": 50,
+     "unit": "мг",
+     "label": "Витамин C",
+     "note": "фреш",
+     "color": "orange"
+    },
+    {
+     "value": 2.4,
+     "decimals": 1,
+     "unit": "г",
+     "label": "Клетчатка",
+     "note": "апельсин",
+     "color": "green"
+    },
+    {
+     "value": 0.2,
+     "decimals": 1,
+     "unit": "г",
+     "label": "Клетчатка",
+     "note": "фреш",
+     "color": "pink"
+    }
+   ],
+   "desc": "Цифры: четыре карточки — витамин C и клетчатка в апельсине и в свежевыжатом соке.",
+   "prompt": "A whole orange and a tall glass of orange juice stand side by side, the camera slowly glides between them while pulp fibres float out of the orange like glowing threads, soft studio light. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Витамина Цэ почти поровну:",
+     "Витамин C — почти поровну:"
+    ],
+    [
+     "пятьдесят три и пятьдесят миллиграммов.",
+     "53 и 50 мг."
+    ],
+    [
+     "А клетчатки во фреше в двенадцать раз меньше:",
+     "А клетчатки во фреше в 12 раз меньше:"
+    ],
+    [
+     "две и четыре десятых грамма против двух десятых.",
+     "2,4 г против 0,2 г."
+    ]
+   ],
+   "deco": false
+  },
+  {
+   "type": "list",
+   "title": "Что говорит ВОЗ",
+   "items": [
+    {
+     "head": "Сахар из сока",
+     "text": "«свободный» — как добавленный сахар",
+     "at_part": 0,
+     "color": "orange"
+    },
+    {
+     "head": "Сахар целых фруктов",
+     "text": "ВОЗ не ограничивает",
+     "at_part": 1,
+     "color": "green"
+    }
+   ],
+   "desc": "Две карточки: сахар сока против сахара целого фрукта.",
+   "prompt": "Sugar crystals sparkle as they drift out of a glass of orange juice, while a whole orange next to it stays calm and fresh, gentle camera push-in. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "ВОЗ считает сахар из сока свободным — как добавленный.",
+     "ВОЗ: сахар из сока — как добавленный."
+    ],
+    [
+     "А сахар в целых фруктах ВОЗ не ограничивает.",
+     "А сахар целых фруктов ВОЗ не ограничивает."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что делать",
+   "items": [
+    {
+     "head": "Ешь апельсин целиком",
+     "text": "так сохраняется клетчатка",
+     "at_part": 0,
+     "color": "green"
+    },
+    {
+     "head": "Сок — до 150 мл в день",
+     "text": "совет Британской службы здоровья (NHS)",
+     "at_part": 1,
+     "color": "gold"
+    },
+    {
+     "head": "Пей сок во время еды",
+     "text": "сахар из сока вредит зубам",
+     "at_part": 2,
+     "color": "orange"
+    }
+   ],
+   "desc": "Совет: три карточки появляются по очереди.",
+   "prompt": "Hands peel a juicy orange into segments on a wooden board, a small glass of juice beside a plate of breakfast, warm morning light, slow camera dolly. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Что делать? Ешь апельсин целиком.",
+     "Ешь апельсин целиком."
+    ],
+    [
+     "Сока — до ста пятидесяти миллилитров в день.",
+     "Сока — до 150 мл в день."
+    ],
+    [
+     "И пей его во время еды: сахар вредит зубам.",
+     "Пей во время еды: сахар вредит зубам."
+    ]
+   ],
+   "deco": false
+  },
+  {
+   "type": "finale",
+   "fruits": [
+    "tangerine",
+    "orange",
+    "orange_half"
+   ],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: ВОЗ, 2015 · NHS · USDA FoodData Central",
+   "desc": "Призыв: цитрусы подпрыгивают, «Подпишись», «Сохрани».",
+   "prompt": "A tangerine, an orange and an orange half bounce playfully on a dark green surface with splashes of juice, slow motion, cheerful ending shot. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
