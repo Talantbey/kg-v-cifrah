@@ -16,7 +16,7 @@
 2. Ешь целиком или ложкой из половинки
 3. При зуде во рту после киви — к аллергологу
 
-**Длительность:** 29.5 с
+**Длительность:** 29.8 с
 
 ## Полный текст озвучки
 
@@ -32,7 +32,7 @@
 Macro shot of a freshly cut green kiwi half rotating slowly, glistening flesh and black seeds, droplets of juice flying in slow motion. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 2 · 3.6–11.5 с · nutrients
+### Сцена 2 · 3.6–12.2 с · nutrients
 
 Цифры: четыре карточки с питательными веществами, значения отсчитываются.
 
@@ -40,7 +40,7 @@ Macro shot of a freshly cut green kiwi half rotating slowly, glistening flesh an
 Kiwi slices arranged on a dark green slate, camera slides over them while glowing nutrient particles rise, soft studio light. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 3 · 11.5–20.0 с · list
+### Сцена 3 · 12.2–20.5 с · list
 
 Польза: три карточки появляются по очереди.
 
@@ -48,7 +48,7 @@ Kiwi slices arranged on a dark green slate, camera slides over them while glowin
 Three kiwi halves on floating glass plates appear one by one in a warm green space, gentle camera glide, fresh juicy look. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 4 · 20.0–26.5 с · caution
+### Сцена 4 · 20.5–26.9 с · caution
 
 Предупреждение: значок, две карточки.
 
@@ -56,7 +56,7 @@ Three kiwi halves on floating glass plates appear one by one in a warm green spa
 A single kiwi on a dark surface under a soft amber spotlight, slow push-in, calm cautious mood. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.
 ```
 
-### Сцена 5 · 26.5–29.5 с · finale
+### Сцена 5 · 26.9–29.8 с · finale
 
 Призыв: три фрукта подпрыгивают, «Подпишись», «Сохрани».
 
@@ -68,55 +68,55 @@ An orange, a kiwi and an apple bounce playfully on a dark green surface with spl
 
 ```
 1
-00:00:00,300 --> 00:00:03,215
+00:00:00,300 --> 00:00:03,226
 100 г киви — дневная норма витамина C.
 
 2
-00:00:03,900 --> 00:00:05,479
+00:00:03,933 --> 00:00:05,669
 В 100 г зелёного киви:
 
 3
-00:00:05,479 --> 00:00:07,623
+00:00:05,669 --> 00:00:08,024
 93 мг витамина C,
 
 4
-00:00:07,623 --> 00:00:09,259
+00:00:08,024 --> 00:00:09,822
 3 г клетчатки и калий,
 
 5
-00:00:09,259 --> 00:00:11,064
+00:00:09,822 --> 00:00:11,805
 и всего 61 ккал.
 
 6
-00:00:11,767 --> 00:00:12,744
+00:00:12,500 --> 00:00:13,451
 Чем он полезен?
 
 7
-00:00:12,744 --> 00:00:15,610
+00:00:13,451 --> 00:00:16,240
 Витамин C — иммунитет и коллаген.
 
 8
-00:00:15,610 --> 00:00:18,020
+00:00:16,240 --> 00:00:18,586
 2 киви в день помогали при запорах.
 
 9
-00:00:18,020 --> 00:00:19,583
+00:00:18,586 --> 00:00:20,107
 И калорий немного.
 
 10
-00:00:20,267 --> 00:00:20,971
+00:00:20,800 --> 00:00:21,494
 Но осторожно:
 
 11
-00:00:20,971 --> 00:00:23,787
+00:00:21,494 --> 00:00:24,271
 Зуд во рту — повод сходить к аллергологу.
 
 12
-00:00:23,787 --> 00:00:26,062
+00:00:24,271 --> 00:00:26,513
 Риск выше при аллергии на латекс и пыльцу.
 
 13
-00:00:26,767 --> 00:00:28,300
+00:00:27,200 --> 00:00:28,640
 Сохрани и подпишись!
 
 ```
