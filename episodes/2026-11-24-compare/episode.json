@@ -1,0 +1,196 @@
+{
+ "theme": "fresh",
+ "header": "Сравнение",
+ "speed": 0.92,
+ "caption": "Где больше калия? Сравнили 5 фруктов 🍌\n\nНа 100 г: банан — 358 мг, абрикос — 259, виноград — 191, апельсин — 181, яблоко — 107 мг. Наш абрикос — на втором месте!\nВОЗ: больше калия из еды помогает снизить давление у взрослых; совет — не меньше 3510 мг в день.\n\n⚠️ При болезни почек и приёме некоторых лекарств калий может накапливаться — сколько можно, решает врач.\nНе является медицинской рекомендацией.\nИсточники: USDA FoodData Central (SR Legacy); ВОЗ, 2012; NIH ODS.\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#калий #банан #абрикос #фрукты #здоровоепитание #пп #давление",
+ "package": {
+  "title": "Где больше калия: банан, абрикос, виноград, апельсин, яблоко",
+  "hook": "Где больше всего калия? Сравним пять фруктов.",
+  "problem": "Все говорят про калий в бананах, но мало кто знает, сколько его в других фруктах.",
+  "solution": "На 100 г: банан 358 мг, абрикос 259, виноград 191, апельсин 181, яблоко 107 (USDA). ВОЗ: больше калия из еды помогает снизить давление у взрослых.",
+  "steps": [
+   "Добавляй в день банан или горсть абрикосов",
+   "Ешь разные фрукты и овощи — калий есть во многих",
+   "При болезни почек — сколько калия можно, спроси у врача"
+  ],
+  "compatibility": "Свежие сырые фрукты: банан, абрикос, виноград, апельсин, яблоко с кожурой",
+  "source": "USDA FoodData Central SR Legacy: Bananas, raw (173944); Apricots, raw (171697); Grapes, red or green (European type), raw (174683); Oranges, raw, all commercial varieties (169097); Apples, raw, with skin (171688). WHO Guideline: potassium intake for adults and children (2012). NIH ODS Potassium fact sheet."
+ },
+ "scenes": [
+  {
+   "type": "fruit",
+   "fruit": "banana",
+   "name": "КАЛИЙ",
+   "kicker": "Сравнение",
+   "lines": [
+    "Где больше калия?",
+    "5 фруктов на 100 г"
+   ],
+   "highlight": [
+    "калия"
+   ],
+   "desc": "Хук: банан в центре, крупный вопрос «Где больше калия?».",
+   "prompt": "A ripe yellow banana slowly rotating in mid-air, surrounded by an apricot, a bunch of green grapes, an orange and a red apple orbiting gently, tiny juice droplets glinting. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Где больше всего калия? Сравним пять фруктов.",
+     "Где больше калия? Сравним 5 фруктов."
+    ]
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Калий в 100 г",
+   "subtitle": "по данным USDA",
+   "unit": " мг",
+   "rows": [
+    {
+     "label": "Банан",
+     "value": 358,
+     "fruit": "banana",
+     "best": true,
+     "at_part": 0
+    },
+    {
+     "label": "Абрикос",
+     "value": 259,
+     "fruit": "apricot",
+     "color": "orange",
+     "at_part": 1
+    },
+    {
+     "label": "Виноград",
+     "value": 191,
+     "fruit": "grapes_green",
+     "color": "green",
+     "at_part": 2
+    },
+    {
+     "label": "Апельсин",
+     "value": 181,
+     "fruit": "orange",
+     "color": "orange",
+     "at_part": 2
+    },
+    {
+     "label": "Яблоко",
+     "value": 107,
+     "fruit": "apple",
+     "color": "pink",
+     "at_part": 3
+    }
+   ],
+   "desc": "Сравнение: пять полос с иконками фруктов, банан выделен золотом.",
+   "prompt": "Five fruits lined up on a dark green glass shelf — banana, apricot, green grapes, orange, apple — glowing light columns rise behind each one at different heights, slow lateral camera slide. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Лидер — банан: триста пятьдесят восемь миллиграммов.",
+     "Лидер — банан: 358 мг."
+    ],
+    [
+     "Наш абрикос — на втором месте: двести пятьдесят девять.",
+     "Наш абрикос — второй: 259 мг."
+    ],
+    [
+     "Виноград и апельсин — около ста девяноста.",
+     "Виноград и апельсин — около 190 мг."
+    ],
+    [
+     "В яблоке — сто семь.",
+     "В яблоке — 107 мг."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Зачем калий",
+   "items": [
+    {
+     "head": "Давление",
+     "text": "больше калия из еды помогает снизить давление у взрослых (ВОЗ)",
+     "at_part": 0
+    },
+    {
+     "head": "Норма ВОЗ",
+     "text": "не меньше 3510 мг в день для взрослых",
+     "at_part": 1,
+     "color": "green"
+    },
+    {
+     "head": "Из еды",
+     "text": "фрукты, овощи, бобовые — разнообразие",
+     "at_part": 2,
+     "color": "orange"
+    }
+   ],
+   "desc": "Польза: три карточки — давление, норма ВОЗ, источники.",
+   "prompt": "Sliced apricots and banana rounds floating slowly over a dark green surface, a soft pulse of warm light passes through them like a calm heartbeat, gentle camera glide. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "По данным Всемирной организации здравоохранения, калий из еды помогает снизить давление.",
+     "ВОЗ: калий из еды помогает снизить давление."
+    ],
+    [
+     "Взрослым — не меньше трёх с половиной граммов в день,",
+     "Взрослым — не меньше 3510 мг в день,"
+    ],
+    [
+     "из разных фруктов и овощей.",
+     "из разных фруктов и овощей."
+    ]
+   ],
+   "deco": false
+  },
+  {
+   "type": "caution",
+   "title": "Кому осторожно",
+   "items": [
+    {
+     "text": "При болезни почек калий может накапливаться в крови",
+     "at_part": 1
+    },
+    {
+     "text": "Это же — при некоторых лекарствах: спроси врача",
+     "at_part": 2
+    }
+   ],
+   "desc": "Предупреждение: значок, две карточки про почки и лекарства.",
+   "prompt": "A single apricot on a dark slate under a soft amber spotlight, slow push-in, calm and careful mood. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Осторожно:",
+     "Осторожно:"
+    ],
+    [
+     "при болезни почек калий может накапливаться.",
+     "При болезни почек калий может накапливаться."
+    ],
+    [
+     "И при некоторых лекарствах — спроси врача.",
+     "И при некоторых лекарствах — спроси врача."
+    ]
+   ],
+   "deco": false
+  },
+  {
+   "type": "finale",
+   "fruits": [
+    "apricot",
+    "banana",
+    "orange"
+   ],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: USDA FoodData Central · ВОЗ, 2012 · NIH ODS",
+   "desc": "Призыв: абрикос, банан и апельсин подпрыгивают, «Подпишись», «Сохрани».",
+   "prompt": "An apricot, a banana and an orange bounce playfully on a dark green surface with small splashes of juice, slow motion, cheerful ending shot. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
