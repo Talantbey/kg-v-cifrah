@@ -132,5 +132,6 @@ An orange, a kiwi and an apple bounce playfully on a dark green surface with spl
 Источники: USDA FoodData Central; Am J Gastroenterol, 2023.
 
 Сохрани и подпишись — каждый день польза фруктов!
+Фото: Prosperosity / Wikimedia Commons, CC BY 4.0; Wikimedia Commons, Public domain; Abhijit Tembhekar from Mumbai, India / Wikimedia Commons, CC BY 2.0
 
 #киви #фрукты #витаминC #здоровоепитание #пп #польза #фруктдня

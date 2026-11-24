@@ -165,10 +165,15 @@ FRESH = dict(BG1="#123524", BG2="#06140D", CARD="#17402C", GOLD="#FFB547", DARK=
                   "yellow": "#F7D154", "pink": "#FF7AA2"})
 THEMES = {"tech": TECH, "fresh": FRESH}
 BG_HOOKS = {}
+DECO_HOOKS = {}  # theme -> fn(ctx, ep, idx, t, T): drawn after background, before scene content
+
+
+CURRENT_EP = {}
 
 
 def apply_theme(ep):
-    global THEME, BG1, BG2, CARD, GOLD, DARK, MUTED
+    global THEME, BG1, BG2, CARD, GOLD, DARK, MUTED, CURRENT_EP
+    CURRENT_EP = ep
     th = ep.get("theme", "classic")
     d = THEMES.get(th, CLASSIC)
     THEME = th
@@ -657,6 +662,8 @@ def draw(ep, idx, t, timing, offs):
     ctx = cairo.Context(surf); ctx.set_antialias(cairo.ANTIALIAS_BEST)
     background(ctx, offs[idx] + t)
     c = Ctx(sc, tm, T)
+    if THEME in DECO_HOOKS:
+        DECO_HOOKS[THEME](ctx, ep, idx, t, T)
     zoom = THEME in ("tech", "fresh") and t < 0.35 and idx > 0
     if zoom:
         k = 1.07 - 0.07 * eo(p(t, 0, 0.35))

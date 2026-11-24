@@ -64,6 +64,20 @@ def _tc(x):
     return f"{h:02d}:{mi:02d}:{s:02d},{ms:03d}"
 
 
+def write_caption(ep, epdir):
+    """caption.txt = episode caption + photo credits (publish THIS text)."""
+    cap = ep.get("caption", "")
+    cr = fruits.photo_credits(ep)
+    if cr:
+        line = "Фото: " + "; ".join(cr)
+        if line not in cap:
+            parts = cap.rsplit("\n\n", 1)
+            cap = (parts[0] + "\n" + line + "\n\n" + parts[1]) if len(parts) == 2 and parts[1].lstrip().startswith("#") else cap + "\n\n" + line
+    open(os.path.join(epdir, "caption.txt"), "w").write(cap)
+    print("caption ->", os.path.join(epdir, "caption.txt"), "| photo credits:", "; ".join(cr) or "none")
+    return cap
+
+
 def write_package(ep, timing, epdir):
     """package.md (title, hook, voiceover, scenes + AI prompts, subtitles, caption) and subtitles.srt."""
     offs, total = offsets(ep, timing)
@@ -91,7 +105,7 @@ def write_package(ep, timing, epdir):
             e1 = parts[j + 1][0] if j + 1 < len(parts) else e0
             srt += [str(n), f"{_tc(o + E.LEAD + s0)} --> {_tc(o + E.LEAD + e1)}", sub, ""]; n += 1
     open(os.path.join(epdir, "subtitles.srt"), "w").write("\n".join(srt))
-    L += ["## Субтитры", "", "```", "\n".join(srt), "```", "", "## Описание для Instagram", "", ep.get("caption", ""), ""]
+    L += ["## Субтитры", "", "```", "\n".join(srt), "```", "", "## Описание для Instagram", "", write_caption(ep, epdir), ""]
     open(os.path.join(epdir, "package.md"), "w").write("\n".join(L))
     print("package ->", os.path.join(epdir, "package.md"))
 
@@ -144,6 +158,7 @@ def main():
                     "-af", "highpass=f=70,acompressor=threshold=-18dB:ratio=3:attack=5:release=80,loudnorm=I=-14:TP=-1.5:LRA=9,aresample=48000",
                     "-ac", "2", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-shortest", tmp], check=True)
     os.replace(tmp, os.path.join(epdir, "video.mp4"))
+    write_caption(ep, epdir)
     write_package(ep, timing, epdir)
     print("video ->", os.path.join(epdir, "video.mp4"), round(total, 2), "s")
 

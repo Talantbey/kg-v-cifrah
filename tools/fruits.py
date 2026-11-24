@@ -69,8 +69,124 @@ def citrus_half(ctx, r, rind, rind_d, pulp, pulp_d, segs=10):
     spec(ctx, -r * 0.35, -r * 0.4, r * 0.25, r * 0.12, 0.25)
 
 
+# ---------------- real photos (assets/photos/<kind>/main.png, see tools/photos.py) ----------------
+import os, io
+PHOTO_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "assets", "photos")
+_SURF = {}
+
+
+def photos_on():
+    return E.THEME == "fresh" and E.CURRENT_EP.get("photos", True)
+
+
+def photo_path(kind, name="main.png"):
+    p = os.path.join(PHOTO_DIR, kind, name)
+    return p if os.path.exists(p) else None
+
+
+def photo_surface(kind):
+    if kind not in _SURF:
+        p = photo_path(kind)
+        _SURF[kind] = cairo.ImageSurface.create_from_png(p) if p else None
+    return _SURF[kind]
+
+
+def bg_surface(kind):
+    key = "bg:" + kind
+    if key not in _SURF:
+        p = photo_path(kind, "bg.jpg")
+        if not p:
+            _SURF[key] = None
+        else:
+            from PIL import Image, ImageFilter, ImageEnhance
+            im = Image.open(p).convert("RGB")
+            sc = max(E.W / im.width, E.H / im.height) * 1.12
+            im = im.resize((int(im.width * sc), int(im.height * sc)))
+            l, t = (im.width - int(E.W * 1.12)) // 2, (im.height - int(E.H * 1.12)) // 2
+            im = im.crop((l, t, l + int(E.W * 1.12), t + int(E.H * 1.12))).filter(ImageFilter.GaussianBlur(22))
+            im = ImageEnhance.Brightness(im).enhance(0.55)
+            buf = io.BytesIO(); im.save(buf, "PNG"); buf.seek(0)
+            _SURF[key] = cairo.ImageSurface.create_from_png(buf)
+    return _SURF[key]
+
+
+def draw_photo(ctx, kind, cx, cy, s, a=1.0):
+    xx, yx, xy, yy, _, _ = ctx.get_matrix()
+    if a <= 0.001 or s <= 1 or abs(xx * yy - yx * xy) < 1e-6:
+        return
+    surf = photo_surface(kind)
+    w, h = surf.get_width(), surf.get_height()
+    k = s * 1.1 / max(w, h)
+    # soft contact shadow
+    sy = cy + h * k / 2 * 0.95
+    ctx.save(); ctx.translate(cx, sy); ctx.scale(w * k * 0.42, h * k * 0.07)
+    rg = cairo.RadialGradient(0, 0, 0, 0, 0, 1); rg.add_color_stop_rgba(0, 0, 0, 0, 0.45 * a); rg.add_color_stop_rgba(1, 0, 0, 0, 0)
+    ctx.set_source(rg); ctx.arc(0, 0, 1, 0, 2 * math.pi); ctx.fill(); ctx.restore()
+    ctx.save(); ctx.translate(cx - w * k / 2, cy - h * k / 2); ctx.scale(k, k)
+    ctx.set_source_surface(surf, 0, 0); ctx.get_source().set_filter(cairo.FILTER_GOOD)
+    ctx.paint_with_alpha(max(0.0, min(1.0, a)))
+    ctx.restore()
+
+
+def main_kind(ep):
+    for sc in ep.get("scenes", []):
+        if sc.get("type") == "fruit" and sc.get("fruit"):
+            return sc["fruit"]
+    ks = used_kinds(ep)
+    return ks[0] if ks else None
+
+
+def deco_fresh(ctx, ep, idx, t, T):
+    """Real photo of the episode's main fruit peeking from the bottom-right corner behind the content."""
+    sc = ep["scenes"][idx]
+    if not photos_on() or sc.get("type") in ("fruit", "finale", "compare") or sc.get("deco") is False:
+        return
+    kind = sc.get("deco_fruit") or main_kind(ep)
+    if not kind or photo_surface(kind) is None:
+        return
+    q = eo(p(t, 0.05, 0.6)) * (1 - p(t, T - 0.2, 0.2))
+    side = 1 if idx % 2 else -1
+    cx = 540 + side * 360 + side * (1 - q) * 200
+    ctx.save(); ctx.translate(cx, 1330 + 10 * math.sin(t * 1.8)); ctx.rotate(side * (0.18 + 0.03 * math.sin(t)))
+    tech.glow(ctx, 0, 0, 380, E.GOLD, 0.15 * q)
+    draw_photo(ctx, kind, 0, 0, 560, 0.92 * q)
+    ctx.restore()
+
+
+E.DECO_HOOKS["fresh"] = deco_fresh
+
+
+def used_kinds(ep):
+    ks = []
+    for sc in ep.get("scenes", []):
+        for k in ([sc.get("fruit")] + list(sc.get("fruits", [])) + [r.get("fruit") for r in sc.get("rows", []) if isinstance(r, dict)]):
+            if k and k not in ks:
+                ks.append(k)
+    if any(sc.get("type") == "finale" and not sc.get("fruits") for sc in ep.get("scenes", [])):
+        for k in ("apple", "kiwi", "orange"):
+            if k not in ks:
+                ks.append(k)
+    return ks
+
+
+def photo_credits(ep):
+    if not (ep.get("theme") == "fresh" and ep.get("photos", True)):
+        return []
+    import json as _j
+    out = []
+    for k in used_kinds(ep):
+        m = os.path.join(PHOTO_DIR, k, "meta.json")
+        if os.path.exists(m):
+            c = _j.load(open(m))["credit"]
+            if c not in out:
+                out.append(c)
+    return out
+
+
 def draw_fruit(ctx, kind, cx, cy, s, t=0.0, a=1.0):
-    """Draw fruit `kind` centred at (cx, cy) with overall size ~s px."""
+    """Draw fruit `kind` centred at (cx, cy) with overall size ~s px (real photo cut-out when available)."""
+    if photos_on() and photo_surface(kind) is not None:
+        return draw_photo(ctx, kind, cx, cy, s, a)
     r = s / 2
     ctx.save(); ctx.translate(cx, cy)
     if a < 1:
@@ -320,16 +436,19 @@ def chip(ctx, s, cx, cy, a, color=None, fg=None, size=32, solid=False):
 
 def s_fruit(ctx, t, c):
     sc = c.sc; a = c.out(t)
-    hl = [w.lower() for w in sc.get("highlight", [])]
-    lines = sc.get("lines", [])[:2]
-    for i, l in enumerate(lines):
-        q = p(t, 0.05 + 0.12 * i, 0.3)
-        size = fit(ctx, l, 84, 980)
-        tech.rich_line(ctx, l, 540, 440 + i * 100, size, hl, eo(q) * a, 1.3 - 0.3 * eob(q), hcol=E.GOLD)
+    kind = sc.get("fruit", "apple")
+    if photos_on() and sc.get("bg_photo", True) and bg_surface(kind) is not None:
+        bs = bg_surface(kind); z = 1.0 + 0.04 * t / max(c.T, 1)
+        ctx.save(); ctx.translate(540, 960); ctx.scale(z / 1.12, z / 1.12); ctx.translate(-bs.get_width() / 2, -bs.get_height() / 2)
+        ctx.set_source_surface(bs, 0, 0); ctx.paint_with_alpha(0.55 * a); ctx.restore()
+        g = cairo.LinearGradient(0, 0, 0, E.H)
+        g.add_color_stop_rgba(0, *hexc(E.BG2)[:3], 0.75); g.add_color_stop_rgba(0.4, *hexc(E.BG2)[:3], 0.15)
+        g.add_color_stop_rgba(0.7, *hexc(E.BG2)[:3], 0.35); g.add_color_stop_rgba(1, *hexc(E.BG2)[:3], 0.85)
+        ctx.set_source(g); ctx.paint()
     k = eob(p(t, 0.15, 0.7))
     bob = 10 * math.sin(t * 2.2)
     tech.glow(ctx, 540, 880, 420, E.GOLD, 0.22 * a)
-    if k > 0:
+    if k > 0.02:
         ctx.save(); ctx.translate(540, 880 + bob); ctx.rotate(0.06 * math.sin(t * 1.6)); ctx.scale(k, k)
         draw_fruit(ctx, sc.get("fruit", "apple"), 0, 0, sc.get("size", 470), t, a)
         ctx.restore()
@@ -340,6 +459,11 @@ def s_fruit(ctx, t, c):
         text(ctx, name, 540, 1255, fit(ctx, name, 110, 980), CREAM, "c", True, q * a)
         ctx.restore()
     chip(ctx, sc.get("kicker"), 540, 1340, eo(p(t, 0.7, 0.35)) * a, solid=True, size=30)
+    hl = [w.lower() for w in sc.get("highlight", [])]
+    for i, l in enumerate(sc.get("lines", [])[:2]):
+        q = p(t, 0.05 + 0.12 * i, 0.3)
+        size = fit(ctx, l, 84, 980)
+        tech.rich_line(ctx, l, 540, 440 + i * 100, size, hl, eo(q) * a, 1.3 - 0.3 * eob(q), hcol=E.GOLD)
 
 
 def s_nutrients(ctx, t, c):
@@ -477,7 +601,7 @@ def s_finale(ctx, t, c):
     for i, f in enumerate(fr):
         k = eob(p(t, 0.05 + 0.12 * i, 0.5))
         x = 540 + (i - (len(fr) - 1) / 2) * 260
-        if k > 0:
+        if k > 0.02:
             ctx.save(); ctx.translate(x, 640 + 12 * math.sin(t * 3 + i)); ctx.scale(k, k)
             draw_fruit(ctx, f, 0, 0, 210, t, a); ctx.restore()
     q = eo(p(t, 0.3, 0.4))
@@ -492,6 +616,11 @@ def s_finale(ctx, t, c):
     disc = sc.get("disclaimer", "Не является медицинской рекомендацией")
     if disc:
         text(ctx, disc, 540, 1285, fit(ctx, disc, 26, 960, False), E.MUTED, "c", False, 0.8 * eo(p(t, 0.9, 0.4)) * a)
+    cr = photo_credits(E.CURRENT_EP)
+    if cr:
+        ls = wrap(ctx, "Фото: " + "; ".join(cr), 22, 980, False, False)[:3]
+        for j, l in enumerate(ls):
+            text(ctx, l, 540, 1325 + j * 28, 22, E.MUTED, "c", False, 0.75 * eo(p(t, 0.9, 0.4)) * a)
 
 
 E.SCENES.update(fruit=s_fruit, nutrients=s_nutrients, myth=s_myth, compare=s_compare, caution=s_caution, finale=s_finale)

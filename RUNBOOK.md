@@ -39,6 +39,25 @@ re-verify its facts quickly, `git mv` it to `episodes/YYYY-MM-DD-<slot>/`, then 
   `Источники: …`, «Сохрани и подпишись», then **5–8 hashtags**.
 - Reference episode: `episodes/backlog/fruit-kiwi/episode.json` (after it is used, the latest dated fresh episode).
 
+## Real photos (Wikimedia Commons)
+
+- Fruits are drawn from **real photo cut-outs** in `assets/photos/<kind>/main.png` when they exist (hero scene also uses
+  a blurred `bg.jpg` behind; middle scenes show the episode's main fruit peeking from a corner). Otherwise the vector fruit is used.
+  `python3 tools/photos.py list` shows the library and credits.
+- If the episode's main fruit has no photo yet, add one **before rendering**:
+  1. `python3 tools/photos.py search <kind> "<english query>" --n 12` (e.g. `persimmon "persimmon fruit white background"`).
+     Only CC0 / Public domain / CC BY are downloaded (no BY-SA, NC, ND).
+  2. LOOK at `assets/photos/<kind>/cand/sheet.png`. Choose a clean, sharp, colour photo of the fruit itself (whole or cut),
+     ideally on a plain background. Reject: paintings/illustrations, old black-and-white photos, text/labels/stickers/logos,
+     people, markets/crowded piles, wrong variety. If nothing fits, try another query once; if still nothing, use the vector.
+  3. `python3 tools/photos.py pick <kind> <number>` → cut-out + `meta.json` (author, licence, link). Look at the cut-out on a
+     still frame; if the background removal is bad, pick another candidate.
+  4. Commit `assets/photos/<kind>/` (main.png, bg.jpg, meta.json) with the episode.
+- Kind names: use the vector names from the list above when they match (apple, kiwi, orange…), so vector fallback works;
+  a new kind name (e.g. `fig`) is fine once it has a photo.
+- Photo credits are added automatically: in the finale («Фото: …») and in `caption.txt`. **Publish `caption.txt`**, not the raw
+  `"caption"` field. Wikimedia may answer 429 (rate limit) — the tool waits and retries; don't hammer it.
+
 ## Health-content rules (strict)
 
 - Nutrient numbers: **USDA FoodData Central** (say which entry, raw/fresh, per 100 g; prefer SR Legacy, keep one entry per
@@ -62,12 +81,12 @@ re-verify its facts quickly, `git mv` it to `episodes/YYYY-MM-DD-<slot>/`, then 
    empty-looking scenes (make the first card/item appear at part 0). Duration must be 25–35 s.
 4. `python3 tools/make.py episodes/YYYY-MM-DD-<slot> --reuse-audio` → `video.mp4`, `package.md`, `subtitles.srt`. Spot-check 3 frames.
 5. Copy to `videos/YYYY-MM-DD-<slot>-<latin-slug>.mp4`; delete files in `videos/` older than 14 days.
-   Commit `episode.json`, `package.md`, `subtitles.srt` and the video; `git pull --rebase origin main`; push (retry once on conflict).
+   Commit `episode.json`, `package.md`, `subtitles.srt`, `caption.txt`, any new `assets/photos/<kind>/` and the video; `git pull --rebase origin main`; push (retry once on conflict).
 6. Wait for GitHub Pages: poll `https://api.github.com/repos/Talantbey/kg-v-cifrah/deployments` until the deployment for
    your pushed sha (or a newer one) has status `success`. github.io itself is not reachable from the sandbox.
 7. Wait until the slot's publish time (if already past, go on). Publish with Windsor `execute_action`:
    connector `instagram`, action `create_video_post`, account `17841469113945711`,
-   params `{video_url, caption, share_to_feed: true, thumb_offset: 1500}`.
+   params `{video_url, caption: <contents of episodes/YYYY-MM-DD-<slot>/caption.txt>, share_to_feed: true, thumb_offset: 1500}`.
    On failure retry once after 2 minutes; if it still fails, tell the user and give the video URL.
 8. Append a row to `episodes.md` (date, slot, rubric, subject, video path, media id); pull --rebase, commit, push.
 9. Send the user a short message in Kyrgyz: slot, title, main facts, sources, media id.

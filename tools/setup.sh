@@ -2,7 +2,7 @@
 # One-time setup per fresh environment: Python deps + Russian Piper voice.
 set -e
 cd "$(dirname "$0")"
-pip install --break-system-packages -q pycairo piper-tts numpy pillow 2>&1 | grep -v -i "warning" || true
+pip install --break-system-packages -q pycairo piper-tts numpy pillow rembg onnxruntime 2>&1 | grep -v -i "warning" || true
 mkdir -p voice
 # Main voice: Ruslan (male). Pinned mirror of rhasspy/piper-voices ru_RU-ruslan-medium.
 RUSLAN=https://media.githubusercontent.com/media/moonshine-ai/moonshine-tts/dba0b7cb5857ff4b0a08fad47f6fbb8630a3ca70/data/ru/piper-voices
