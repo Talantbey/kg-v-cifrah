@@ -20,7 +20,9 @@ re-verify its facts quickly, `git mv` it to `episodes/YYYY-MM-DD-<slot>/`, then 
 
 ## Video format
 
-- `"theme": "fresh"`, `"speed"` 0.88–0.95, total **25–35 s** (`make.py` prints it and `voice: ru_RU-ruslan-medium.onnx`;
+- `"theme": "splash"` (since 2026-11-26: bright sky-blue water design — light gradient, water splash, droplets, real-photo
+  garnish of mint, raspberries, blueberries, lime and ice floating around; dark navy text, white cards; see `tools/splash.py`).
+  The old dark-green `"fresh"` theme still works but is not used for new episodes. `"speed"` 0.88–0.95, total **25–35 s** (`make.py` prints it and `voice: ru_RU-ruslan-medium.onnx`;
   if another voice is used, say so in the final message). 4–6 scenes. Scene types (see `tools/fruits.py`):
   - `fruit` — hero/hook: `fruit` (vector kind), `name`, `kicker`, `lines` (2 short hook lines), `highlight`.
   - `nutrients` — `title`, `subtitle` ("по данным USDA"), up to 4 `tiles` {value, decimals, unit, label, note, color}, `active` per part.
@@ -33,16 +35,18 @@ re-verify its facts quickly, `git mv` it to `episodes/YYYY-MM-DD-<slot>/`, then 
   pomegranate, pomegranate_seeds, apricot, peach, plum, grapes, grapes_green, cherry, strawberry, pear, watermelon, melon,
   persimmon, sea_buckthorn, currant, avocado, mango (`python3 tools/fruits.py /tmp/f.png` draws them all). Prefer fruits in this list.
 - Every scene has `"desc"` (Russian) and `"prompt"`: a detailed English AI-video prompt ending with the shared style line:
-  `Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.`
+  `Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.`
 - `"package"`: `title`, `hook`, `problem`, `solution`, `steps`, `compatibility` (variety / form, e.g. «зелёный киви, свежий»), `source`.
 - `"caption"`: hook + emoji, 2–3 short lines of facts, caution line if any, «Не является медицинской рекомендацией.»,
   `Источники: …`, «Сохрани и подпишись», then **5–8 hashtags**.
-- Reference episode: `episodes/backlog/fruit-kiwi/episode.json` (after it is used, the latest dated fresh episode).
+- Reference episode: `tools/examples/splash_kiwi.json` (an already published kiwi episode re-styled; do NOT publish it again),
+  or the latest dated episode with `"theme": "splash"`.
 
 ## Real photos (Wikimedia Commons)
 
-- Fruits are drawn from **real photo cut-outs** in `assets/photos/<kind>/main.png` when they exist (hero scene also uses
-  a blurred `bg.jpg` behind; middle scenes show the episode's main fruit peeking from a corner). Otherwise the vector fruit is used.
+- Fruits are drawn from **real photo cut-outs** in `assets/photos/<kind>/main.png` when they exist. In the splash theme the hero
+  fruit sits in a water splash with garnish around it, and middle scenes show garnish + the main fruit floating at the edges.
+  Garnish kinds (`mint`, `raspberry`, `blueberry`, `lime`, `ice`) are already in the library. Otherwise the vector fruit is used.
   `python3 tools/photos.py list` shows the library and credits.
 - If the episode's main fruit has no photo yet, add one **before rendering**:
   1. `python3 tools/photos.py search <kind> "<english query>" --n 12` (e.g. `persimmon "persimmon fruit white background"`).
@@ -55,7 +59,8 @@ re-verify its facts quickly, `git mv` it to `episodes/YYYY-MM-DD-<slot>/`, then 
   4. Commit `assets/photos/<kind>/` (main.png, bg.jpg, meta.json) with the episode.
 - Kind names: use the vector names from the list above when they match (apple, kiwi, orange…), so vector fallback works;
   a new kind name (e.g. `fig`) is fine once it has a photo.
-- Photo credits are added automatically: in the finale («Фото: …») and in `caption.txt`. **Publish `caption.txt`**, not the raw
+- Photo credits (including garnish photos) are added automatically: in the finale («Фото: …», shortened to «авторы и лицензии —
+  в описании» when long) and in full in `caption.txt`. **Publish `caption.txt`**, not the raw
   `"caption"` field. Wikimedia may answer 429 (rate limit) — the tool waits and retries; don't hammer it.
 
 ## Health-content rules (strict)

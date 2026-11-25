@@ -86,16 +86,17 @@ def icon_badge(ctx, kind, cx, cy, s, color, a, t):
     icon(ctx, kind, cx, cy, s * 0.62, color, a)
 
 
-def rich_line(ctx, line, cx, y, size, hl, a, scale=1.0, hcol=None):
+def rich_line(ctx, line, cx, y, size, hl, a, scale=1.0, hcol=None, base=None):
     """Centered line, words in hl drawn in accent colour."""
     hcol = hcol or CYAN
+    base = base or WHITE
     font(ctx, size)
     w = ctx.text_extents(line).x_advance
     x = cx - w / 2
     ctx.save(); ctx.translate(cx, y - size * 0.35); ctx.scale(scale, scale); ctx.translate(-cx, -(y - size * 0.35))
     for wd in line.split(" "):
         key = wd.strip(".,:!?«»\"()").lower()
-        c = hcol if key in hl else WHITE
+        c = hcol if key in hl else base
         text(ctx, wd, x, y, size, c, "l", True, a)
         x += tw(ctx, wd + " ", size)
     ctx.restore()

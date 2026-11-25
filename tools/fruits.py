@@ -76,7 +76,7 @@ _SURF = {}
 
 
 def photos_on():
-    return E.THEME == "fresh" and E.CURRENT_EP.get("photos", True)
+    return E.THEME in ("fresh", "splash") and E.CURRENT_EP.get("photos", True)
 
 
 def photo_path(kind, name="main.png"):
@@ -156,11 +156,18 @@ def deco_fresh(ctx, ep, idx, t, T):
 E.DECO_HOOKS["fresh"] = deco_fresh
 
 
+GARNISH = ["mint", "raspberry", "blueberry", "lime", "ice"]
+
+
 def used_kinds(ep):
     ks = []
     for sc in ep.get("scenes", []):
         for k in ([sc.get("fruit")] + list(sc.get("fruits", [])) + [r.get("fruit") for r in sc.get("rows", []) if isinstance(r, dict)]):
             if k and k not in ks:
+                ks.append(k)
+    if ep.get("theme") == "splash":
+        for k in GARNISH:
+            if k not in ks:
                 ks.append(k)
     if any(sc.get("type") == "finale" and not sc.get("fruits") for sc in ep.get("scenes", [])):
         for k in ("apple", "kiwi", "orange"):
@@ -170,7 +177,7 @@ def used_kinds(ep):
 
 
 def photo_credits(ep):
-    if not (ep.get("theme") == "fresh" and ep.get("photos", True)):
+    if not (ep.get("theme") in ("fresh", "splash") and ep.get("photos", True)):
         return []
     import json as _j
     out = []
@@ -437,7 +444,7 @@ def chip(ctx, s, cx, cy, a, color=None, fg=None, size=32, solid=False):
 def s_fruit(ctx, t, c):
     sc = c.sc; a = c.out(t)
     kind = sc.get("fruit", "apple")
-    if photos_on() and sc.get("bg_photo", True) and bg_surface(kind) is not None:
+    if E.THEME == "fresh" and photos_on() and sc.get("bg_photo", True) and bg_surface(kind) is not None:
         bs = bg_surface(kind); z = 1.0 + 0.04 * t / max(c.T, 1)
         ctx.save(); ctx.translate(540, 960); ctx.scale(z / 1.12, z / 1.12); ctx.translate(-bs.get_width() / 2, -bs.get_height() / 2)
         ctx.set_source_surface(bs, 0, 0); ctx.paint_with_alpha(0.55 * a); ctx.restore()
@@ -456,14 +463,14 @@ def s_fruit(ctx, t, c):
     name = sc.get("name", "")
     if name:
         ctx.save(); ctx.translate(0, (1 - q) * 40)
-        text(ctx, name, 540, 1255, fit(ctx, name, 110, 980), CREAM, "c", True, q * a)
+        text(ctx, name, 540, 1255, fit(ctx, name, 110, 980), E.WHITE, "c", True, q * a)
         ctx.restore()
     chip(ctx, sc.get("kicker"), 540, 1340, eo(p(t, 0.7, 0.35)) * a, solid=True, size=30)
     hl = [w.lower() for w in sc.get("highlight", [])]
     for i, l in enumerate(sc.get("lines", [])[:2]):
         q = p(t, 0.05 + 0.12 * i, 0.3)
         size = fit(ctx, l, 84, 980)
-        tech.rich_line(ctx, l, 540, 440 + i * 100, size, hl, eo(q) * a, 1.3 - 0.3 * eob(q), hcol=E.GOLD)
+        tech.rich_line(ctx, l, 540, 440 + i * 100, size, hl, eo(q) * a, 1.3 - 0.3 * eob(q), hcol=E.GOLD, base=E.WHITE)
 
 
 def s_nutrients(ctx, t, c):
@@ -502,7 +509,7 @@ def s_nutrients(ctx, t, c):
         if unit:
             text(ctx, " " + unit, x0 + vw, -H2 / 2 + 150, 44, E.MUTED, "l", True, la * dim)
         lab = tl.get("label", "")
-        text(ctx, lab, 0, -H2 / 2 + 215, fit(ctx, lab, 40, w - 50), CREAM, "c", True, la * dim)
+        text(ctx, lab, 0, -H2 / 2 + 215, fit(ctx, lab, 40, w - 50), E.WHITE, "c", True, la * dim)
         if tl.get("note"):
             chip(ctx, tl["note"], 0, H2 / 2 - 52, la * dim, cc, size=28)
         ctx.restore()
@@ -516,7 +523,7 @@ def s_myth(ctx, t, c):
     for i, l in enumerate(lines):
         q = eo(p(t, 0.15 + 0.1 * i, 0.4))
         ctx.save(); ctx.translate(0, (1 - q) * 30)
-        text(ctx, l, 540, 640 + i * 86, fit(ctx, l, 70, 960), CREAM, "c", True, q * a)
+        text(ctx, l, 540, 640 + i * 86, fit(ctx, l, 70, 960), E.WHITE, "c", True, q * a)
         ctx.restore()
     if sc.get("fruit"):
         draw_fruit(ctx, sc["fruit"], 900, 400, 120, t, 0.9 * eo(p(t, 0.2, 0.4)) * a)
@@ -557,11 +564,11 @@ def s_compare(ctx, t, c):
         if r.get("fruit"):
             draw_fruit(ctx, r["fruit"], 150, y + 48, min(110, step - 20), t, la)
         lab = r["label"]
-        text(ctx, lab, 230, y + 22, fit(ctx, lab, 40, 560, best), CREAM, "l", best, la)
+        text(ctx, lab, 230, y + 22, fit(ctx, lab, 40, 560, best), E.WHITE, "l", best, la)
         g = eo(p(t, st + 0.1, 1.0))
         bw = 600
         w = max(10, bw * float(r["value"]) / mx * g)
-        rrect(ctx, 230, y + 42, bw, 44, 14); ctx.set_source_rgba(1, 1, 1, 0.06 * la); ctx.fill()
+        rrect(ctx, 230, y + 42, bw, 44, 14); ctx.set_source_rgba(*hexc(E.WHITE)[:3], 0.08 * la); ctx.fill()
         rrect(ctx, 230, y + 42, w, 44, 14); fill(ctx, cc, la)
         vt = r.get("text", E.num(float(r["value"]) * g, int(sc.get("decimals", 0))) + sc.get("unit", ""))
         text(ctx, vt, min(230 + w + 16, 1000 - tw(ctx, vt, 38)), y + 78, 38, cc, "l", True, la * p(t, st + 0.3, 0.3))
@@ -570,13 +577,13 @@ def s_compare(ctx, t, c):
 def s_caution(ctx, t, c):
     sc = c.sc; a = c.out(t)
     k = eob(p(t, 0.05, 0.5))
-    amber = "#F7D154"
+    amber = E.PAL.get("yellow", "#F7D154")
     tech.glow(ctx, 540, 560, 220 * k, amber, 0.3 * a)
     ctx.arc(540, 560, 105 * k, 0, 2 * math.pi); fill(ctx, E.CARD, 0.95 * a)
     if k > 0:
         tech.icon(ctx, "warning", 540, 555, 120 * k, amber, a)
     title = sc.get("title", "Кому осторожно")
-    text(ctx, title, 540, 770, fit(ctx, title, 64, 960), CREAM, "c", True, eo(p(t, 0.15, 0.4)) * a)
+    text(ctx, title, 540, 770, fit(ctx, title, 64, 960), E.WHITE, "c", True, eo(p(t, 0.15, 0.4)) * a)
     items = sc.get("items", [])[:4]
     y = 860
     for i, it in enumerate(items):
@@ -590,7 +597,7 @@ def s_caution(ctx, t, c):
             rrect(ctx, 90, y, 900, h, 24); fill(ctx, E.CARD, 0.9 * la)
             ctx.arc(140, y + h / 2, 12, 0, 2 * math.pi); fill(ctx, amber, la)
             for j, l in enumerate(ls):
-                text(ctx, l, 180, y + h / 2 - (len(ls) - 1) * 25 + 14 + j * 50, 40, CREAM, "l", False, la)
+                text(ctx, l, 180, y + h / 2 - (len(ls) - 1) * 25 + 14 + j * 50, 40, E.WHITE, "l", False, la)
             ctx.restore()
         y += h + 22
 
@@ -606,7 +613,7 @@ def s_finale(ctx, t, c):
             draw_fruit(ctx, f, 0, 0, 210, t, a); ctx.restore()
     q = eo(p(t, 0.3, 0.4))
     cta = sc.get("cta", "Подпишись")
-    text(ctx, cta, 540, 910, fit(ctx, cta, 104, 980), CREAM, "c", True, q * a)
+    text(ctx, cta, 540, 910, fit(ctx, cta, 104, 980), E.WHITE, "c", True, q * a)
     if sc.get("sub"):
         text(ctx, sc["sub"], 540, 985, fit(ctx, sc["sub"], 44, 960, False), E.MUTED, "c", False, q * a)
     if sc.get("save"):
@@ -618,9 +625,12 @@ def s_finale(ctx, t, c):
         text(ctx, disc, 540, 1285, fit(ctx, disc, 26, 960, False), E.MUTED, "c", False, 0.8 * eo(p(t, 0.9, 0.4)) * a)
     cr = photo_credits(E.CURRENT_EP)
     if cr:
-        ls = wrap(ctx, "Фото: " + "; ".join(cr), 22, 980, False, False)[:3]
+        line = "Фото: " + "; ".join(cr)
+        ls = wrap(ctx, line, 22, 980, False, False)
+        if len(ls) > 2:
+            ls = ["Фото: Wikimedia Commons (CC0, Public domain, CC BY)", "авторы и лицензии — в описании"]
         for j, l in enumerate(ls):
-            text(ctx, l, 540, 1325 + j * 28, 22, E.MUTED, "c", False, 0.75 * eo(p(t, 0.9, 0.4)) * a)
+            text(ctx, l, 540, 1325 + j * 28, 22, E.MUTED, "c", False, 0.8 * eo(p(t, 0.9, 0.4)) * a)
 
 
 E.SCENES.update(fruit=s_fruit, nutrients=s_nutrients, myth=s_myth, compare=s_compare, caution=s_caution, finale=s_finale)
@@ -637,5 +647,5 @@ if __name__ == "__main__":  # contact sheet of all fruits: python3 tools/fruits.
     for i, kd in enumerate(kinds):
         x = (i % cols) * 260 + 130; y = (i // cols) * 300 + 130
         draw_fruit(ctx, kd, x, y, 180)
-        text(ctx, kd, x, y + 140, 22, CREAM, "c", False)
+        text(ctx, kd, x, y + 140, 22, E.WHITE, "c", False)
     surf.write_to_png(sys.argv[1] if len(sys.argv) > 1 else "/tmp/fruits.png")

@@ -91,7 +91,7 @@ def search(kind, query, n=12):
     from PIL import Image, ImageDraw
     thumbs = []
     for i, c in enumerate(out):
-        data = fetch(c["thumb"])
+        print("  downloading", i + 1, c["title"][:50], flush=True); data = fetch(c["thumb"])
         p = os.path.join(cdir, f"{i + 1:02d}.jpg"); open(p, "wb").write(data)
         im = Image.open(io.BytesIO(data)).convert("RGB"); im.thumbnail((360, 360)); thumbs.append(im)
     json.dump(out, open(os.path.join(cdir, "candidates.json"), "w"), ensure_ascii=False, indent=1)

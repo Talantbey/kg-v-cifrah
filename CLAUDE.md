@@ -1,1 +1,1 @@
-See RUNBOOK.md for the daily Instagram video workflow (3 fruit Reels per day: slots fruit 19:00, myth 20:00, compare 21:00 Asia/Bishkek; theme "fresh", scenes in tools/fruits.py). Videos must stay under videos/ (served by GitHub Pages).
+See RUNBOOK.md for the daily Instagram video workflow (3 fruit Reels per day: slots fruit 19:00, myth 20:00, compare 21:00 Asia/Bishkek; theme "splash", scenes in tools/fruits.py, look in tools/splash.py). Videos must stay under videos/ (served by GitHub Pages).

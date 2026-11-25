@@ -163,7 +163,11 @@ FRESH = dict(BG1="#123524", BG2="#06140D", CARD="#17402C", GOLD="#FFB547", DARK=
              PAL={"gold": "#FFB547", "teal": "#7BD389", "red": "#FF5A5F", "grey": "#5E7A69", "blue": "#FF8A3D",
                   "violet": "#B565D8", "green": "#7BD389", "orange": "#FF8A3D", "white": "#FFF8EE", "muted": "#A9C7B4",
                   "yellow": "#F7D154", "pink": "#FF7AA2"})
-THEMES = {"tech": TECH, "fresh": FRESH}
+SPLASH = dict(BG1="#EEF8FF", BG2="#2A7FB8", CARD="#FFFFFF", GOLD="#FF7A1A", DARK="#FFFFFF", MUTED="#4A6B85", TEXT="#0B2A4A",
+              PAL={"gold": "#FF7A1A", "teal": "#16A34A", "red": "#E11D48", "grey": "#7C93A8", "blue": "#0284C7",
+                   "violet": "#7C3AED", "green": "#16A34A", "orange": "#FF7A1A", "white": "#0B2A4A", "muted": "#4A6B85",
+                   "yellow": "#F59E0B", "pink": "#DB2777"})
+THEMES = {"tech": TECH, "fresh": FRESH, "splash": SPLASH}
 BG_HOOKS = {}
 DECO_HOOKS = {}  # theme -> fn(ctx, ep, idx, t, T): drawn after background, before scene content
 
@@ -172,12 +176,13 @@ CURRENT_EP = {}
 
 
 def apply_theme(ep):
-    global THEME, BG1, BG2, CARD, GOLD, DARK, MUTED, CURRENT_EP
+    global THEME, BG1, BG2, CARD, GOLD, DARK, MUTED, CURRENT_EP, WHITE
     CURRENT_EP = ep
     th = ep.get("theme", "classic")
     d = THEMES.get(th, CLASSIC)
     THEME = th
     BG1, BG2, CARD, GOLD, DARK, MUTED = d["BG1"], d["BG2"], d["CARD"], d["GOLD"], d["DARK"], d["MUTED"]
+    WHITE = d.get("TEXT", "#F4F6FA")
     PAL.clear(); PAL.update(d["PAL"])
 
 
@@ -251,7 +256,7 @@ def subtitle(ctx, tm, t):
     by = 1500 - bh / 2 + (1 - a) * 12
     rrect(ctx, 540 - w / 2 - 34, by, w + 68, bh, 24); fill(ctx, "#000000", 0.55 * a)
     for i, l in enumerate(lines):
-        text(ctx, l, 540, by + 17 + lh * i + size * 0.94, size, WHITE, "c", True, a)
+        text(ctx, l, 540, by + 17 + lh * i + size * 0.94, size, "#FFFFFF", "c", True, a)
 
 
 def sun(ctx, cx, cy, r, rot, a=1.0, rays=40):
@@ -664,7 +669,7 @@ def draw(ep, idx, t, timing, offs):
     c = Ctx(sc, tm, T)
     if THEME in DECO_HOOKS:
         DECO_HOOKS[THEME](ctx, ep, idx, t, T)
-    zoom = THEME in ("tech", "fresh") and t < 0.35 and idx > 0
+    zoom = THEME in ("tech", "fresh", "splash") and t < 0.35 and idx > 0
     if zoom:
         k = 1.07 - 0.07 * eo(p(t, 0, 0.35))
         ctx.save(); ctx.translate(540, 900); ctx.scale(k, k); ctx.translate(-540, -900)
@@ -673,10 +678,10 @@ def draw(ep, idx, t, timing, offs):
     SCENES[sc["type"]](ctx, t, c)
     if zoom:
         ctx.restore()
-    if THEME in ("tech", "fresh") and idx > 0 and t < 0.45:  # light sweep transition
+    if THEME in ("tech", "fresh", "splash") and idx > 0 and t < 0.45:  # light sweep transition
         x = -400 + 1900 * eo(p(t, 0, 0.45))
         lg = cairo.LinearGradient(x - 220, 0, x + 220, 0)
-        sw = (0.65, 0.55, 1.0) if THEME == "tech" else hexc(GOLD)[:3]
+        sw = (0.65, 0.55, 1.0) if THEME == "tech" else ((1, 1, 1) if THEME == "splash" else hexc(GOLD)[:3])
         lg.add_color_stop_rgba(0, *sw, 0); lg.add_color_stop_rgba(0.5, *sw, 0.2)
         lg.add_color_stop_rgba(1, *sw, 0)
         ctx.set_source(lg); ctx.paint()

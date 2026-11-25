@@ -1,0 +1,195 @@
+{
+ "theme": "splash",
+ "header": "Фрукт дня",
+ "speed": 0.9,
+ "caption": "100 г киви = дневная норма витамина C 🥝\n\nВ 100 г зелёного киви: ~93 мг витамина C, 3 г клетчатки, калий и всего 61 ккал. А в исследовании 2023 года 2 киви в день помогали при запорах.\n\n⚠️ Зуд во рту после киви — повод сходить к аллергологу.\nНе является медицинской рекомендацией.\nИсточники: USDA FoodData Central; Am J Gastroenterol, 2023.\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#киви #фрукты #витаминC #здоровоепитание #пп #польза #фруктдня",
+ "package": {
+  "title": "100 г киви — дневная норма витамина C",
+  "hook": "Сто граммов киви — это дневная норма витамина C.",
+  "problem": "Многие ищут витамин C в таблетках, хотя он есть в обычных фруктах.",
+  "solution": "Зелёный киви: ~93 мг витамина C на 100 г (≈ 100% нормы), 3 г клетчатки, калий, 61 ккал.",
+  "steps": [
+   "Съешь 1–2 киви в день — например, на завтрак",
+   "Ешь целиком или ложкой из половинки",
+   "При зуде во рту после киви — к аллергологу"
+  ],
+  "compatibility": "Зелёный киви (Hayward); у золотого витамина C ещё больше",
+  "source": "USDA FoodData Central (SR Legacy, kiwifruit green raw); Gearry et al., Am J Gastroenterol 2023; NIH ODS Vitamin C"
+ },
+ "scenes": [
+  {
+   "type": "fruit",
+   "fruit": "kiwi",
+   "name": "КИВИ",
+   "kicker": "Фрукт дня",
+   "lines": [
+    "100 г киви =",
+    "дневная норма витамина C"
+   ],
+   "highlight": [
+    "витамина",
+    "c"
+   ],
+   "desc": "Хук: половинка киви вращается в центре, сверху крупный текст.",
+   "prompt": "Macro shot of a freshly cut green kiwi half rotating slowly, glistening flesh and black seeds, droplets of juice flying in slow motion. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сто граммов киви — это дневная норма витамина Цэ.",
+     "100 г киви — дневная норма витамина C."
+    ]
+   ]
+  },
+  {
+   "type": "nutrients",
+   "title": "В 100 г зелёного киви",
+   "subtitle": "по данным USDA",
+   "active": [
+    0,
+    0,
+    1,
+    3
+   ],
+   "tiles": [
+    {
+     "value": 92.7,
+     "decimals": 1,
+     "unit": "мг",
+     "label": "Витамин C",
+     "note": "≈ 100% нормы",
+     "color": "gold"
+    },
+    {
+     "value": 3,
+     "unit": "г",
+     "label": "Клетчатка",
+     "color": "green"
+    },
+    {
+     "value": 312,
+     "unit": "мг",
+     "label": "Калий",
+     "color": "orange"
+    },
+    {
+     "value": 61,
+     "unit": "ккал",
+     "label": "Калорийность",
+     "color": "pink"
+    }
+   ],
+   "desc": "Цифры: четыре карточки с питательными веществами, значения отсчитываются.",
+   "prompt": "Kiwi slices arranged on a dark green slate, camera slides over them while glowing nutrient particles rise, soft studio light. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "В ста граммах зелёного киви:",
+     "В 100 г зелёного киви:"
+    ],
+    [
+     "девяносто три миллиграмма витамина Цэ,",
+     "93 мг витамина C,"
+    ],
+    [
+     "три грамма клетчатки и калий,",
+     "3 г клетчатки и калий,"
+    ],
+    [
+     "а калорий всего шестьдесят одна.",
+     "и всего 61 ккал."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Чем полезен",
+   "items": [
+    {
+     "head": "Витамин C",
+     "text": "нужен для иммунитета и коллагена",
+     "at_part": 0
+    },
+    {
+     "head": "Пищеварение",
+     "text": "2 киви в день помогали при запорах (исследование 2023)",
+     "at_part": 2,
+     "color": "green"
+    },
+    {
+     "head": "Мало калорий",
+     "text": "61 ккал на 100 г",
+     "at_part": 3,
+     "color": "pink"
+    }
+   ],
+   "desc": "Польза: три карточки появляются по очереди.",
+   "prompt": "Three kiwi halves on floating glass plates appear one by one in a warm green space, gentle camera glide, fresh juicy look. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Чем он полезен?",
+     "Чем он полезен?"
+    ],
+    [
+     "Витамин Цэ нужен для иммунитета и коллагена.",
+     "Витамин C — иммунитет и коллаген."
+    ],
+    [
+     "Два киви в день помогали при запорах.",
+     "2 киви в день помогали при запорах."
+    ],
+    [
+     "И калорий в нём немного.",
+     "И калорий немного."
+    ]
+   ]
+  },
+  {
+   "type": "caution",
+   "title": "Кому осторожно",
+   "items": [
+    {
+     "text": "Зуд во рту после киви — повод сходить к аллергологу",
+     "at_part": 1
+    },
+    {
+     "text": "Риск выше при аллергии на латекс и пыльцу",
+     "at_part": 2
+    }
+   ],
+   "desc": "Предупреждение: значок, две карточки.",
+   "prompt": "A single kiwi on a dark surface under a soft amber spotlight, slow push-in, calm cautious mood. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Но осторожно:",
+     "Но осторожно:"
+    ],
+    [
+     "зуд во рту после киви — повод сходить к аллергологу.",
+     "Зуд во рту — повод сходить к аллергологу."
+    ],
+    [
+     "Риск выше при аллергии на латекс и пыльцу.",
+     "Риск выше при аллергии на латекс и пыльцу."
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "fruits": [
+    "orange",
+    "kiwi",
+    "apple"
+   ],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: USDA FoodData Central · Am J Gastroenterol, 2023",
+   "desc": "Призыв: три фрукта подпрыгивают, «Подпишись», «Сохрани».",
+   "prompt": "An orange, a kiwi and an apple bounce playfully on a dark green surface with splashes of juice, slow motion, cheerful ending shot. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
