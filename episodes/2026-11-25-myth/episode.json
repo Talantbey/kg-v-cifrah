@@ -1,0 +1,198 @@
+{
+ "theme": "fresh",
+ "header": "Миф или факт?",
+ "speed": 0.9,
+ "caption": "Гранат поднимает гемоглобин? ЧАСТИЧНО 🍎\n\nЖелеза в гранате мало: 0,3 мг в 100 г — это ≈ 2% дневной нормы (USDA).\nВ маленьком исследовании (10 человек, 500 мл сока в день 2 недели) гемоглобин немного вырос — но этого мало для выводов.\nЖелезо из растений усваивается хуже, чем из мяса; витамин C помогает его усвоению (NIH).\n\n⚠️ Низкий гемоглобин — повод сходить к врачу, а не лечиться гранатом.\nНе является медицинской рекомендацией.\nИсточники: USDA FoodData Central; NIH ODS «Iron»; Manthou et al., Exp Ther Med, 2017.\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#мифилифакт #гранат #гемоглобин #железо #здоровоепитание #пп #фрукты",
+ "package": {
+  "title": "Гранат поднимает гемоглобин? Частично",
+  "hook": "Гранат поднимает гемоглобин? Частично — железа в нём мало.",
+  "problem": "Многие считают гранат главным продуктом при низком гемоглобине.",
+  "solution": "В 100 г граната всего 0,3 мг железа (≈ 2% нормы). В маленьком исследовании (10 человек, 500 мл сока в день 2 недели) гемоглобин немного вырос, но данных мало. Железо из растений усваивается хуже, чем из мяса.",
+  "steps": [
+   "Железо — из мяса, рыбы, птицы, фасоли и чечевицы (NIH)",
+   "Ешь растительное железо вместе с витамином C",
+   "Низкий гемоглобин — к врачу"
+  ],
+  "compatibility": "Гранат свежий, зёрна (сырой); в исследовании — гранатовый сок",
+  "source": "USDA FoodData Central SR Legacy: Pomegranates, raw (169134); NIH Office of Dietary Supplements, Iron — Fact Sheet for Consumers; Manthou E. et al. Effect of pomegranate juice consumption on biochemical parameters and complete blood count. Exp Ther Med. 2017;14(2):1756–1762 (PMC5526177); FDA Daily Value iron 18 mg"
+ },
+ "scenes": [
+  {
+   "type": "myth",
+   "statement": "Гранат поднимает гемоглобин",
+   "verdict": "ЧАСТИЧНО",
+   "body": "Железа в гранате совсем мало",
+   "fruit": "pomegranate",
+   "verdict_at_part": 1,
+   "body_at_part": 2,
+   "kicker": "Говорят, что…",
+   "deco": false,
+   "desc": "Утверждение крупно, штамп «ЧАСТИЧНО», пояснение снизу.",
+   "prompt": "A ripe red pomegranate splits open in slow motion on a dark green surface, glossy ruby seeds spill out and bounce, macro detail of juice droplets on the seeds. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Гранат поднимает гемоглобин?",
+     "Гранат поднимает гемоглобин?"
+    ],
+    [
+     "Частично.",
+     "Частично."
+    ],
+    [
+     "Железа в гранате совсем мало.",
+     "Железа в гранате совсем мало."
+    ]
+   ]
+  },
+  {
+   "type": "nutrients",
+   "title": "Гранат, 100 г",
+   "subtitle": "по данным USDA",
+   "active": [
+    0,
+    0,
+    1
+   ],
+   "tiles": [
+    {
+     "value": 0.3,
+     "decimals": 1,
+     "unit": "мг",
+     "label": "Железо",
+     "note": "≈ 2% нормы",
+     "color": "pink"
+    },
+    {
+     "value": 4,
+     "unit": "г",
+     "label": "Клетчатка",
+     "note": "≈ 14% нормы",
+     "color": "green"
+    },
+    {
+     "value": 10.2,
+     "decimals": 1,
+     "unit": "мг",
+     "label": "Витамин C",
+     "note": "≈ 11% нормы",
+     "color": "gold"
+    },
+    {
+     "value": 83,
+     "unit": "ккал",
+     "label": "Калории",
+     "note": "в 100 г",
+     "color": "orange"
+    }
+   ],
+   "desc": "Цифры: железо, клетчатка, витамин C и калории в 100 г граната.",
+   "prompt": "Pomegranate seeds pour slowly onto a small kitchen scale, the camera glides around the glistening ruby seeds while a halved pomegranate rests beside them, soft studio light. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "В ста граммах — три десятых миллиграмма железа.",
+     "В 100 г — 0,3 мг железа."
+    ],
+    [
+     "Это около двух процентов дневной нормы.",
+     "Это ≈ 2% дневной нормы."
+    ],
+    [
+     "Зато есть клетчатка и витамин Цэ.",
+     "Зато есть клетчатка и витамин C."
+    ]
+   ],
+   "deco": false
+  },
+  {
+   "type": "list",
+   "title": "Что известно",
+   "items": [
+    {
+     "head": "Исследование: 10 человек",
+     "text": "сок 2 недели — гемоглобин немного вырос",
+     "at_part": 0,
+     "color": "gold"
+    },
+    {
+     "head": "Железо из растений",
+     "text": "усваивается хуже, чем из мяса (NIH)",
+     "at_part": 1,
+     "color": "orange"
+    }
+   ],
+   "desc": "Две карточки: маленькое исследование и усвоение растительного железа.",
+   "prompt": "A glass of deep red pomegranate juice on a laboratory-style table, a drop falls in slow motion creating ripples, tiny glowing particles rise like red blood cells, gentle camera push-in. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "В опыте на десяти людях от сока гемоглобин немного вырос — данных мало.",
+     "В опыте на 10 людях гемоглобин чуть вырос."
+    ],
+    [
+     "А железо из растений усваивается хуже, чем из мяса.",
+     "Железо из растений усваивается хуже."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что делать",
+   "items": [
+    {
+     "head": "Мясо, рыба, фасоль",
+     "text": "а также птица и чечевица — источники железа",
+     "at_part": 0,
+     "color": "green"
+    },
+    {
+     "head": "Добавь витамин C",
+     "text": "так железо из растений усваивается лучше",
+     "at_part": 1,
+     "color": "gold"
+    },
+    {
+     "head": "Низкий гемоглобин?",
+     "text": "это повод сходить к врачу",
+     "at_part": 2,
+     "color": "pink"
+    }
+   ],
+   "desc": "Совет: три карточки появляются по очереди.",
+   "prompt": "A balanced plate with lentils, beans, a piece of grilled fish and fresh pomegranate seeds sprinkled on a salad with lemon slices, warm light, slow overhead camera dolly. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Железо — в мясе, рыбе, фасоли и чечевице.",
+     "Железо — в мясе, рыбе, фасоли."
+    ],
+    [
+     "Ешь их с витамином Цэ — так усвоится лучше.",
+     "С витамином C усвоится лучше."
+    ],
+    [
+     "А при низком гемоглобине — к врачу.",
+     "Низкий гемоглобин — к врачу."
+    ]
+   ],
+   "deco": false
+  },
+  {
+   "type": "finale",
+   "fruits": [
+    "pomegranate",
+    "pomegranate_seeds",
+    "lemon"
+   ],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: USDA · NIH ODS · Manthou et al., 2017",
+   "desc": "Призыв: гранат, зёрна граната и лимон подпрыгивают, «Подпишись», «Сохрани».",
+   "prompt": "A whole pomegranate, a scatter of pomegranate seeds and a lemon bounce playfully on a dark green surface with juicy splashes, slow motion, cheerful ending shot. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
