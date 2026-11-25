@@ -1,0 +1,180 @@
+{
+ "theme": "fresh",
+ "header": "Сравнение",
+ "speed": 0.92,
+ "caption": "Где больше сахара? Сравнили 5 фруктов 🍇\n\nНа 100 г: виноград — 15,5 г сахаров, черешня — 12,8, яблоко — 10,4, арбуз — 6,2, клубника — 4,9 г.\nВОЗ: сахар целых свежих фруктов — не «свободный», рекомендация ВОЗ его не ограничивает. Ограничить советуют свободные сахара — добавленный сахар, мёд, соки: меньше 10% калорий, лучше около 25 г в день.\n\nЕшь фрукты целиком, а не сок.\nНе является медицинской рекомендацией.\nИсточники: USDA FoodData Central (SR Legacy); ВОЗ, 2015.\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#сахар #фрукты #виноград #черешня #клубника #здоровоепитание #пп",
+ "package": {
+  "title": "Где больше сахара: виноград, черешня, яблоко, арбуз, клубника",
+  "hook": "В каком фрукте больше всего сахара? Сравним пять.",
+  "problem": "Многие боятся сахара во фруктах и не знают, сколько его на самом деле.",
+  "solution": "На 100 г: виноград 15,5 г, черешня 12,8, яблоко 10,4, арбуз 6,2, клубника 4,9 (USDA). ВОЗ: сахар целых свежих фруктов не относится к «свободным» и рекомендацией не ограничивается; ограничивать — добавленный сахар, мёд и соки (меньше 10% калорий, лучше ~25 г в день).",
+  "steps": [
+   "Ешь фрукты целиком, а не в виде сока",
+   "Меньше сладкого — выбирай клубнику и арбуз",
+   "Ограничивай добавленный сахар, мёд и соки"
+  ],
+  "compatibility": "Свежие сырые фрукты: виноград (красный/зелёный), черешня, яблоко с кожурой, арбуз, клубника",
+  "source": "USDA FoodData Central SR Legacy (Sugars, total, per 100 g): Grapes, red or green (European type), raw (174683); Cherries, sweet, raw (171719); Apples, raw, with skin (171688); Watermelon, raw (167765); Strawberries, raw (167762). WHO Guideline: sugars intake for adults and children (2015) / WHO news release 04.03.2015."
+ },
+ "scenes": [
+  {
+   "type": "fruit",
+   "fruit": "grapes",
+   "name": "САХАР",
+   "kicker": "Сравнение",
+   "lines": [
+    "Где больше сахара?",
+    "5 фруктов на 100 г"
+   ],
+   "highlight": [
+    "сахара"
+   ],
+   "desc": "Хук: гроздь винограда в центре, вопрос «Где больше сахара?».",
+   "prompt": "A glossy bunch of red grapes slowly rotating in mid-air, surrounded by dark sweet cherries, a red apple, a slice of watermelon and fresh strawberries orbiting gently, tiny juice droplets glinting. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "В каком фрукте больше всего сахара? Сравним пять фруктов.",
+     "Где больше сахара? Сравним 5 фруктов."
+    ]
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Сахара в 100 г",
+   "subtitle": "по данным USDA",
+   "unit": " г",
+   "decimals": 1,
+   "rows": [
+    {
+     "label": "Виноград",
+     "value": 15.5,
+     "fruit": "grapes",
+     "best": true,
+     "at_part": 0
+    },
+    {
+     "label": "Черешня",
+     "value": 12.8,
+     "fruit": "cherry",
+     "color": "pink",
+     "at_part": 1
+    },
+    {
+     "label": "Яблоко",
+     "value": 10.4,
+     "fruit": "apple",
+     "color": "orange",
+     "at_part": 1
+    },
+    {
+     "label": "Арбуз",
+     "value": 6.2,
+     "fruit": "watermelon",
+     "color": "green",
+     "at_part": 2
+    },
+    {
+     "label": "Клубника",
+     "value": 4.9,
+     "fruit": "strawberry",
+     "color": "teal",
+     "at_part": 2
+    }
+   ],
+   "desc": "Сравнение: пять полос с иконками фруктов, виноград выделен золотом.",
+   "prompt": "Five fruits lined up on a dark green glass shelf — a bunch of red grapes, sweet cherries, a red apple, a watermelon wedge and a strawberry — glowing columns of sparkling sugar crystals rise behind each one at different heights, slow lateral camera slide. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Больше всего — в винограде: пятнадцать с половиной граммов.",
+     "Лидер — виноград: 15,5 г."
+    ],
+    [
+     "Черешня — почти тринадцать, яблоко — около десяти.",
+     "Черешня — 12,8 г, яблоко — 10,4 г."
+    ],
+    [
+     "А меньше всего — в арбузе и клубнике: около шести и пяти граммов.",
+     "Арбуз — 6,2 г, клубника — 4,9 г."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что говорит ВОЗ",
+   "items": [
+    {
+     "head": "Целые фрукты",
+     "text": "их сахар ВОЗ не считает «свободным»",
+     "at_part": 0
+    },
+    {
+     "head": "Свободный сахар",
+     "text": "добавленный сахар, мёд, соки",
+     "at_part": 1,
+     "color": "orange"
+    },
+    {
+     "head": "Лимит",
+     "text": "меньше 10% калорий, лучше ~25 г в день",
+     "at_part": 2,
+     "color": "green"
+    }
+   ],
+   "desc": "Три карточки: сахар целых фруктов, что такое свободный сахар, лимит ВОЗ.",
+   "prompt": "Fresh strawberries and grapes resting on a dark green surface while a small spoonful of white sugar and a glass of juice stand slightly out of focus behind them, soft warm light sweeps across, gentle camera glide. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Но по данным Всемирной организации здравоохранения, сахар целых свежих фруктов — не свободный.",
+     "ВОЗ: сахар целых фруктов — не «свободный»."
+    ],
+    [
+     "Ограничивать советуют добавленный сахар, мёд и соки:",
+     "Ограничивать — сахар, мёд и соки:"
+    ],
+    [
+     "меньше десяти процентов калорий, а лучше — около двадцати пяти граммов в день.",
+     "меньше 10% калорий, лучше ~25 г в день."
+    ]
+   ],
+   "deco": false
+  },
+  {
+   "type": "fact",
+   "desc": "Вывод: крупная надпись «Ешь фрукты целиком, а не сок».",
+   "prompt": "A hand-free shot of a whole red apple and a bowl of strawberries next to an empty juice glass on a dark green table, slow push-in toward the whole fruit, fresh and calm mood. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Поэтому ешь фрукты целиком, а не пей сок.",
+     "Ешь фрукты целиком, а не пей сок."
+    ]
+   ],
+   "kicker": "Вывод",
+   "headline": "Лучше съесть фрукт, чем выпить сок",
+   "headline_at_part": 0,
+   "big": "Целиком",
+   "big_color": "green",
+   "big_at_part": 0,
+   "deco": false
+  },
+  {
+   "type": "finale",
+   "fruits": [
+    "grapes",
+    "cherry",
+    "strawberry"
+   ],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: USDA FoodData Central · ВОЗ, 2015",
+   "desc": "Призыв: виноград, черешня и клубника подпрыгивают, «Подпишись», «Сохрани».",
+   "prompt": "A bunch of grapes, a pair of sweet cherries and a strawberry bounce playfully on a dark green surface with small splashes of juice, slow motion, cheerful ending shot. Premium 3D food animation, deep green background with warm orange and fresh green rim light, cinematic lighting, macro lens, shallow depth of field, juicy realistic textures, water droplets, smooth slow camera dolly, consistent fresh style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
