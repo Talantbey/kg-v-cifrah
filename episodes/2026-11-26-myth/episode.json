@@ -1,0 +1,154 @@
+{
+ "theme": "splash",
+ "header": "Миф или факт?",
+ "speed": 0.9,
+ "caption": "Горькие ядра абрикоса полезны? МИФ ⚠️\n\nВ ядрах абрикоса есть амигдалин — после еды он превращается в цианид (EFSA).\nВзрослым за раз — не больше 3 маленьких сырых ядер (≈ 370 мг) или меньше половины крупного. Малышу даже одно маленькое ядро может быть выше безопасного уровня.\nКак «лекарство» амигдалин не доказан: в клинических исследованиях эффекта против рака почти нет (NCI).\n\n⚠️ Тошнота, головная боль, жар, слабость после ядер — сразу к врачу.\nНе является медицинской рекомендацией.\nИсточники: EFSA, 2016 («Apricot kernels pose risk of cyanide poisoning»); National Cancer Institute, PDQ «Laetrile/Amygdalin».\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#мифилифакт #абрикос #урюк #здоровоепитание #пп #фрукты #безопасность",
+ "package": {
+  "title": "Горькие ядра абрикоса полезны? Миф",
+  "hook": "Горькие ядра абрикоса полезны? Это миф — в них амигдалин, который в организме даёт цианид.",
+  "problem": "Сырые горькие ядра абрикоса продают и хвалят как «полезные» и даже как средство от рака.",
+  "solution": "EFSA (2016): амигдалин из ядер после еды превращается в цианид. Взрослым за раз — не больше 3 маленьких сырых ядер (≈ 370 мг) или меньше половины крупного; малышу даже одно маленькое ядро может превысить безопасный уровень. NCI: в клинических исследованиях лаэтрил/амигдалин почти не показал эффекта против рака.",
+  "steps": [
+   "Ешь мякоть абрикоса, а сырые горькие ядра не грызи",
+   "Держи ядра подальше от детей",
+   "Тошнота, головная боль, жар, слабость после ядер — сразу к врачу"
+  ],
+  "compatibility": "Сырые горькие ядра абрикоса (урюка); сам фрукт — мякоть",
+  "source": "EFSA, 27.04.2016: Apricot kernels pose risk of cyanide poisoning (ARfD 20 мкг цианида/кг массы тела; 3 маленьких ядра = 370 мг для взрослого; малышу ~60 мг); EFSA Journal 2016;14(4):4424; National Cancer Institute, Laetrile/Amygdalin (PDQ®) — Patient Version"
+ },
+ "scenes": [
+  {
+   "type": "myth",
+   "statement": "Горькие ядра абрикоса полезны",
+   "verdict": "МИФ",
+   "body": "Амигдалин → цианид (EFSA)",
+   "fruit": "apricot",
+   "verdict_at_part": 1,
+   "body_at_part": 2,
+   "kicker": "Говорят, что…",
+   "desc": "Утверждение крупно, абрикос во всплеске, штамп «МИФ», пояснение снизу.",
+   "prompt": "A ripe orange apricot splits in half in slow motion inside a crystal-clear water splash, the brown stone pops out and cracks open revealing a pale kernel, droplets and ice cubes fly around. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Горькие ядра абрикоса полезны?",
+     "Горькие ядра абрикоса полезны?"
+    ],
+    [
+     "Миф.",
+     "Миф!"
+    ],
+    [
+     "В них амигдалин — в организме он даёт цианид.",
+     "Амигдалин в организме даёт цианид."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Безопасный предел",
+   "items": [
+    {
+     "head": "Взрослым — до 3 маленьких",
+     "text": "сырых ядер за раз или < ½ крупного",
+     "at_part": 0,
+     "color": "orange"
+    },
+    {
+     "head": "Малышу — даже 1 ядро",
+     "text": "может быть выше безопасного уровня",
+     "at_part": 1,
+     "color": "pink"
+    }
+   ],
+   "desc": "Три карточки: сколько ядер — уже выше безопасного уровня для взрослых и детей.",
+   "prompt": "Three small apricot kernels roll slowly across a white surface next to a cracked apricot stone, water droplets splash around them, a halved apricot floats in the background, gentle macro camera slide. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Европейские эксперты: взрослым — не больше трёх маленьких ядер за раз.",
+     "Взрослым — не больше 3 маленьких ядер."
+    ],
+    [
+     "А малышу много даже одного.",
+     "Малышу много даже одного ядра."
+    ]
+   ]
+  },
+  {
+   "type": "caution",
+   "title": "Признаки отравления",
+   "items": [
+    {
+     "text": "Тошнота, головная боль, жар, слабость",
+     "at_part": 0
+    },
+    {
+     "text": "Съели много ядер — сразу к врачу",
+     "at_part": 1
+    }
+   ],
+   "desc": "Предупреждение: значок, три карточки с симптомами и советом.",
+   "prompt": "A glass of clear water with ice and a mint sprig, a few apricot stones sink slowly to the bottom, a warning-like calm mood, soft focus apricot halves at the edges, slow camera push-in. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Признаки отравления: тошнота, головная боль, жар, слабость.",
+     "Тошнота, головная боль, жар, слабость."
+    ],
+    [
+     "Съели много — сразу к врачу.",
+     "Съели много — сразу к врачу."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что делать",
+   "items": [
+    {
+     "head": "Против рака — не доказано",
+     "text": "в исследованиях эффекта почти нет (NCI)",
+     "at_part": 0,
+     "color": "blue"
+    },
+    {
+     "head": "Ешь мякоть, а не ядра",
+     "text": "и прячь ядра от детей",
+     "at_part": 1,
+     "color": "green"
+    }
+   ],
+   "desc": "Совет: три карточки появляются по очереди.",
+   "prompt": "Juicy apricot halves without stones fly through a sparkling water splash with mint leaves and lime slices, golden flesh glistening, cheerful bright mood, smooth orbiting camera. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Против рака амигдалин не доказан.",
+     "Против рака — не доказано (NCI)."
+    ],
+    [
+     "Ешьте мякоть, а ядра прячьте от детей.",
+     "Ешь мякоть, а ядра прячь от детей."
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "fruits": [
+    "apricot",
+    "peach",
+    "plum"
+   ],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: EFSA, 2016 · NCI (США)",
+   "disclaimer": "Не является медицинской рекомендацией",
+   "desc": "Призыв: абрикос, персик и слива подпрыгивают во всплеске, «Подпишись», «Сохрани».",
+   "prompt": "An apricot, a peach and a plum bounce playfully through a crystal-clear water splash with ice cubes and mint leaves, slow motion, cheerful ending shot. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
