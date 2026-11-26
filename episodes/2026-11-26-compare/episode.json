@@ -1,0 +1,217 @@
+{
+ "theme": "splash",
+ "header": "Сравнение",
+ "speed": 0.9,
+ "caption": "Мандарин — не чемпион по витамину C 🍊 Кто тогда?\n\nНа 100 г: чёрная смородина — 181 мг витамина C, киви — 92,7, клубника — 58,8, мандарин — 26,7, яблоко (с кожурой) — 4,6 мг.\nВзрослым нужно 75–90 мг в день (NIH): это примерно 50 г чёрной смородины или 100 г киви. Витамин C нужен для синтеза коллагена (заживление ран) и помогает усваивать железо из растительной пищи. Организм сам его не вырабатывает.\nПри нагревании и долгом хранении витамина C становится меньше — ешь фрукты свежими.\n\nНе является медицинской рекомендацией.\nИсточники: USDA FoodData Central (SR Legacy); NIH Office of Dietary Supplements.\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#витаминC #фрукты #смородина #киви #мандарины #здоровоепитание #пп",
+ "package": {
+  "title": "Витамин C: смородина, киви, клубника, мандарин, яблоко",
+  "hook": "Думаешь, больше всего витамина C в мандаринах? Сравним пять фруктов.",
+  "problem": "Зимой витамин C ищут в мандаринах, хотя в других фруктах и ягодах его в разы больше.",
+  "solution": "На 100 г: чёрная смородина 181 мг, киви 92,7, клубника 58,8, мандарин 26,7, яблоко с кожурой 4,6 (USDA). Норма для взрослых — 75 мг (женщины) и 90 мг (мужчины) в день (NIH ODS): ≈ 50 г смородины или 100 г киви. Витамин C нужен для синтеза коллагена и заживления ран, улучшает усвоение негемового железа; человек не синтезирует его сам. Долгое хранение и нагревание уменьшают его количество.",
+  "steps": [
+   "Добавляй в рацион ягоды и киви, а не только цитрусы",
+   "Ешь фрукты свежими: нагрев и долгое хранение уменьшают витамин C",
+   "Сочетай фрукты с растительной пищей — так лучше усваивается железо"
+  ],
+  "compatibility": "Свежие сырые фрукты: чёрная смородина (европейская), зелёный киви, клубника, мандарин, яблоко с кожурой",
+  "source": "USDA FoodData Central SR Legacy (Vitamin C, total ascorbic acid, per 100 g): Currants, european black, raw (173963) — 181 mg; Kiwifruit, green, raw (168153) — 92.7 mg; Strawberries, raw (167762) — 58.8 mg; Tangerines, (mandarin oranges), raw (169105) — 26.7 mg; Apples, raw, with skin (171688) — 4.6 mg. NIH Office of Dietary Supplements, Vitamin C Fact Sheet for Health Professionals (RDA 90/75 mg; collagen, wound healing, nonheme iron; storage and cooking losses)."
+ },
+ "scenes": [
+  {
+   "type": "fruit",
+   "fruit": "currant",
+   "name": "ВИТАМИН C",
+   "kicker": "Сравнение",
+   "lines": [
+    "Мандарин — не чемпион!",
+    "Кто лидер? 5 фруктов"
+   ],
+   "highlight": [
+    "чемпион!"
+   ],
+   "desc": "Хук: гроздь чёрной смородины во всплеске, вопрос «Кто лидер?».",
+   "prompt": "Macro shot of glossy blackcurrant clusters plunging into a crystal-clear water splash, a kiwi half, strawberries, a mandarin and a red apple orbiting around them, droplets and ice cubes flying in slow motion. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Витамина Цэ больше всего в мандаринах? Сравним пять фруктов.",
+     "Мандарин — чемпион? Сравним 5 фруктов."
+    ]
+   ]
+  },
+  {
+   "type": "compare",
+   "title": "Витамин C в 100 г",
+   "subtitle": "по данным USDA",
+   "unit": " мг",
+   "decimals": 1,
+   "rows": [
+    {
+     "label": "Чёрная смородина",
+     "value": 181,
+     "text": "181 мг",
+     "fruit": "currant",
+     "best": true,
+     "at_part": 0
+    },
+    {
+     "label": "Киви",
+     "value": 92.7,
+     "fruit": "kiwi",
+     "color": "green",
+     "at_part": 1
+    },
+    {
+     "label": "Клубника",
+     "value": 58.8,
+     "fruit": "strawberry",
+     "color": "pink",
+     "at_part": 1
+    },
+    {
+     "label": "Мандарин",
+     "value": 26.7,
+     "fruit": "tangerine",
+     "color": "blue",
+     "at_part": 2
+    },
+    {
+     "label": "Яблоко",
+     "value": 4.6,
+     "fruit": "apple",
+     "color": "teal",
+     "at_part": 2
+    }
+   ],
+   "desc": "Сравнение: пять полос с фруктами, смородина выделена золотом.",
+   "prompt": "Five fruits floating in a row inside clear sparkling water — a blackcurrant cluster, a kiwi half, a strawberry, a mandarin and a red apple — columns of bubbles rise behind each at different heights, slow lateral camera slide. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Лидер — чёрная смородина: сто восемьдесят один.",
+     "Лидер — чёрная смородина: 181 мг."
+    ],
+    [
+     "Киви — девяносто три, клубника — почти шестьдесят.",
+     "Киви — 92,7 мг, клубника — 58,8 мг."
+    ],
+    [
+     "Мандарин — двадцать семь, яблоко — меньше пяти.",
+     "Мандарин — 26,7 мг, яблоко — 4,6 мг."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Зачем он нужен",
+   "items": [
+    {
+     "head": "Коллаген",
+     "text": "нужен для его синтеза и заживления ран",
+     "at_part": 0,
+     "color": "pink"
+    },
+    {
+     "head": "Железо",
+     "text": "лучше усваивается из растительной пищи",
+     "at_part": 1,
+     "color": "green"
+    },
+    {
+     "head": "Только из еды",
+     "text": "организм сам его не вырабатывает",
+     "at_part": 2,
+     "color": "blue"
+    }
+   ],
+   "desc": "Польза по данным NIH: три карточки по очереди.",
+   "prompt": "Blackcurrants, kiwi slices and strawberries rise one by one out of sparkling water on a light sky-blue background, surrounded by droplets and mint leaves, gentle camera glide upward. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Он нужен для коллагена и заживления ран,",
+     "Нужен для коллагена и заживления ран,"
+    ],
+    [
+     "помогает усваивать растительное железо,",
+     "помогает усваивать железо из растений,"
+    ],
+    [
+     "а организм сам его не делает.",
+     "а организм сам его не делает."
+    ]
+   ]
+  },
+  {
+   "type": "fact",
+   "kicker": "Норма в день",
+   "big": "75–90 мг",
+   "big_color": "gold",
+   "big_at_part": 0,
+   "headline": "≈ 50 г смородины или 100 г киви",
+   "headline_at_part": 1,
+   "highlight": [
+    "50 г",
+    "100 г"
+   ],
+   "accent": "green",
+   "desc": "Норма: крупно «75–90 мг», под ней — сколько это в смородине и киви.",
+   "prompt": "A small glass bowl of blackcurrants and a halved kiwi resting on a floating ice cube in calm clear water, soft ripples, slow push-in. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Норма в день — семьдесят пять — девяносто миллиграммов:",
+     "Норма взрослым — 75–90 мг в день (NIH):"
+    ],
+    [
+     "это полсотни граммов смородины или сто — киви.",
+     "≈ 50 г смородины или 100 г киви."
+    ]
+   ],
+   "deco": false
+  },
+  {
+   "type": "caution",
+   "title": "Как сохранить",
+   "items": [
+    {
+     "text": "Нагрев разрушает витамин C",
+     "at_part": 0
+    },
+    {
+     "text": "При долгом хранении его меньше",
+     "at_part": 0
+    },
+    {
+     "text": "Ешь фрукты свежими",
+     "at_part": 0
+    }
+   ],
+   "desc": "Совет: нагрев и долгое хранение уменьшают витамин C.",
+   "prompt": "Fresh blackcurrants and mandarin segments splashing into ice-cold clear water, droplets frozen in mid-air, calm careful mood, slow camera glide. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Нагрев и долгое хранение его разрушают — ешь свежими.",
+     "Нагрев и хранение его разрушают — ешь свежими."
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "fruits": [
+    "currant",
+    "kiwi",
+    "tangerine"
+   ],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: USDA FoodData Central · NIH ODS",
+   "disclaimer": "Не является медицинской рекомендацией",
+   "desc": "Призыв: смородина, киви и мандарин подпрыгивают во всплеске.",
+   "prompt": "A blackcurrant cluster, a kiwi half and a mandarin bounce playfully through a big crystal-clear water splash with ice cubes and mint leaves, slow motion, cheerful ending shot. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
