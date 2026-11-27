@@ -1,0 +1,95 @@
+{
+ "theme": "splash",
+ "header": "Миф или факт?",
+ "speed": 0.9,
+ "caption": "При диабете фрукты нельзя? МИФ 🍎\n\nАмериканская диабетическая ассоциация (ADA): «Да, людям с диабетом можно есть фрукты». Diabetes UK: сокращать фрукты, скорее всего, не нужно.\nПорция — около 80 г (примерно на ладони: 7 клубник или 14 черешен). Распределяй фрукты по дню, а не всё за один раз.\nЦелый фрукт лучше сока — в нём больше клетчатки. 150 мл сока ≈ 15 г углеводов, его легко выпить много.\n\n⚠️ Сухофрукты, виноград и тропические фрукты легко переесть. План питания при диабете — с врачом.\nНе является медицинской рекомендацией.\nИсточники: American Diabetes Association, «Fruit» (diabetes.org); Diabetes UK, «Fruit, vegetables and diabetes».\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#мифилифакт #диабет #фрукты #яблоко #здоровоепитание #пп #сахарвкрови",
+ "package": {
+  "title": "При диабете фрукты нельзя? Миф",
+  "hook": "При диабете фрукты нельзя? Это миф — диабетические ассоциации говорят: можно, но с умом.",
+  "problem": "Многие с диабетом совсем отказываются от фруктов из-за сахара в них.",
+  "solution": "ADA: «Yes, people with diabetes can eat fruit»; целый фрукт лучше сока — больше клетчатки. Diabetes UK: сокращать фрукты, скорее всего, не нужно; порция — 80 г (≈ ладонь, 7 клубник или 14 черешен), распределять по дню; сок и смузи лучше сократить (150 мл ≈ 15 г углеводов); сухофрукты, виноград и тропические фрукты легко съесть много за раз.",
+  "steps": [
+   "Порция — около 80 г (на ладони)",
+   "Распределяй фрукты по дню",
+   "Целый фрукт вместо сока; сухофрукты — понемногу",
+   "План питания — с врачом"
+  ],
+  "compatibility": "Свежие целые фрукты и ягоды (яблоко, клубника, черешня); сок, смузи и сухофрукты — ограничивать",
+  "source": "American Diabetes Association, Food & Nutrition: Fruit (diabetes.org/food-nutrition/reading-food-labels/fruit); ADA Diabetes Food Hub, «Can I eat fruit if I have diabetes?» (18.02.2026); Diabetes UK, «Fruit, vegetables and diabetes» (diabetes.org.uk)"
+ },
+ "scenes": [
+  {
+   "type": "myth",
+   "statement": "При диабете фрукты нельзя",
+   "verdict": "МИФ",
+   "body": "Можно — но с умом (ADA)",
+   "fruit": "apple",
+   "kicker": "Говорят, что…",
+   "verdict_at_part": 1,
+   "body_at_part": 2,
+   "desc": "Утверждение крупно, яблоко во всплеске, штамп «МИФ», пояснение снизу.",
+   "prompt": "A shiny red apple drops into a crystal-clear water splash in slow motion, droplets and ice cubes burst around it, mint leaves swirl, the apple slowly rotates showing its glossy skin. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["При диабете фрукты нельзя?", "При диабете фрукты нельзя?"],
+    ["Миф.", "Миф!"],
+    ["Диабетические ассоциации говорят: можно, но с умом.", "Можно — но с умом."]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Как есть фрукты",
+   "items": [
+    {"head": "Порция — около 80 г", "text": "на ладони: 7 клубник или 14 черешен", "at_part": 0, "color": "orange"},
+    {"head": "Распредели по дню", "text": "не всё за один раз", "at_part": 1, "color": "blue"}
+   ],
+   "desc": "Две карточки: размер порции и совет распределять фрукты по дню.",
+   "prompt": "A small handful of fresh strawberries and dark red cherries rests in an open palm while a gentle water splash rises around it, droplets sparkle, an apple floats softly in the background, macro camera slide. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Порция — около восьмидесяти граммов: столько, сколько на ладони.", "Порция — около 80 г, на ладони."],
+    ["И лучше распределить фрукты по дню.", "Распредели фрукты по дню."]
+   ]
+  },
+  {
+   "type": "caution",
+   "title": "Осторожнее с этим",
+   "items": [
+    {"text": "Сок и смузи — пить их легко много", "at_part": 0},
+    {"text": "Сухофрукты и виноград — легко переесть", "at_part": 1}
+   ],
+   "desc": "Предупреждение: сок, смузи, сухофрукты и виноград — легко переборщить.",
+   "prompt": "A tall glass of orange juice next to a small bowl of raisins and a bunch of grapes, a calm water splash rises behind them, ice cubes drift slowly, soft focus mint at the edges, slow camera push-in. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Осторожнее с соком и смузи: их легко выпить много.", "Сок и смузи легко выпить много."],
+    ["А сухофрукты и виноград легко переесть.", "Сухофрукты и виноград — легко переесть."]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что делать",
+   "items": [
+    {"head": "Целый фрукт, а не сок", "text": "в нём больше клетчатки (ADA)", "at_part": 0, "color": "green"},
+    {"head": "План питания — с врачом", "text": "при диабете он у каждого свой", "at_part": 1, "color": "pink"}
+   ],
+   "desc": "Совет: две карточки появляются по очереди.",
+   "prompt": "Whole fresh apples, pears and strawberries fly through a sparkling water splash with mint leaves and lime slices, one apple is sliced in half mid-air showing crisp white flesh, cheerful bright mood, smooth orbiting camera. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Выбирайте целый фрукт вместо сока: в нём больше клетчатки.", "Целый фрукт вместо сока."],
+    ["А свой план питания обсудите с врачом.", "План питания — с врачом."]
+   ]
+  },
+  {
+   "type": "finale",
+   "fruits": ["apple", "strawberry", "cherry"],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: ADA (США) · Diabetes UK",
+   "disclaimer": "Не является медицинской рекомендацией",
+   "desc": "Призыв: яблоко, клубника и черешня подпрыгивают во всплеске, «Подпишись», «Сохрани».",
+   "prompt": "An apple, a strawberry and a pair of cherries bounce playfully through a crystal-clear water splash with ice cubes and mint leaves, slow motion, cheerful ending shot. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    ["Сохрани и подпишись!", "Сохрани и подпишись!"]
+   ]
+  }
+ ]
+}
