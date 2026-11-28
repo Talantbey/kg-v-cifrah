@@ -1,0 +1,156 @@
+{
+ "theme": "splash",
+ "header": "Миф или факт?",
+ "speed": 0.9,
+ "caption": "Черника улучшает зрение? МИФ 🫐\n\nЛегенда: британские лётчики во Вторую мировую ели черничный джем, чтобы лучше видеть ночью. NIH (NCCIH): возможно, это был слух или прикрытие для секретных радаров.\nОбзор 12 исследований с плацебо (Canter & Ernst, 2004): 4 самых новых и строгих не нашли улучшения ночного зрения у здоровых людей.\nNIH: черника пока явно не помогла ни при одном заболевании, но в обычных количествах в еде она безопасна.\n\n⚠️ Принимаешь лекарства — перед БАДами с черникой посоветуйся с врачом. Зрение ухудшилось — к офтальмологу.\nНе является медицинской рекомендацией.\nИсточники: NIH NCCIH, «Bilberry» (обновлено в ноябре 2024); Canter PH, Ernst E. Surv Ophthalmol 2004;49(1):38–50.\n\nСохрани и подпишись — каждый день польза фруктов!\n\n#мифилифакт #черника #зрение #ягоды #здоровоепитание #пп #полезныефакты",
+ "package": {
+  "title": "Черника улучшает зрение? Миф",
+  "hook": "Черника улучшает зрение? Это миф — строгие исследования этого не подтвердили.",
+  "problem": "Многие едят чернику или покупают БАДы с ней, чтобы лучше видеть, особенно в темноте.",
+  "solution": "NIH NCCIH: легенда о британских лётчиках с черничным джемом (Вторая мировая) — возможно, слух или прикрытие для радаров; исследования ночного зрения противоречивы и часто низкого качества, самые строгие не нашли эффекта у здоровых людей. Обзор Canter & Ernst (Surv Ophthalmol 2004): 30 исследований, 12 с плацебо; 4 самых новых РКИ — отрицательные; гипотеза не подтверждена строгими исследованиями. Черника в обычной еде безопасна.",
+  "steps": [
+   "Ешь чернику как вкусную ягоду, а не как «лекарство для глаз»",
+   "Ухудшилось зрение — к офтальмологу",
+   "Принимаешь лекарства — БАДы с черникой только после разговора с врачом"
+  ],
+  "compatibility": "Черника (Vaccinium myrtillus) свежая или замороженная; в кадре — похожая ягода голубика",
+  "source": "NIH NCCIH, «Bilberry» (nccih.nih.gov/health/bilberry, обновлено 11.2024); Canter PH, Ernst E. Anthocyanosides of Vaccinium myrtillus (bilberry) for night vision — a systematic review of placebo-controlled trials. Surv Ophthalmol 2004;49(1):38–50 (PMID 14711439)"
+ },
+ "scenes": [
+  {
+   "type": "myth",
+   "statement": "Черника улучшает зрение",
+   "verdict": "МИФ",
+   "body": "Наукой не подтверждено",
+   "fruit": "blueberry",
+   "kicker": "Говорят, что…",
+   "verdict_at_part": 1,
+   "body_at_part": 2,
+   "desc": "Утверждение крупно, черника во всплеске, штамп «МИФ», пояснение снизу.",
+   "prompt": "A handful of dark blue bilberries tumbles into a crystal-clear water splash in slow motion, tiny droplets and ice cubes burst around the berries, mint leaves swirl, the dusty blue skin of the berries glistens in macro detail. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Черника улучшает зрение?",
+     "Черника улучшает зрение?"
+    ],
+    [
+     "Миф.",
+     "Миф!"
+    ],
+    [
+     "Самые строгие исследования этого не подтвердили.",
+     "Строгие исследования — не подтвердили."
+    ]
+   ]
+  },
+  {
+   "type": "fact",
+   "kicker": "Откуда миф",
+   "big": "1940-е",
+   "big_color": "gold",
+   "big_at_part": 0,
+   "headline": "лётчики ели черничный джем",
+   "headline_at_part": 0,
+   "highlight": [
+    "черничный",
+    "джем"
+   ],
+   "accent": "blue",
+   "body": "Возможно, это слух или прикрытие для секретных радаров (NIH)",
+   "body_at_part": 1,
+   "desc": "Откуда миф: «1940-е», британские лётчики и черничный джем; возможно, прикрытие для радаров.",
+   "prompt": "A small glass jar of dark bilberry jam with a spoon stands in a calm water splash, blueberries and ice cubes float around it, soft blue evening light hints at a night sky, slow camera push-in. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Говорят, в войну британские лётчики ели черничный джем, чтобы лучше видеть ночью.",
+     "Говорят, в войну лётчики ели черничный джем,"
+    ],
+    [
+     "Но, возможно, это был просто слух или прикрытие для секретных радаров.",
+     "но это мог быть слух или прикрытие радаров."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что показали исследования",
+   "items": [
+    {
+     "head": "12 исследований с плацебо",
+     "text": "обзор Canter и Ernst, 2004",
+     "at_part": 0,
+     "color": "blue"
+    },
+    {
+     "head": "4 самых новых — без эффекта",
+     "text": "ночное зрение у здоровых не улучшилось",
+     "at_part": 1,
+     "color": "orange"
+    }
+   ],
+   "desc": "Две карточки: обзор 12 исследований с плацебо и итог — без эффекта.",
+   "prompt": "Fresh bilberries roll across a glossy white surface beside a pair of eyeglasses while a gentle water splash rises behind, droplets sparkle, macro slide camera move. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Учёные разобрали двенадцать исследований с плацебо.",
+     "Учёные разобрали 12 исследований с плацебо."
+    ],
+    [
+     "Четыре самых новых и строгих не нашли пользы для ночного зрения.",
+     "4 самых новых и строгих — пользы нет."
+    ]
+   ]
+  },
+  {
+   "type": "list",
+   "title": "Что делать",
+   "items": [
+    {
+     "head": "Ешь чернику как ягоду",
+     "text": "в обычной еде она безопасна (NIH)",
+     "at_part": 0,
+     "color": "green"
+    },
+    {
+     "head": "Зрение хуже — к окулисту",
+     "text": "ягоды и БАДы его не заменят",
+     "at_part": 1,
+     "color": "pink"
+    }
+   ],
+   "desc": "Совет: две карточки появляются по очереди.",
+   "prompt": "Blueberries, raspberries and strawberries fly through a sparkling water splash with mint leaves and lime slices, a small bowl of berries catches them, cheerful bright mood, smooth orbiting camera. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Чернику можно есть просто как вкусную ягоду: в обычной еде она безопасна.",
+     "Ешь чернику как ягоду — это безопасно."
+    ],
+    [
+     "А если зрение ухудшилось, идите к окулисту.",
+     "Зрение ухудшилось — к окулисту."
+    ]
+   ]
+  },
+  {
+   "type": "finale",
+   "fruits": [
+    "blueberry",
+    "raspberry",
+    "strawberry"
+   ],
+   "cta": "Подпишись",
+   "sub": "каждый день — польза фруктов",
+   "save": "Сохрани, чтобы не забыть",
+   "source": "Источники: NIH NCCIH · Canter, Ernst 2004",
+   "disclaimer": "Не является медицинской рекомендацией",
+   "desc": "Призыв: черника, малина и клубника подпрыгивают во всплеске, «Подпишись», «Сохрани».",
+   "prompt": "Blueberries, a raspberry and a strawberry bounce playfully through a crystal-clear water splash with ice cubes and mint leaves, slow motion, cheerful ending shot. Bright commercial food photography in motion, fresh fruits and berries flying through a crystal-clear water splash with ice cubes, mint leaves and droplets, light sky-blue to white background, high-key lighting, ultra sharp macro detail, slow motion, smooth camera dolly, consistent splash style, vertical 9:16, no text, no logos, no watermarks.",
+   "parts": [
+    [
+     "Сохрани и подпишись!",
+     "Сохрани и подпишись!"
+    ]
+   ]
+  }
+ ]
+}
